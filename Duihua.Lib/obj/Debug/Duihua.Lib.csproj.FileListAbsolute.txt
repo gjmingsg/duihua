@@ -1,0 +1,5 @@
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\bin\Debug\Duihua.Lib.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\bin\Debug\Duihua.Lib.pdb
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\ResolveAssemblyReference.cache
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.pdb
