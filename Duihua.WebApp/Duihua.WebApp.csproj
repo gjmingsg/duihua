@@ -67,6 +67,7 @@
     <Content Include="Admin\Account\UserList.aspx" />
     <Content Include="Admin\Article\Article.aspx" />
     <Content Include="Admin\Article\ArticleType.aspx" />
+    <Content Include="Admin\Config\ConfigList.aspx" />
     <Content Include="Admin\Message\MessageList.aspx" />
     <Content Include="Admin\RegistStudent\ClassList.aspx" />
     <Content Include="Admin\RegistStudent\RegistList.aspx" />
@@ -465,6 +466,13 @@
     <Compile Include="Admin\Article\ArticleType.aspx.designer.cs">
       <DependentUpon>ArticleType.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Config\ConfigList.aspx.cs">
+      <DependentUpon>ConfigList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Config\ConfigList.aspx.designer.cs">
+      <DependentUpon>ConfigList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -555,7 +563,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Config\" />
     <Folder Include="App_Data\" />
     <Folder Include="Attachment\" />
   </ItemGroup>

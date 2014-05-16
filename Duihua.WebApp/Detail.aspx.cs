@@ -20,16 +20,16 @@ namespace Duihua.WebApp
         {
             get
             {
-                string id = Request.QueryString["ID"];
-                return s.LoadMenu(id);
+                 
+                return s.LoadMenu(Id);
             }
         }
         public List<Dictionary<String, Object>> ArticleList
         {
             get
             {
-                string id = Request.QueryString["ID"];
-                return s.GetArticleList(id);
+                 
+                return s.GetArticleList(Id);
             }
         }
 
@@ -38,7 +38,7 @@ namespace Duihua.WebApp
         {
             get
             {
-                return Request.QueryString["ID"];
+                return Request.QueryString["ID"].ToUpper();
             }
         }
     }

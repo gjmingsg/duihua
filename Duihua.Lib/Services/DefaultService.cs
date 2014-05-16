@@ -127,15 +127,15 @@ ORDER BY a.UpdateTime DESC")[0];
 
         public Dictionary<String, Object> GetInformation()
         {
-            var item0 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT TOP 1 
+            var item0 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT TOP 3 
 at.TypeName
 ,at.ID
 ,a.[Content]
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='13'
 AND a.[Status] = 1
-ORDER BY a.UpdateTime DESC")[0];
-            var item1 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT TOP 1 
+ORDER BY a.UpdateTime DESC");
+            var item1 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT TOP 3
 at.TypeName
 ,at.ID
 ,a.[Content]
@@ -143,7 +143,7 @@ at.TypeName
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='14'
 AND a.[Status] = 1
 ORDER BY a.UpdateTime DESC
-")[0];
+");
             var item2 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT TOP 5
 at.TypeName
 ,at.ID

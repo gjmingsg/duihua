@@ -21,18 +21,12 @@ namespace Duihua.Lib.Services
                 
             var result = _dao.QueryScalar(q,
             @"
-            WITH t AS(
-	SELECT at.* FROM ArticleType at WHERE at.ID = @QTypeId
-	UNION ALL
-	SELECT at.* FROM ArticleType at INNER JOIN t on at.ParentID = t.id	
-)
-            SELECT COUNT(1) FROM Article a INNER JOIN t at
+           SELECT COUNT(1) FROM Article a INNER JOIN ArticleType at
                 ON at.ID = a.TypeId
                 WHERE 1=1
                 AND a.Title LIKE '%' +@Title+ '%'
                 AND(a.[Content] is null or a.[Content] LIKE '%'+@Content+'%')
-                --AND (a.TypeId = @TypeId or a.TypeId =@QTypeId)
-                --AND a.[Status] = @Status");
+                AND at.ParentID = @QTypeId");
             return int.Parse(result.ToString());
         }
 

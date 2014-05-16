@@ -24,7 +24,7 @@
         <siteMapNode url="~/Admin/Account/UserList.aspx" title="用户管理"  description="用户管理" />
         <siteMapNode url="~/Admin/Account/ChangePassword.aspx" title="修改管理员密码"  description="修改管理员密码" />
         <siteMapNode url="~/Admin/Account/Register.aspx" title="添加管理员"  description="添加管理员" />
-        <siteMapNode url="~/Admin/Config/Regist2ndList.aspx" title="前台配置"  description="前台配置" />
+        <siteMapNode url="~/Admin/Config/ConfigList.aspx" title="前台配置"  description="前台配置" />
       </siteMapNode>
       
     </siteMapNode>

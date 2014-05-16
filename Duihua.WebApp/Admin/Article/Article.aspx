@@ -31,11 +31,7 @@
                         <asp:Button runat="server" ID="btnSearch" ClientIDMode="Static"   Text="搜索" onclick="btnSearch_Click"/>
                         
                         <asp:SqlDataSource ID="TypeDataSource" runat="server"  ConnectionString="<%$ ConnectionStrings:DuihuaDB %>"
-                         SelectCommand="WITH t AS(
-	SELECT at.* FROM ArticleType at WHERE at.ID = @ID
-	UNION ALL
-	SELECT at.* FROM ArticleType at INNER JOIN t on at.ParentID = t.id	
-)SELECT * FROM t order by TypeCode asc">
+                         SelectCommand="SELECT * FROM ArticleType at  where at.ParentID =@ID order by at.TypeCode asc">
                           <SelectParameters>
                             <asp:QueryStringParameter ConvertEmptyStringToNull="false" Name="ID" QueryStringField="ID" />
                           </SelectParameters>
@@ -80,11 +76,6 @@
     </asp:GridView>
     
   <asp:SqlDataSource SelectCommand="
-  WITH t AS(
-	SELECT at.* FROM ArticleType at WHERE at.ID = @QTypeId
-	UNION ALL
-	SELECT at.* FROM ArticleType at INNER JOIN t on at.ParentID = t.id	
-)
   SELECT x.ID
 ,x.Title
 ,x.Author
@@ -96,12 +87,12 @@
 ,case x.[Status] WHEN 1 THEN '发布'
 ELSE '草稿' end [Status]
 ,x.pageIndex FROM (
-SELECT a.*,at.TypeName,ROW_NUMBER()OVER(ORDER BY updatetime desc)pageIndex FROM Article a INNER JOIN t at
+SELECT a.*,at.TypeName,ROW_NUMBER()OVER(ORDER BY updatetime desc)pageIndex FROM Article a INNER JOIN ArticleType at
 ON at.ID = a.TypeId
 WHERE 1=1
 AND a.Title LIKE '%' +@Title+ '%'
 AND(a.[Content] is null or a.[Content] LIKE '%'+@Content+'%')
---and a.TypeId = @QTypeId
+and AT.ParentID = @QTypeId
 ) x 
 WHERE x.pageIndex BETWEEN @begin AND @end
 ORDER BY x.pageIndex"
@@ -239,8 +230,8 @@ ORDER BY x.pageIndex"
                              <p>
                                 <asp:Label ID="Label5" runat="server" AssociatedControlID="eStatus">发布状态:</asp:Label>
                                 <asp:DropDownList runat="server" ID="eStatus" name="Status">
-                                    <asp:ListItem Value='0' Text="草稿"></asp:ListItem>
                                     <asp:ListItem Value='1' Text="发布"></asp:ListItem>
+                                     <asp:ListItem Value='0' Text="草稿"></asp:ListItem>
                                  </asp:DropDownList>
                             </p>
                             <p>

@@ -8,7 +8,8 @@ $(function () {
     $(".search_t span").click(function () {
         $(this).addClass("current").siblings("span").removeClass("current");
     });
-
+    $('.header').height($(window).height() - 80);
+    BindGotoTop();
     //导航
     var navT = $(".nav").offset().top;
     var additionH = $(".nav").height();
@@ -16,7 +17,9 @@ $(function () {
     var sectionH = [], section_n = sectionCount, section_i = 1, i1 = 0, scrollEv = true;
     for (; section_i <= section_n; section_i++) {
         var sectionH_s = $(".section" + section_i).offset().top;
-        $(".section" + section_i).height($(window).height()-110);
+        var t1 = $(window).height() - 110;
+        var t2 = $(".section" + section_i).height();
+        if (t1 > t2) $(".section" + section_i).height(t1);
         var sectionH_l = sectionH_s + $(".section" + section_i).height();
         sectionH.push([sectionH_s, sectionH_l]);
     }
@@ -115,3 +118,13 @@ $(function () {
         return false;
     });
 });
+
+function BindGotoTop() {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0)
+            $('.float_ico').show();
+        else
+            $('.float_ico').hide();
+
+    });    
+}

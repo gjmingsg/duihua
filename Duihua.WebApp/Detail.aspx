@@ -64,6 +64,8 @@
 <!--内容1区结束-->
 <%
     int j = 1;
+    if (ArticleList.Count == 0)
+        return;
     var lastCode = ArticleList[0]["TypeCode"];
     var defaultMenu = lastCode;
     %><section class="section<%=j %>"><%
@@ -77,7 +79,8 @@
             <section class="section<%=j %>">
             <%
         }
-        if (ID.Equals(item["TypeId"])) {
+        if (Id.Equals(item["TypeId"].ToString().ToUpper()))
+        {
             defaultMenu = lastCode;
         }
   %><div class="m">

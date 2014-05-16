@@ -64,7 +64,7 @@ h2{
 .module_light h2{
 	color:#fff;
 	font-size:18px;
-	padding:45px 0 0 85px;
+	padding:15px 0 0 85px;
 }
 .module_light p{
 	color:#a4a4a4;
@@ -73,7 +73,7 @@ h2{
 .moduleLight_ico{
 	position:absolute;
 	z-index:11;
-	top:40px;
+	top:10px;
 	left:30px;
 	width:37px;
 	height:37px;
@@ -769,11 +769,12 @@ p.s1{
 .float_ico{
 	width:40px;
 	height:80px;
-	/*position:fixed;*/
-	position:absolute;
+	position:fixed;
+	display:none;
+	/*position:absolute;*/
 	z-index:1;
-	right:5px;
-	bottom:66px;
+	right:65px;
+	bottom:6px;
 	background-position:-560px -520px;
 }
 .goTop,.leave{

@@ -115,7 +115,7 @@
                     	<a href="#"><img src="images/btn1.gif" alt="新手指南" /></a>
                     </li>
                 	<li class="even">
-                    	<a href="#"><img src="images/btn2.gif" alt="视频中心" /></a>
+                    	<a href="detail.aspx?ID=C4DDE71F-A08E-4B03-AEF1-A26B3315B478"><img src="images/btn2.gif" alt="视频中心" /></a>
                     </li>
                 	<li>
                     	<a href="#"><img src="images/btn3.gif" alt="家长沟通" /></a>
@@ -210,22 +210,34 @@
             </div>
             <div class="informationDWAD_list rfloat">
             	<div class="module_light light1">
-                    <a href='Detail.aspx?ID=<%=(Information["item0"] as Dictionary<String,Object>)["ID"] %>'>
+                    <a href='Detail.aspx?ID=<%=(Information["item0"] as List<Dictionary<String,Object>>)[0]["ID"] %>'>
                         <span class="vertical"></span>
                         <div class="module_relative">
                             <span class="moduleLight_ico"></span>
-                            <h2><%=(Information["item0"] as Dictionary<String,Object>)["TypeName"] %></h2>
-                            <p><%=(Information["item0"] as Dictionary<String,Object>)["Content"] %></p>
+                            <h2>对画新闻</h2>
+                             <div style="margin-left:50px;height:100px;">
+                            <%
+                                var t = (Information["item0"] as List< Dictionary<String,Object>>); 
+                                foreach(var ti in t){ %>
+                                <%=ti["Content"] %>
+                                <% } %>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="module_light light2">
-                    <a href='Detail.aspx?ID=<%=(Information["item1"] as Dictionary<String,Object>)["ID"] %>'>
+                    <a href='Detail.aspx?ID=<%=(Information["item1"] as List<Dictionary<String,Object>>)[0]["ID"] %>'>
                         <span class="vertical"></span>
                         <div class="module_relative">
                             <span class="moduleLight_ico"></span>
-                            <h2><%=(Information["item1"] as Dictionary<String,Object>)["TypeName"] %></h2>
-                            <p><%=(Information["item1"] as Dictionary<String,Object>)["Content"] %></p>
+                            <h2>艺考资讯</h2>
+                           <div style="margin-left:50px;height:100px;">
+                             <%
+                                t = (Information["item1"] as List<Dictionary<String,Object>>); 
+                                foreach(var ti in t){ %>
+                                <%=ti["Content"] %>
+                                <%} %>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -417,12 +429,12 @@
               <div class="leave_msg">
             	<form action="Default.aspx?Submit=Message" method="post">
                     <div class="leaveMsg_contact clearfix">
-                        <input class="leave_name lfloat" type="text" name="UserName"/>
-                        <input class="leave_tel rfloat" type="text" name="ContactWay"/>
+                        <input class="leave_name lfloat" type="text" name="UserName" id="UserName" placeholder="姓名"/>
+                        <input class="leave_tel rfloat" type="text" name="ContactWay" id="ContactWay" placeholder="邮箱"/>
                     </div>
                     <div class="leaveMsg_content">
                     	<div class="leaveContent_bg">
-                        	<textarea name="Message"></textarea>
+                        	<textarea name="Message" placeholder="留言内容"></textarea>
                         </div>
                     </div>
                     <div class="send_box">
@@ -480,7 +492,7 @@
 <div class="relative">
     <div class="float_ico">
         <a href="#" class="goTop" id="goTop">&nbsp;</a>
-        <a class="leave">&nbsp;</a>
+        <a class="leave" href="#UserName">&nbsp;</a>
     </div>
 </div>
 

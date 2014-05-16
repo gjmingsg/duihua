@@ -125,8 +125,6 @@ VALUES
      
     </UpdateParameters>
     <InsertParameters>
-          
-        <asp:ControlParameter Name="RegistName" Type="String" />
         <asp:ControlParameter Name="RegistName" Type="String" ControlID="eRegistName"/>
         <asp:ControlParameter Name="QQ" Type="String" ControlID="eQQ" />
         <asp:ControlParameter Name="Email" Type="String"  ControlID="eEmail"/>
@@ -135,7 +133,6 @@ VALUES
         <asp:ControlParameter Name="ClassID" Type="Object" ControlID="ddClassName"/>
         <asp:ControlParameter Name="Address" Type="String" ControlID="eAddress" />
         <asp:ControlParameter Name="Status" Type="Int32"  ControlID="ddStatus"/>
-      
     </InsertParameters>
     <DeleteParameters>
         <asp:Parameter Name="ID" Type="Object" />
