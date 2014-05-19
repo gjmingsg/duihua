@@ -7,10 +7,28 @@ using System.Web.SessionState;
 using log4net.Config;
 using log4net;
 
+using Duihua.Lib.Services;
+
 namespace Duihua.WebApp
 {
     public class Global : System.Web.HttpApplication
     {
+        private readonly static ConfigService db = new ConfigService();
+        /// <summary>
+        /// 获取配置信息
+        /// </summary>
+        public static List<Object> Config(string key) { 
+                var result = HttpRuntime.Cache.Get("Config");
+                if (result == null)
+                {
+                    result = db.GetConfigList();
+                    HttpRuntime.Cache.Insert("Config", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                }
+               // var temp = result as List<Dictionary<string, object>>;
+              //  temp.FindAll();
+                return null; //result as List<Object>;
+             
+        }
         private readonly ILog log = LogManager.GetLogger(typeof(Global));
         void Application_Start(object sender, EventArgs e)
         {

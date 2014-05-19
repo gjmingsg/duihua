@@ -18,8 +18,11 @@ namespace Duihua.Lib.Services
 
         public Dictionary<String, Object> GetClass(String id)
         {
-            return _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } },
-                            @"SELECT * FROM ClassInfo ci WHERE id = @Id")[0];
+            var list = _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } },
+                            @"SELECT * FROM ClassInfo ci WHERE id = @Id");
+            if (list.Count == 0)
+                return null;
+            return list[0];
         }
 
     }

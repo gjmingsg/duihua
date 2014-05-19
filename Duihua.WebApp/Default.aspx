@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content='' />
+<meta name="description" content="" />
 <title>对画设计</title>
 <link rel="stylesheet" href="Styles/reset.css" />
 <link rel="stylesheet" href="Styles/main.css" />
@@ -427,19 +429,19 @@
                 <%=(Contact["item1"] as Dictionary<String,Object>)["Content"] %>
             </div>
               <div class="leave_msg">
-            	<form action="Default.aspx?Submit=Message" method="post">
+            	<form action="Default.aspx?Submit=Message" method="post" runat="server">
                     <div class="leaveMsg_contact clearfix">
                         <input class="leave_name lfloat" type="text" name="UserName" id="UserName" placeholder="姓名"/>
                         <input class="leave_tel rfloat" type="text" name="ContactWay" id="ContactWay" placeholder="邮箱"/>
                     </div>
                     <div class="leaveMsg_content">
                     	<div class="leaveContent_bg">
-                        	<textarea name="Message" placeholder="留言内容"></textarea>
+                        	<textarea name="Message" placeholder="留言内容" id="Message"></textarea>
                         </div>
                     </div>
                     <div class="send_box">
                         <button type="reset" class="res_btn">重新填写</button>
-                        <button type="submit" class="send_btn">提交留言</button>
+                        <button type="submit" class="send_btn" id="send_btn" runat="server" onclick="Validate()">提交留言</button>
                     </div>
                 </form>
             </div>
@@ -495,33 +497,6 @@
         <a class="leave" href="#UserName">&nbsp;</a>
     </div>
 </div>
-
-   <div id="loading" style="display:none" >
-        <div class="load_mg" style="position: absolute; top: 45%; left: 45%; z-index: 1000; border:0px;">
-            <table id="Table1">
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        提交中......
-                    </td>
-                </tr>
-            </table>
-            <table id="Table2" cellpadding="5" cellspacing="5">
-                <tr>
-                    <td class="">
-                        <img  src="Images/loading.gif" />
-                    </td>
-                    <td style="padding: 5px;">
-                        &nbsp;
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div style="background: #fff; filter: alpha(opacity=60); opacity: 0.6; width: 100%;
-            height: 100%; position: absolute; left: 0; top: 0; z-index: 999;">
-        </div>
-    </div>
 <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script><!--库-->
 <script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script><!--动画效果-->
 <script type="text/javascript" src="Scripts/jquery-wen_play.js"></script><!--轮播插件-->
@@ -534,13 +509,24 @@
                 $('.video_play').html(videaHtml).find('embed').height(305).width(500);
             });
         });
-        $('.send_btn').click(function () {
-            SubmitMessage();
-        });
+       
     });
-    function SubmitMessage() {
-        document.getElementById('loading').style.display = "";
-
+   
+    function Validate() {
+        var mail = $('#ContactWay').val();
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (filter.test(mail)==false){
+            alert('您的电子邮件格式不正确');
+            return false;
+        }
+        if ($('#UserName').val() == '') {
+            alert('姓名不能为空')
+            return false;
+        }
+        if ($('#Message').val() == '') {
+            alert('内容不能为空')
+            return false;
+        }
         return true;
     }
 </script>
