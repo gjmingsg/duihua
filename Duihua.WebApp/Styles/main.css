@@ -696,7 +696,13 @@ p.s1{
 	height:66px;
 	background-color:#3e3e3e;
 }
-
+/*--在线报名--*/
+.enroll_online{
+	position: fixed;
+	right: -6px;
+	top: 60%;
+	z-index: 21;
+}
 /*--返回顶部--*/
 .consult_online{
 	position:fixed;

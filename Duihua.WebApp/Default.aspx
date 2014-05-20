@@ -451,6 +451,10 @@
 <!--内容区‘联系对画’结束-->
 
 <footer class="footer"></footer>
+<!--在线报名-->
+<div class="enroll_online">
+	<a href="Register.aspx"><img src="images/enroll.png" alt="在线报名" /></a>
+</div>
 
 <!--在线咨询-->
 <div class="consult_online">

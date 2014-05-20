@@ -101,6 +101,7 @@
     <Content Include="Images\consult_list_ico3.png" />
     <Content Include="Images\consult_m.png" />
     <Content Include="Images\consult_t.png" />
+    <Content Include="Images\enroll.png" />
     <Content Include="Images\ewm.gif" />
     <Content Include="Images\ico_bg.png" />
     <Content Include="Images\ico_team.png" />

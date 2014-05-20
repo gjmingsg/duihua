@@ -94,7 +94,10 @@
  </section>
 
 <footer class="footer"></footer>
-
+<!--在线报名-->
+<div class="enroll_online">
+	<a href="Register.aspx"><img src="images/enroll.png" alt="在线报名" /></a>
+</div>
 <!--在线咨询-->
 <div class="consult_online">
 	<h1><img src="images/consult.png" alt="在线咨询" /></h1>

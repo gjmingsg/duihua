@@ -200,6 +200,8 @@ select
 </div>
 </section>
 
+<footer class="footer"></footer>
+
 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
     ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
     InsertCommand="INSERT INTO RegisterInfo(ID, RegistName, QQ, Email, Phone, Intro, Address, Status, CreateTime, RegisterNo, ClassID) VALUES (
