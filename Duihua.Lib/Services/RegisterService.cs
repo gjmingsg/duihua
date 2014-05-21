@@ -16,11 +16,11 @@ namespace Duihua.Lib.Services
                     and status = @status");
             return int.Parse(ret.ToString());
         }
-        public Dictionary<String, Object> GetRegister(String id)
+        public Dictionary<String, Object> GetRegister(String registerNo)
         {
-            return _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } },
+            return _dao.QueryListData(new Dictionary<string, object>() { { "registerNo", registerNo } },
                             @"SELECT ri.*,ci.ClassName FROM RegisterInfo ri
-                            INNER JOIN ClassInfo ci ON ci.ID = ri.ClassID WHERE ri.id = @Id")[0];
+                            INNER JOIN ClassInfo ci ON ci.ID = ri.ClassID WHERE ri.registerNo = @registerNo")[0];
         }
     }
 

@@ -12,8 +12,15 @@
 <link rel="stylesheet" href="Styles/reset.css" />
 <link rel="stylesheet" href="Styles/main.css" />
 <link rel="stylesheet" href="Styles/animateCSS3.css" />
-<style>
 
+<style type="text/css">
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+    margin:5px;
+    
+}
 fieldset
 {
     margin: 1em 0px;
@@ -86,6 +93,16 @@ select
     width: 400px;
     }
     .fuAttachment{margin-left:5px;}
+    .SubmitButton
+    {
+        width:114px;
+	height:34px;
+	margin-right:10px;
+	border:0;
+	cursor:pointer;
+	background:none;
+	font-size:14px;
+        }
 </style>
 <script type="text/javascript" src="Scripts/modernizr.custom-css.js"></script>
 <!--这个脚本要放这里，其它的可以放底部。用于HTML5及CSS3支持判断-->
@@ -132,40 +149,56 @@ select
 	
 </div>
 <!--内容1区结束-->
-<form method="post" runat="server">
+<form method="post" runat="server" id="FRegisterInfo">
 <section class="section1">
 <div class="m">
 <fieldset>
     <legend>基本信息</legend>
-     <p>报名号为自动分配，注册完后凭报名号登陆查询注册结果。</p>
-
-       <div class="lfloat">
+     <p>报名号为自动分配，注册完后凭报名号登陆查询注册结果。
+     <br />
+     <asp:LinkButton ID="lbCheckRegister" runat="server" onclick="lbCheckRegister_Click" CommandName="check">查看之前的报名信息</asp:LinkButton>
+     </p>
+     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vsErrorInfo"  CssClass="failureNotification" ></asp:ValidationSummary>
+       <div class="lfloat" id="lblRegisterNo" runat="server" visible="False">
       <asp:Label AssociatedControlID="tbRegisterNo" runat="server" Text="报名号：" CssClass="labelCss"></asp:Label>
-      
       <asp:TextBox ID="tbRegisterNo" name="RegisterNo" runat="server" CssClass="inputText" ReadOnly="true"></asp:TextBox>
+      <asp:CustomValidator ID="cvRegisterNo" runat="server" ErrorMessage="报名号不能为空" 
+               onservervalidate="cvRegisterNo_ServerValidate"></asp:CustomValidator>
       </div>
 
       <div class="lfloat">
       <asp:Label AssociatedControlID="tbRegistName" runat="server" Text="报名人：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbRegistName" name="RegistName" runat="server" CssClass="inputText" ClientIDMode="Static"></asp:TextBox>
+      <asp:RequiredFieldValidator  ControlToValidate="tbRegistName"  runat="server" ErrorMessage="报名人不能为空"  ValidationGroup="vsErrorInfo"  ToolTip="报名人不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
+       <asp:CustomValidator ID="cvRegistName" runat="server"  ControlToValidate="tbRegistName"
+              ErrorMessage="CustomValidator" onservervalidate="cvRegistName_ServerValidate"  ValidationGroup="vsErrorInfo"></asp:CustomValidator>
       </div>
       
       <div  class="lfloat">
       <asp:Label AssociatedControlID="tbQQ" runat="server" Text="QQ：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbQQ" name="QQ" runat="server" CssClass="inputText"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  ControlToValidate="tbQQ"  runat="server" ErrorMessage="QQ不能为空" ValidationGroup="vsErrorInfo" ToolTip="QQ不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
+       <asp:RegularExpressionValidator  ControlToValidate="tbQQ"  ValidationExpression="[1-9][0-9]{5,9}"  runat="server" ErrorMessage="QQ不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
+      
       </div>
       <div  class="lfloat">
       <asp:Label AssociatedControlID="tbEmail" runat="server" Text="Email：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbEmail" name="Email" runat="server" CssClass="inputText"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator2"   ControlToValidate="tbEmail" runat="server" ErrorMessage="Email不能为空" ValidationGroup="vsErrorInfo" ToolTip="Email不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
+      <asp:RegularExpressionValidator  ControlToValidate="tbEmail" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Email不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
       </div>
        <div class="lfloat">
       <asp:Label AssociatedControlID="tbPhone" runat="server" Text="电话：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbPhone" name="Phone" runat="server" CssClass="inputText"></asp:TextBox>
+      <asp:RequiredFieldValidator ControlToValidate="tbPhone"  runat="server" ErrorMessage="电话不能为空" ValidationGroup="vsErrorInfo"  ToolTip="电话不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
+      <asp:RegularExpressionValidator ControlToValidate="tbPhone" ValidationExpression="(d+-)?(d{4}-?d{7}|d{3}-?d{8}|^d{7,8})(-d+)?" runat="server" ErrorMessage="电话不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
       </div>
       
       <div class="lfloat">
       <asp:Label AssociatedControlID="tbAddress" runat="server" Text="地址：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbAddress" name="Address" runat="server" CssClass="inputText" TextMode="MultiLine"></asp:TextBox>
+      <asp:CustomValidator ID="cvAddress" runat="server"  ControlToValidate="tbAddress"
+              ErrorMessage="地址不能超过500个字符" ValidationGroup="vsErrorInfo"></asp:CustomValidator>
       </div>
       <div class="lfloat">
       <asp:Label ID="Label1" AssociatedControlID="tbIntro" runat="server" Text="个人简介：" CssClass="labelCss"></asp:Label>
@@ -179,6 +212,7 @@ select
               onselectedindexchanged="ddClassID_SelectedIndexChanged">
         <asp:ListItem Text="--请选报名的班级--"></asp:ListItem>
      </asp:DropDownList>
+     <asp:RequiredFieldValidator ControlToValidate="ddClassID" runat="server" ErrorMessage="班级不能为空" ToolTip="班级不能为空"  CssClass="failureNotification" ValidationGroup="vsErrorInfo">*</asp:RequiredFieldValidator>
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
               ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
               SelectCommand="SELECT [Intro], [ClassName], [Year], [EndTime], [IsFinish], [StartTime], [ID] FROM [ClassInfo] WHERE ([IsFinish] = @IsFinish)">
@@ -192,9 +226,21 @@ select
       <asp:Label  AssociatedControlID="fuAttachment" runat="server" Text="附件/作品：" CssClass="labelCss"></asp:Label>
       <asp:FileUpload ID="fuAttachment" runat="server" CssClass="fuAttachment"></asp:FileUpload>
       </div>
+       <br />
+       <div class="lfloat">
+      <asp:Label   AssociatedControlID="tbValidateCode" runat="server" Text="验证码：" CssClass="labelCss"></asp:Label>
+        <asp:TextBox ID="tbValidateCode" name="ValidateCode" runat="server" CssClass="inputText"></asp:TextBox>
+        <asp:Image ImageAlign="Middle" ID="imgValidator" ToolTip="点击更新验证码"  runat="server" ImageUrl="~/ImageValidator.aspx?len=4&type=1"/>
+        <asp:CustomValidator ID="CustomValidator1" ControlToValidate="tbValidateCode"  ValidationGroup="vsErrorInfo"
+               runat="server" ErrorMessage="验证码不正确" ToolTip="验证码不正确"  CssClass="failureNotification" 
+               onservervalidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
+      </div>
+      <br />
     <div class="send_box">
             <button type="reset" class="res_btn">重置</button>
-            <button type="submit" class="send_btn">提交</button>
+            <asp:Button runat="server" Text="提交"  CssClass="SubmitButton send_btn" ID="btnSubmit" ValidationGroup="vsErrorInfo" 
+                onclick="btnSubmit_Click" />
+            
     </div>
 </fieldset>
 </div>
@@ -202,7 +248,7 @@ select
 
 <footer class="footer"></footer>
 
-<asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+<asp:SqlDataSource ID="dsRegister" runat="server" 
     ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
     InsertCommand="INSERT INTO RegisterInfo(ID, RegistName, QQ, Email, Phone, Intro, Address, Status, CreateTime, RegisterNo, ClassID) VALUES (
 newid(), @RegistName, @QQ, @Email, @Phone, @Intro, @Address, 0, getdate(), @RegisterNo, @ClassID)"
@@ -289,8 +335,10 @@ where RegisterNo = @RegisterNo"
 <script type="text/javascript" >
     $(document).ready(function () {
         $('#register').click();
+        $('#<%=imgValidator.ClientID %>').click(function () {
+            document.getElementById('<%=imgValidator.ClientID %>').src = "ImageValidator.aspx?len=4&type=1&r" + Math.random();
+        });
     });
 </script>
-
 </body>
 </html>

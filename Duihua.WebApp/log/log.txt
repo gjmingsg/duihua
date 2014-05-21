@@ -2999,3 +2999,34 @@ Source: System.Web
    在 System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
 
 
+2014-05-22 00:28:22,343 [4744] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.fehfnx6z.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Duihua.Lib.Services.RegisterService.GetRegister(String registerNo) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\RegisterService.cs:行号 21
+   在 Duihua.WebApp.Register.lbCheckRegister_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 80
+   在 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
