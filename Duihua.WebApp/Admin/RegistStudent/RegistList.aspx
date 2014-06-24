@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/ListMasterPage.master" AutoEventWireup="true" CodeBehind="RegistList.aspx.cs" Inherits="Duihua.WebApp.Admin.RegistStudent.RegistList" %>
+﻿<%@ Page Title="报名情况" ValidateRequest="false" Language="C#" MasterPageFile="~/Admin/ListMasterPage.master" AutoEventWireup="true" CodeBehind="RegistList.aspx.cs" Inherits="Duihua.WebApp.Admin.RegistStudent.RegistList" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Script" runat="server">
 </asp:Content>
@@ -6,14 +6,21 @@
 <div id="listTemplate" runat="server">
   <div class="block"> 
             <div class="fl">
-                    <asp:Button runat="server" ID="btnNew" ClientIDMode="Static"   Text="添加班级"  onclick="btnNew_Click"/></div>
+                    <asp:Button runat="server" ID="btnNew" ClientIDMode="Static"   Text="添加报名学生"  onclick="btnNew_Click"/></div>
 			<div class="fr" id="search">
                 报名人名称:   <asp:TextBox runat="server" ID="tbRegistName" ></asp:TextBox>
 			    报名号:        <asp:TextBox runat="server" ID="tbRegisterNo" ></asp:TextBox>
-                注册状态：  <asp:DropDownList runat="server" ID="ddStatus">
-                            <asp:ListItem Value='0' Text="报名中"></asp:ListItem>
-                            <asp:ListItem Value='1' Text="结束报名"></asp:ListItem>
-                        </asp:DropDownList>
+                
+                <div class="hide">
+               报名的班级:  <asp:DropDownList ID="ddClassID" name="ClassID" runat="server" AutoPostBack="true" AppendDataBoundItems="true" 
+                        DataSourceID="dsClass" DataTextField="ClassName" DataValueField="ID" >
+                            <asp:ListItem Text="--请选报名的班级--" Value=""></asp:ListItem>
+                            </asp:DropDownList>
+     
+                            <asp:SqlDataSource ID="dsClass" runat="server"  ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
+                                SelectCommand="SELECT [Intro], [ClassName], [Year], [EndTime], [IsFinish], [StartTime], [ID] FROM [ClassInfo]">
+                            </asp:SqlDataSource>
+                            </div>
                         <asp:HiddenField ID="hdbegin" runat="server" />
                         <asp:HiddenField ID="hdend" runat="server" />
                         <asp:Button runat="server" ID="btnSearch" ClientIDMode="Static"   Text="搜索" onclick="btnSearch_Click"/>
@@ -25,12 +32,13 @@
          CssClass="fullwidth table_solid" AutoGenerateColumns="False" DataSourceID="ClassDataSource"
          DataKeyNames="ID">
              <Columns>
+                <asp:BoundField DataField="RegisterNo" HeaderText="报名号" />
                  <asp:BoundField DataField="RegistName" HeaderText="报名人"  />
                  <asp:BoundField DataField="QQ" HeaderText="QQ"/>
                  <asp:BoundField DataField="Email" HeaderText="Email"/>
                  <asp:BoundField DataField="Phone" HeaderText="手机"/>
                  <asp:BoundField DataField="ClassName" HeaderText="报名班级" />
-                 <asp:BoundField DataField="RegisterNo" HeaderText="报名号" />
+                
                  <asp:BoundField DataField="Address" HeaderText="地址" />
                  <asp:BoundField DataField="Status" HeaderText="注册状态" />
                  <asp:BoundField DataField="CreateTime" HeaderText="创建时间" />
@@ -38,10 +46,10 @@
        
         <ItemTemplate>
                 <asp:LinkButton ID="lbDelete"
-             CssClass="fl btn3"  runat="server" _Id='<%#Eval("ID") %>' OnClientClick="return confirm('确认要删除吗？');"  OnClick="lbOperator_Click"  CommandName="Delete" Text="删除"></asp:LinkButton>
-                <asp:LinkButton ID="lbEdit" _Id='<%#Eval("ID") %>'
+             CssClass="fl btn3"  runat="server" _Id='<%#Eval("RegisterNo") %>' OnClientClick="return confirm('确认要删除吗？');"  OnClick="lbOperator_Click"  CommandName="Delete" Text="删除"></asp:LinkButton>
+                <asp:LinkButton ID="lbEdit" _Id='<%#Eval("RegisterNo") %>'
              CssClass="fl btn2"  runat="server"  OnClick="lbOperator_Click" CommandName="EditReg" Text="编辑" ></asp:LinkButton>
-               <asp:LinkButton ID="lbView" _Id='<%#Eval("ID") %>'
+               <asp:LinkButton ID="lbView" _Id='<%#Eval("RegisterNo") %>'
              CssClass="fl btn5"  runat="server"   OnClick="lbOperator_Click" CommandName="View" Text="查看" ></asp:LinkButton>
         </ItemTemplate>
    </asp:TemplateField>
@@ -59,13 +67,17 @@ SELECT [RegisterInfo].[ID],
        ci.ClassName,
        [RegisterNo],
        [Address],
-       [Status],
+       case  [Status] when 1 then '通过报名' when 2 then  '不接受报名' when 0 then '注册报名中' end [Status],
        [CreateTime],
        ROW_NUMBER()OVER(ORDER BY [RegisterInfo].CreateTime DESC) pageIndex
 FROM   [RegisterInfo]
 INNER JOIN ClassInfo ci ON ci.ID = [RegisterInfo].ClassID
 WHERE  1 = 1
- order x.pageIndex asc"
+
+and RegisterNo like '%'+isnull( @RegisterNo ,'')+'%'
+and RegistName like '%'+isnull(@RegistName,'') +'%') x
+WHERE x.pageIndex BETWEEN @begin AND @end
+ order by x.pageIndex asc"
 
          UpdateCommand="     
 UPDATE [RegisterInfo]
@@ -109,16 +121,21 @@ VALUES
     @Address,
     @Status,
     GETDATE()
-  )" 
-        ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
-       >
+  )"  ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
+        oninserting="ClassDataSource_Inserting" >
+  <SelectParameters>
+     <asp:ControlParameter Name="RegistName" ControlID="tbRegistName" Type="String" ConvertEmptyStringToNull="false" />
+     <asp:ControlParameter Name="RegisterNo" ControlID="tbRegisterNo" Type="String" ConvertEmptyStringToNull="false"/>
+     <asp:ControlParameter ControlID="hdend"  ConvertEmptyStringToNull="false" Name="end" />
+     <asp:ControlParameter ControlID="hdbegin"  ConvertEmptyStringToNull="false" Name="begin" />
+  </SelectParameters>
     <UpdateParameters>
         <asp:ControlParameter Name="ID" Type="Object" ControlID="eID" />
         <asp:ControlParameter Name="RegistName" Type="String" ControlID="eRegistName"/>
         <asp:ControlParameter Name="QQ" Type="String" ControlID="eQQ" />
         <asp:ControlParameter Name="Email" Type="String"  ControlID="eEmail"/>
         <asp:ControlParameter Name="Phone" Type="String"  ControlID="ePhone"/>
-        <asp:ControlParameter Name="Intro" Type="String"  ControlID="eIntro"/>
+        <asp:ControlParameter Name="Intro" Type="String"  ControlID="eIntro"  PropertyName="InnerText"/>
         <asp:ControlParameter Name="ClassID" Type="Object" ControlID="ddClassName"/>
         <asp:ControlParameter Name="Address" Type="String" ControlID="eAddress" />
         <asp:ControlParameter Name="Status" Type="Int32"  ControlID="ddStatus"/>
@@ -129,10 +146,11 @@ VALUES
         <asp:ControlParameter Name="QQ" Type="String" ControlID="eQQ" />
         <asp:ControlParameter Name="Email" Type="String"  ControlID="eEmail"/>
         <asp:ControlParameter Name="Phone" Type="String"  ControlID="ePhone"/>
-        <asp:ControlParameter Name="Intro" Type="String"  ControlID="eIntro"/>
-        <asp:ControlParameter Name="ClassID" Type="Object" ControlID="ddClassName"/>
+        <asp:ControlParameter Name="Intro" Type="String"  ControlID="eIntro"  PropertyName="InnerText"/>
+        <asp:ControlParameter Name="ClassID" DbType="Guid" ControlID="ddClassName"/>
         <asp:ControlParameter Name="Address" Type="String" ControlID="eAddress" />
         <asp:ControlParameter Name="Status" Type="Int32"  ControlID="ddStatus"/>
+        <asp:ControlParameter Name="RegisterNo" Type="String"  ControlID="eRegisterNo"/>
     </InsertParameters>
     <DeleteParameters>
         <asp:Parameter Name="ID" Type="Object" />
@@ -148,7 +166,7 @@ VALUES
         </webdiyer:aspnetpager> 
     </div>
 
-  <div id="detailTemplate" runat="server">
+  <div id="detailTemplate" runat="server" visible="false">
    <fieldset >
     <fieldset >
     <legend>报名人信息</legend>
@@ -185,7 +203,7 @@ VALUES
    </fieldset>
   </div>
 
- <div id="editTemplate" runat="server">
+ <div id="editTemplate" runat="server"  visible="false">
  
                   
                     <span class="failureNotification">
@@ -202,8 +220,13 @@ VALUES
                                    ValidationGroup="RegisterArtValidationGroup"/>
                                 <asp:Button   runat="server" Text="关闭" onclick="btnBackList_Click"/>
                              </p>
+                             <p style="display:none">
+                              <asp:Label   AssociatedControlID="tbRegisterNo" runat="server" Text="报名号：" CssClass="labelCss"></asp:Label>
+                                <asp:TextBox ID="eRegisterNo" name="RegisterNo" runat="server" CssClass="inputText" ReadOnly="true"></asp:TextBox>
+      
+                            </p>
                             <p>
-                                <asp:Label runat="server" AssociatedControlID="eRegistName">报名人:</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="eRegistName" CssClass="labelCss">报名人:</asp:Label>
                                 <asp:TextBox ID="eRegistName" 
                                     runat="server" CssClass="textEntry" name="RegistName"></asp:TextBox>
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eRegistName" 
@@ -211,7 +234,15 @@ VALUES
                                      ValidationGroup="RegisterArtValidationGroup">*</asp:RequiredFieldValidator>
                             </p>
                             <p>
-                                <asp:Label runat="server" AssociatedControlID="eQQ">QQ:</asp:Label>
+                                <asp:Label  runat="server" AssociatedControlID="ddStatus"  CssClass="labelCss">报名状态:</asp:Label>
+                                <asp:DropDownList runat="server" ID="ddStatus" name="Status">
+                                <asp:ListItem Text="通过报名" Value="1"></asp:ListItem>
+                                <asp:ListItem Text="注册报名中" Value="0"></asp:ListItem>
+                                <asp:ListItem Text="不接受报名" Value="2"></asp:ListItem>
+                                </asp:DropDownList>
+                            </p>
+                            <p>
+                                <asp:Label runat="server" AssociatedControlID="eQQ"  CssClass="labelCss">QQ:</asp:Label>
                                 <asp:TextBox ID="eQQ" runat="server" 
                                     CssClass="textEntry" name="QQ"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="eQQ" 
@@ -219,7 +250,7 @@ VALUES
                                      ValidationGroup="RegisterArtValidationGroup">*</asp:RequiredFieldValidator>
                             </p>
                              <p>
-                                <asp:Label runat="server" AssociatedControlID="eEmail">Email:</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="eEmail"  CssClass="labelCss">Email:</asp:Label>
                                 <asp:TextBox ID="eEmail" runat="server" CssClass="textEntry"  name="Email"/>
                                  <asp:RequiredFieldValidator  runat="server" ControlToValidate="eEmail" 
                                      CssClass="failureNotification" ErrorMessage="必须填写“Email”。" ToolTip="必须填写“Email”。" 
@@ -227,7 +258,7 @@ VALUES
                                  
                             </p>
                             <p>
-                                 <asp:Label runat="server" AssociatedControlID="ePhone">手机:</asp:Label>
+                                 <asp:Label runat="server" AssociatedControlID="ePhone"  CssClass="labelCss">手机:</asp:Label>
                                   <asp:TextBox  ID="ePhone" runat="server" CssClass="textEntry"  name="Phone" />
                                   <asp:RequiredFieldValidator  runat="server" ControlToValidate="ePhone" 
                                      CssClass="failureNotification" ErrorMessage="必须填写“手机”。" ToolTip="必须填写“手机”。" 
@@ -235,22 +266,24 @@ VALUES
                                 
                             </p>
                             <p>
-                                <asp:Label runat="server" AssociatedControlID="ddClassName">班级:</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="ddClassName"  CssClass="labelCss">班级:</asp:Label>
                                 <asp:DropDownList runat="server" ID="ddClassName" name="ClassName" AppendDataBoundItems="true"
                                  DataSourceID="ClassNameDataSource" DataValueField="ID" DataTextField="ClassName">
+                                
                                     <asp:ListItem Text="--请选择班级--" Value=""></asp:ListItem>
                                 </asp:DropDownList>
+                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="ddClassName" runat="server" ErrorMessage="班级不能为空" ToolTip="班级不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
                                 <asp:SqlDataSource ID="ClassNameDataSource" runat="server"    ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
                                    SelectCommand="SELECT ci.ID,ci.ClassName FROM ClassInfo ci WHERE  ci.IsFinish = 0"
                                 ></asp:SqlDataSource>
                             </p>
                               <p>
-                                <asp:Label runat="server" AssociatedControlID="eAddress">地址:</asp:Label>
+                                <asp:Label runat="server" AssociatedControlID="eAddress"  CssClass="labelCss">地址:</asp:Label>
                                   <asp:TextBox  ID="eAddress" runat="server" CssClass="textEntry"  name="Address" />
                             </p>
                         </fieldset>
 
-                         <p><asp:Label ID="Label12" AssociatedControlID="eIntro" runat="server">自我简介:</asp:Label>
+                         <p><asp:Label ID="Label12" AssociatedControlID="eIntro" runat="server"  CssClass="labelCss">自我简介:</asp:Label>
                              <div>
                                  <textarea id="eIntro" name="Intro" runat="server" cols="20" rows="2" clientidmode="Static"></textarea>
 

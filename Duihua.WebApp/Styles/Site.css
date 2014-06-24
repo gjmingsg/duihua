@@ -10,7 +10,12 @@ body
     padding: 0px;
     color: #696969;
 }
-
+  .labelCss
+	    {
+	        margin:5px 5px;
+	        width:150px;
+	        display:inline-block;
+	        }
 a:link, a:visited
 {
     color: #034af3;

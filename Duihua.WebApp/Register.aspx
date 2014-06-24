@@ -156,7 +156,7 @@ select
     <legend>基本信息</legend>
      <p>报名号为自动分配，注册完后凭报名号登陆查询注册结果。
      <br />
-     <asp:LinkButton ID="lbCheckRegister" runat="server" onclick="lbCheckRegister_Click" CommandName="check">查看之前的报名信息</asp:LinkButton>
+     <asp:LinkButton ID="lbCheckRegister" runat="server"  onclick="lbCheckRegister_Click" CommandName="check">查看之前的报名信息</asp:LinkButton>
      </p>
      <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vsErrorInfo"  CssClass="failureNotification" ></asp:ValidationSummary>
        <div class="lfloat" id="lblRegisterNo" runat="server" visible="False">
@@ -191,7 +191,7 @@ select
       <asp:Label AssociatedControlID="tbPhone" runat="server" Text="电话：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbPhone" name="Phone" runat="server" CssClass="inputText"></asp:TextBox>
       <asp:RequiredFieldValidator ControlToValidate="tbPhone"  runat="server" ErrorMessage="电话不能为空" ValidationGroup="vsErrorInfo"  ToolTip="电话不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
-      <asp:RegularExpressionValidator ControlToValidate="tbPhone" ValidationExpression="(d+-)?(d{4}-?d{7}|d{3}-?d{8}|^d{7,8})(-d+)?" runat="server" ErrorMessage="电话不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
+   <%--   <asp:RegularExpressionValidator ControlToValidate="tbPhone" ValidationExpression="(d+-)?(d{4}-?d{7}|d{3}-?d{8}|^d{7,8})(-d+)?" runat="server" ErrorMessage="电话不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>--%>
       </div>
       
       <div class="lfloat">
@@ -254,7 +254,7 @@ select
 newid(), @RegistName, @QQ, @Email, @Phone, @Intro, @Address, 0, getdate(), @RegisterNo, @ClassID)"
     SelectCommand="SELECT ID, QQ, RegistName, Email, Status, Address, CreateTime, RegisterNo, ClassID, Intro, Phone FROM RegisterInfo
 where RegisterNo = @RegisterNo" 
-    UpdateCommand="UPDATE RegisterInfo SET RegistName =@RegistName , QQ =@QQ , Email =@Email , Phone =@Phone , Intro =@Intro , Address =@Address , Status =@Status , CreateTime =@CreateTime , RegisterNo =@RegisterNo , ClassID =@ClassID  WHERE RegisterNo = @RegisterNo">
+    UpdateCommand="UPDATE RegisterInfo SET RegistName =@RegistName , QQ =@QQ , Email =@Email , Phone =@Phone , Intro =@Intro , Address =@Address ,  CreateTime =@CreateTime , RegisterNo =@RegisterNo , ClassID =@ClassID  WHERE RegisterNo = @RegisterNo">
     <InsertParameters>
         <asp:ControlParameter ControlID="tbRegistName" Name="RegistName" />
         <asp:ControlParameter ControlID="tbQQ" Name="QQ" />
@@ -263,7 +263,7 @@ where RegisterNo = @RegisterNo"
         <asp:ControlParameter ControlID="tbIntro" Name="Intro" />
         <asp:ControlParameter ControlID="tbAddress" Name="Address" />
         <asp:ControlParameter ControlID="tbRegisterNo" Name="RegisterNo" PropertyName="Text"/>
-        <asp:ControlParameter ControlID="ddClassID" Name="ClassID" />
+        <asp:ControlParameter ControlID="ddClassID" Name="ClassID" PropertyName="SelectedValue" />
     </InsertParameters>
     <SelectParameters>
         <asp:ControlParameter ControlID="tbRegisterNo" Name="RegisterNo" 
@@ -277,7 +277,7 @@ where RegisterNo = @RegisterNo"
         <asp:ControlParameter ControlID="tbIntro" Name="Intro" />
         <asp:ControlParameter ControlID="tbAddress" Name="Address" />
         <asp:ControlParameter ControlID="tbRegisterNo" Name="RegisterNo" PropertyName="Text"/>
-        <asp:ControlParameter ControlID="ddClassID" Name="ClassID" />
+        <asp:ControlParameter ControlID="ddClassID" Name="ClassID"  PropertyName="SelectedValue" />
     </UpdateParameters>
 </asp:SqlDataSource>
 </form>

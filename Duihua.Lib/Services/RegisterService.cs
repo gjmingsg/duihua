@@ -9,17 +9,31 @@ namespace Duihua.Lib.Services
     public class RegisterService
     {
         private readonly DBHelper _dao = new DBHelper();
-        public int GetRegisterCount(string registerName,string registerNo,string status) {
-            var ret = _dao.QueryScalar(new Dictionary<string, object>() { { "registerName", registerName }, { "registerNo", registerNo }, { "status", status } },
-                @"SELECT COUNT(1) FROM RegisterInfo ri WHERE RegistName like '%'+@registerName+'%'
-                    and registerNo = @registerNo
-                    and status = @status");
+        public int GetRegisterCount(string registerName,string registerNo,string classId) {
+            var dic = new Dictionary<string, object>() { { "registerName", registerName }, { "registerNo", registerNo }};
+            if (string.IsNullOrEmpty(classId))
+                dic.Add("ClassID", DBNull.Value);
+            else
+                dic.Add("ClassID", classId);
+            var ret = _dao.QueryScalar(dic,
+                @"SELECT COUNT(1) FROM RegisterInfo  WHERE RegistName like '%'+@registerName+'%'
+                    and registerNo like '%'+ @registerNo +'%'
+                    and (@ClassID is null or ClassID = @ClassID)");
             return int.Parse(ret.ToString());
         }
         public Dictionary<String, Object> GetRegister(String registerNo)
         {
             return _dao.QueryListData(new Dictionary<string, object>() { { "registerNo", registerNo } },
-                            @"SELECT ri.*,ci.ClassName FROM RegisterInfo ri
+                            @"SELECT ri.[ID]
+      ,ri.[RegistName]
+      ,ri.[QQ]
+      ,ri.[Email]
+      ,ri.[Phone]
+      ,ri.[Intro]
+      ,ri.[ClassID]
+      ,ri.[RegisterNo]
+      ,ri.[CreateTime]
+      ,ri.[Address],case  ri.[Status] when 1 then '通过报名' when 2 then  '不接受报名' when 0 then '注册报名中' end [Status],ci.ClassName FROM RegisterInfo ri
                             INNER JOIN ClassInfo ci ON ci.ID = ri.ClassID WHERE ri.registerNo = @registerNo")[0];
         }
     }

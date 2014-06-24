@@ -37,7 +37,7 @@ namespace Duihua.WebApp
             if (string.IsNullOrEmpty(tbRegisterNo.Text))
             {
                 int count = r.GetRegisterCount(null, null, null);
-                tbRegisterNo.Text = string.Format("{0:yyyyMMddHHmmss}",DateTime.Now) + string.Format("%05i",count);
+                tbRegisterNo.Text = string.Format("{0:yyyyMMddHHmmss}",DateTime.Now) + string.Format("%05d",count);
                 dsRegister.Insert();
                 lblRegisterNo.Visible = true;
             }
@@ -47,8 +47,8 @@ namespace Duihua.WebApp
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            string validateCode = Session["CheckStr"].ToString();
-            if (tbValidateCode.Text.Equals(validateCode))
+            string validateCode = Session["CheckStr"].ToString().ToLower();
+            if (tbValidateCode.Text.ToLower().Equals(validateCode))
                 args.IsValid = true;
             else
                 args.IsValid = false;

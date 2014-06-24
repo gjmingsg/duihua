@@ -49,13 +49,22 @@ namespace Duihua.WebApp.Admin.RegistStudent {
         protected global::System.Web.UI.WebControls.TextBox tbRegisterNo;
         
         /// <summary>
-        /// ddStatus 控件。
+        /// ddClassID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddStatus;
+        protected global::System.Web.UI.WebControls.DropDownList ddClassID;
+        
+        /// <summary>
+        /// dsClass 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsClass;
         
         /// <summary>
         /// hdbegin 控件。
@@ -157,6 +166,15 @@ namespace Duihua.WebApp.Admin.RegistStudent {
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
+        /// eRegisterNo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox eRegisterNo;
+        
+        /// <summary>
         /// eRegistName 控件。
         /// </summary>
         /// <remarks>
@@ -164,6 +182,15 @@ namespace Duihua.WebApp.Admin.RegistStudent {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox eRegistName;
+        
+        /// <summary>
+        /// ddStatus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddStatus;
         
         /// <summary>
         /// eQQ 控件。
@@ -209,6 +236,15 @@ namespace Duihua.WebApp.Admin.RegistStudent {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddClassName;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// ClassNameDataSource 控件。

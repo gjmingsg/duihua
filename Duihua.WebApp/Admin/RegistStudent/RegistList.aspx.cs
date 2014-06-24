@@ -19,7 +19,7 @@ namespace Duihua.WebApp.Admin.RegistStudent
                 hdbegin.Value = "1";
                 hdend.Value = AspNetPager1.PageSize.ToString();
             }
-            AspNetPager1.RecordCount = cl.GetRegisterCount(tbRegistName.Text,tbRegisterNo.Text,ddStatus.SelectedValue);
+            AspNetPager1.RecordCount = cl.GetRegisterCount(tbRegistName.Text,tbRegisterNo.Text,ddClassID.SelectedValue);
             lblCount.Text = AspNetPager1.RecordCount.ToString();
         }
 
@@ -84,11 +84,16 @@ namespace Duihua.WebApp.Admin.RegistStudent
             {
                 ClassDataSource.DeleteParameters.Add("@ID", id);
                 ClassDataSource.Delete();
-                AspNetPager1.RecordCount = cl.GetRegisterCount(tbRegistName.Text, tbRegisterNo.Text, ddStatus.SelectedValue) - 1;
+                AspNetPager1.RecordCount = cl.GetRegisterCount(tbRegistName.Text, tbRegisterNo.Text, ddClassID.SelectedValue) - 1;
                 lblCount.Text = AspNetPager1.RecordCount.ToString();
 
             }
         }
         protected string GetFullContextPath { get { return WebHelper.GetContextPath(Request); } }
+
+        protected void ClassDataSource_Inserting(object sender, SqlDataSourceCommandEventArgs e)
+        {
+            e.Command.Parameters["@RegisterNo"].Value=string.Format("{0:yyyyMMddHHmmss}", DateTime.Now) + string.Format("%05d", lblCount.Text);
+        }
     }
 }
