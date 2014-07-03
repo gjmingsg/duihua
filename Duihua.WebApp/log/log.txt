@@ -1,743 +1,37 @@
-2014-05-22 06:14:33,238 [712] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+2014-05-26 23:52:05,362 [6920] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpCompileException
+Message: e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx(8): error CS0103: 当前上下文中不存在名称“imgValidator”
 Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.1ipd3di0.0.cs:行号 0
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-05-26 23:55:39,009 [1788] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
    在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 41
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:16:02,688 [2520] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+2014-05-26 23:55:39,014 [8068] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
 Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.1ipd3di0.0.cs:行号 0
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
    在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 41
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:17:39,324 [5016] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.1ipd3di0.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 41
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:20:13,717 [2232] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.roqjzjpv.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 41
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:21:26,440 [712] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.roqjzjpv.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 必须声明标量变量 "@Status"。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteUpdate(IDictionary keys, IDictionary values, IDictionary oldValues)
-   在 System.Web.UI.WebControls.SqlDataSource.Update()
-   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 45
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:22:31,594 [3704] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_qgmi4dbm.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 'x' 附近有语法错误。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
-   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
-   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteSelect(DataSourceSelectArguments arguments)
-   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
-   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
-   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
-   在 System.Web.UI.WebControls.GridView.DataBind()
-   在 System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
-   在 System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls()
-   在 System.Web.UI.Control.EnsureChildControls()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:33:46,226 [5736] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_vfje4z1c.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 'x' 附近有语法错误。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
-   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
-   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
-   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteSelect(DataSourceSelectArguments arguments)
-   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
-   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
-   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
-   在 System.Web.UI.WebControls.GridView.DataBind()
-   在 System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
-   在 System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls()
-   在 System.Web.UI.Control.EnsureChildControls()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Control.PreRenderRecursiveInternal()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:49:58,931 [2224] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_x5zr0vmd.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 必须声明标量变量 "@ClassID"。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
-   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
-   在 Duihua.Lib.Common.DBHelper.QueryScalar(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 164
-   在 Duihua.Lib.Services.RegisterService.GetRegisterCount(String registerName, String registerNo, String classId) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\RegisterService.cs:行号 16
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.Page_Load(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 22
-   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:51:57,742 [2224] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_vfdf2ymx.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlDataReader.HasMoreRows()
-   在 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
-   在 System.Data.SqlClient.SqlDataReader.Read()
-   在 System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
-   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
-   在 Duihua.Lib.Common.DBHelper.QueryScalar(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 164
-   在 Duihua.Lib.Services.RegisterService.GetRegisterCount(String registerName, String registerNo, String classId) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\RegisterService.cs:行号 16
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.Page_Load(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 22
-   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:53:09,783 [2224] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_k3c1nljf.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 将字符串转换为 uniqueidentifier 时失败。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlDataReader.HasMoreRows()
-   在 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
-   在 System.Data.SqlClient.SqlDataReader.Read()
-   在 System.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
-   在 System.Data.SqlClient.SqlCommand.ExecuteScalar()
-   在 Duihua.Lib.Common.DBHelper.QueryScalar(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 164
-   在 Duihua.Lib.Services.RegisterService.GetRegisterCount(String registerName, String registerNo, String classId) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\RegisterService.cs:行号 18
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.Page_Load(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 22
-   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
-   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
-   在 System.Web.UI.Control.OnLoad(EventArgs e)
-   在 System.Web.UI.Control.LoadRecursive()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:58:19,013 [2224] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_classlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_0bea4jk2.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: DELETE 语句与 REFERENCE 约束"FK_REGISTER_REFERENCE_CLASSINF"冲突。该冲突发生于数据库"Duihua"，表"dbo.RegisterInfo", column 'ClassID'。
-语句已终止。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDelete(IDictionary keys, IDictionary oldValues)
-   在 System.Web.UI.DataSourceView.Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback)
-   在 System.Web.UI.WebControls.GridView.HandleDelete(GridViewRow row, Int32 rowIndex)
-   在 System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
-   在 System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
-   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   在 System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
-   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   在 System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
-   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 06:58:25,340 [4116] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_classlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_0bea4jk2.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: DELETE 语句与 REFERENCE 约束"FK_REGISTER_REFERENCE_CLASSINF"冲突。该冲突发生于数据库"Duihua"，表"dbo.RegisterInfo", column 'ClassID'。
-语句已终止。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDelete(IDictionary keys, IDictionary oldValues)
-   在 System.Web.UI.DataSourceView.Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback)
-   在 System.Web.UI.WebControls.GridView.HandleDelete(GridViewRow row, Int32 rowIndex)
-   在 System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
-   在 System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
-   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   在 System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
-   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
-   在 System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
-   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:08:23,052 [1016] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpRequestValidationException
-Message: 从客户端(ctl00$ctl00$ContentPlaceHolderContainer$List$eIntro="<p>1</p>")中检测到有潜在危险的 Request.Form 值。
-Source: System.Web
-   在 System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
-   在 System.Web.HttpRequest.ValidateNameValueCollection(NameValueCollection nvc, RequestValidationSource requestCollection)
-   在 System.Web.HttpRequest.get_Form()
-   在 System.Web.HttpRequest.get_HasForm()
-   在 System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
-   在 System.Web.UI.Page.DeterminePostBackMode()
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_bxtroqfa.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-2014-05-22 07:09:31,550 [6992] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_dlj2kkfc.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.InvalidOperationException
-Message: 必须将 PropertyName 设置为 ControlParameter“Intro”中名为“eIntro”的控件的有效属性名。
-Source: System.Web
-   在 System.Web.UI.WebControls.ControlParameter.Evaluate(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.Parameter.UpdateValue(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.ParameterCollection.UpdateValues(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.ParameterCollection.GetValues(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.SqlDataSourceView.InitializeParameters(DbCommand command, ParameterCollection parameters, IDictionary exclusionList)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.btnSave_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 46
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:10:29,248 [6276] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_ph4xky24.1.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.InvalidOperationException
-Message: 未能在 ControlParameter“Status”中找到控件“ddStatus”。
-Source: System.Web
-   在 System.Web.UI.WebControls.ControlParameter.Evaluate(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.Parameter.UpdateValue(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.ParameterCollection.UpdateValues(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.ParameterCollection.GetValues(HttpContext context, Control control)
-   在 System.Web.UI.WebControls.SqlDataSourceView.InitializeParameters(DbCommand command, ParameterCollection parameters, IDictionary exclusionList)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.btnSave_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 46
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:20:33,383 [3232] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_omwt3eh2.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 必须声明标量变量 "@RegisterNo"。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.btnSave_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 46
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:25:39,046 [6488] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_mc3kxwca.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 不允许从数据类型 sql_variant 到 uniqueidentifier 的隐式转换。请使用 CONVERT 函数来运行此查询。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.btnSave_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 46
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:26:25,569 [5064] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_mc3kxwca.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.Data.SqlClient.SqlException
-Message: 不允许从数据类型 sql_variant 到 uniqueidentifier 的隐式转换。请使用 CONVERT 函数来运行此查询。
-Source: .Net SqlClient Data Provider
-   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
-   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
-   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
-   在 System.Web.UI.WebControls.SqlDataSource.Insert()
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.btnSave_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 46
-   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:34:48,338 [3460] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpUnhandledException
-Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
-Source: System.Web
-   在 System.Web.UI.Page.HandleError(Exception e)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-   在 System.Web.UI.Page.ProcessRequest()
-   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
-   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
-   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_wmfx4kkk.0.cs:行号 0
-   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
-   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
-
-Nested Exception
-
-Exception: System.ArgumentOutOfRangeException
-Message: 索引超出范围。必须为非负值并小于集合大小。
-参数名: index
-Source: mscorlib
-   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
-   在 System.Collections.Generic.List`1.get_Item(Int32 index)
-   在 Duihua.Lib.Services.RegisterService.GetRegister(String registerNo) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\RegisterService.cs:行号 26
-   在 Duihua.WebApp.Admin.RegistStudent.RegistList.lbOperator_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 78
-   在 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
-   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
-   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
-   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
-
-
-2014-05-22 07:41:29,154 [5980] ERROR Duihua.WebApp.Global [48] - Exception: System.Web.HttpParseException
-Message: System.Web.UI.WebControls.ListItemCollection 必须具有类型为“System.Web.UI.WebControls.ListItem”的项。“asp:RequiredFieldValidator”的类型为“System.Web.UI.WebControls.RequiredFieldValidator”。
+2014-05-27 21:41:13,650 [8260] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpParseException
+Message: 标记包含重复的“ValidationGroup”特性。
 Source: System.Web
    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
    在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
@@ -761,7 +55,7 @@ Source: System.Web
 Nested Exception
 
 Exception: System.Web.HttpParseException
-Message: System.Web.UI.WebControls.ListItemCollection 必须具有类型为“System.Web.UI.WebControls.ListItem”的项。“asp:RequiredFieldValidator”的类型为“System.Web.UI.WebControls.RequiredFieldValidator”。
+Message: 标记包含重复的“ValidationGroup”特性。
 Source: System.Web
    在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
    在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
@@ -770,13 +64,1301 @@ Source: System.Web
 Nested Exception
 
 Exception: System.Web.HttpException
-Message: System.Web.UI.WebControls.ListItemCollection 必须具有类型为“System.Web.UI.WebControls.ListItem”的项。“asp:RequiredFieldValidator”的类型为“System.Web.UI.WebControls.RequiredFieldValidator”。
+Message: 标记包含重复的“ValidationGroup”特性。
 Source: System.Web
-   在 System.Web.UI.CollectionBuilder.GetChildControlType(String tagName, IDictionary attribs)
-   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
-   在 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
    在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
    在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
 
 
 
+2014-05-27 21:41:43,471 [8904] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_smn12las.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 24
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 21:43:26,720 [8924] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_smn12las.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 24
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 21:50:47,490 [7508] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_horgjguw.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 23
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 21:51:26,395 [7508] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_horgjguw.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 23
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 21:51:54,774 [9896] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_horgjguw.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 23
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 21:56:29,595 [6508] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_login_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_horgjguw.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Admin.Account.Login.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\Account\Login.aspx.cs:行号 23
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-27 22:14:10,227 [7652] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.ezk-kkar.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 Duihua.Lib.Services.DefaultService.GetContact() 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\DefaultService.cs:行号 117
+   在 Duihua.WebApp._Default.get_Contact() 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx.cs:行号 153
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 431
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 18:47:41,797 [3084] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.3fyb9qyt.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 19:05:01,901 [4728] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.3fyb9qyt.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 19:32:11,385 [3008] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.nkmkq9qn.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 19:34:06,231 [3980] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.dmj4uu-a.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:19:55,165 [3980] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.6vzq-ldd.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:20:52,540 [8288] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.6vzq-ldd.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 188
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:26:03,799 [12400] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.-f-npadr.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:27:19,460 [12136] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.-f-npadr.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:29:06,976 [12136] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.-f-npadr.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:36:16,962 [6456] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.-f-npadr.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 21:59:14,618 [12156] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.-f-npadr.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-05-28 22:50:25,707 [10832] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_fkbxnri2.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 9
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-04 10:37:56,505 [3452] ERROR Duihua.WebApp.Global [47] - Exception: System.Configuration.ConfigurationErrorsException
+Message: 在应用程序级别之外使用注册为 allowDefinition='MachineToApplication' 的节是错误的。如果在 IIS 中没有将虚拟目录配置为应用程序，则可能导致此错误。 (E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\admin\web.config line 4)
+Source: System.Configuration
+   在 System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   在 System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+   在 System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   在 System.Web.Configuration.RuntimeConfig.GetSectionObject(String sectionName)
+   在 System.Web.Configuration.RuntimeConfig.GetSection(String sectionName, Type type, ResultsIndex index)
+   在 System.Web.Configuration.RuntimeConfig.get_Identity()
+   在 System.Web.HttpContext.get_ImpersonationToken()
+   在 System.Web.ClientImpersonationContext.Start(HttpContext context, Boolean throwOnError)
+   在 System.Web.HttpApplication.ThreadContext.Enter(Boolean setImpersonationContext)
+   在 System.Web.HttpApplication.OnThreadEnterPrivate(Boolean setImpersonationContext)
+   在 System.Web.HttpApplication.ApplicationStepManager.ResumeSteps(Exception error)
+
+2014-06-12 23:52:07,191 [5756] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_userlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_djx1vpno.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.MissingMethodException
+Message: 没有为该对象定义无参数的构造函数。
+Source: mscorlib
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean fillCache)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Web.UI.WebControls.ObjectDataSourceView.BuildDataObject(Type dataObjectType, IDictionary inputParameters)
+   在 System.Web.UI.WebControls.ObjectDataSourceView.ExecuteDelete(IDictionary keys, IDictionary oldValues)
+   在 System.Web.UI.DataSourceView.Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback)
+   在 System.Web.UI.WebControls.GridView.HandleDelete(GridViewRow row, Int32 rowIndex)
+   在 System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   在 System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-12 23:53:46,882 [4304] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_userlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_aemnrkzt.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.InvalidOperationException
+Message: 除非指定 SelectMethod，否则 ObjectDataSource“dbdUserList”不支持 Select 操作。
+Source: System.Web
+   在 System.Web.UI.WebControls.ObjectDataSourceView.ExecuteSelect(DataSourceSelectArguments arguments)
+   在 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   在 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   在 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   在 System.Web.UI.WebControls.GridView.DataBind()
+   在 System.Web.UI.WebControls.BaseDataBoundControl.EnsureDataBound()
+   在 System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls()
+   在 System.Web.UI.Control.EnsureChildControls()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-12 23:54:22,494 [3928] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_userlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_guy2jyz1.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.MissingMethodException
+Message: 没有为该对象定义无参数的构造函数。
+Source: mscorlib
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean skipCheckThis, Boolean fillCache)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Web.UI.WebControls.ObjectDataSourceView.BuildDataObject(Type dataObjectType, IDictionary inputParameters)
+   在 System.Web.UI.WebControls.ObjectDataSourceView.ExecuteDelete(IDictionary keys, IDictionary oldValues)
+   在 System.Web.UI.DataSourceView.Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback)
+   在 System.Web.UI.WebControls.GridView.HandleDelete(GridViewRow row, Int32 rowIndex)
+   在 System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   在 System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-13 00:01:17,346 [5976] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_account_userlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_bzfg52uz.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NotSupportedException
+Message: 除非指定 DeleteMethod，否则 ObjectDataSource“dbdUserList”不支持删除。
+Source: System.Web
+   在 System.Web.UI.WebControls.ObjectDataSourceView.ExecuteDelete(IDictionary keys, IDictionary oldValues)
+   在 System.Web.UI.DataSourceView.Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback)
+   在 System.Web.UI.WebControls.GridView.HandleDelete(GridViewRow row, Int32 rowIndex)
+   在 System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   在 System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   在 System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   在 System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-20 22:26:02,535 [5432] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-20 22:31:17,320 [5380] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-20 22:36:25,294 [2444] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_register.aspx.cdcab7d2.-3o3zzdl.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Data.SqlClient.SqlException
+Message: 将字符串转换为 uniqueidentifier 时失败。
+Source: .Net SqlClient Data Provider
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   在 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   在 System.Data.SqlClient.SqlDataReader.Read()
+   在 Duihua.Lib.Common.DBHelper.QueryListData(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 187
+   在 Duihua.Lib.Services.ClassService.GetClass(String id) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\ClassService.cs:行号 21
+   在 Duihua.WebApp.Register.ddClassID_SelectedIndexChanged(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 25
+   在 System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   在 System.Web.UI.WebControls.DropDownList.RaisePostDataChangedEvent()
+   在 System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   在 System.Web.UI.Page.RaiseChangedEvents()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-24 22:17:07,602 [264] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_default.aspx.cdcab7d2.ayw-yacf.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 99
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-24 22:17:40,253 [3720] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-25 00:05:16,536 [5136] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpCompileException
+Message: e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Item.aspx(152): error CS0103: 当前上下文中不存在名称“defaultMenu”
+Source: System.Web
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-25 00:17:34,079 [6152] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpCompileException
+Message: e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx(272): error CS1026: 应输入 )
+Source: System.Web
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-25 00:17:47,650 [4680] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpCompileException
+Message: e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx(265): error CS0103: 当前上下文中不存在名称“Result”
+Source: System.Web
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-06-25 00:18:06,322 [7840] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_mhkrjlfv.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentException
+Message: 已添加了具有相同键的项。
+Source: mscorlib
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 Duihua.Lib.Common.DBHelper.QueryListData(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 196
+   在 Duihua.Lib.Services.DefaultService.GetResult() 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\DefaultService.cs:行号 170
+   在 Duihua.WebApp._Default.get_Result() 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx.cs:行号 182
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 265
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-25 00:19:09,556 [7936] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.detail_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_nh1qksxj.2.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Data.SqlClient.SqlException
+Message: 列名 'Status' 无效。
+Source: .Net SqlClient Data Provider
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader()
+   在 Duihua.Lib.Common.DBHelper.QueryListData(Dictionary`2 obj, String sql) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\DBHelper.cs:行号 185
+   在 Duihua.Lib.Services.DetailService.GetArticleList(String Id) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Services\DetailService.cs:行号 20
+   在 Duihua.WebApp.Detail.get_ArticleList() 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Detail.aspx.cs:行号 32
+   在 ASP.detail_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Detail.aspx:行号 69
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-25 00:25:52,575 [6612] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-06-25 00:36:10,237 [3956] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-06-25 00:36:13,388 [7372] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-06-25 00:36:16,079 [3956] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-06-25 00:36:17,231 [7756] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-06-25 00:36:23,574 [7968] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-06-25 00:36:31,325 [7756] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-06-25 00:36:31,336 [7756] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.default_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_kg05zefu.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Collections.Generic.KeyNotFoundException
+Message: 给定关键字不在字典中。
+Source: mscorlib
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 ASP.default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 e:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Default.aspx:行号 99
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-06-25 00:37:33,693 [6756] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:18:45,249 [3644] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:20:47,083 [6684] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:21:03,195 [4356] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:22:50,928 [3644] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:22:51,527 [3644] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:23:56,985 [6684] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:23:57,283 [7416] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:31:43,529 [6684] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:31:44,034 [6124] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:32:53,452 [8184] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:32:54,148 [7952] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:33:24,150 [7724] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:33:24,441 [8184] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:33:32,475 [6124] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:33:33,002 [6124] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:38:26,979 [6540] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:38:27,573 [6540] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:43:04,506 [5548] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:43:04,923 [5380] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:45:33,801 [6364] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:45:35,769 [6352] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:46:14,271 [7856] INFO  Duihua.WebApp.Detail [18] - 来自IP:::1的访问
+2014-07-04 00:46:15,023 [5452] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:47:44,868 [6192] INFO  Duihua.WebApp.Detail [18] - 来自IP:::1的访问
+2014-07-04 00:47:45,761 [6192] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:47:48,177 [6868] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:47:49,095 [7616] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:47:59,291 [6192] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:48:11,190 [7616] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:48:11,562 [6192] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:48:16,135 [6868] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:48:16,579 [7940] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpException
+Message: 文件不存在。
+Source: System.Web
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+2014-07-04 00:48:22,114 [6964] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.item_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_3fycaa5t.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Web.HttpException
+Message: 仅在引用母版页的内容页中允许内容控件。
+Source: System.Web
+   在 System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   在 System.Web.UI.Page.get_Master()
+   在 System.Web.UI.Page.ApplyMasterPage()
+   在 System.Web.UI.Page.PerformPreInit()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-07-04 00:48:48,944 [6868] INFO  Duihua.WebApp.Item [25] - 来自IP:::1的访问
+2014-07-04 00:48:54,347 [6868] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:50:57,505 [5364] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 00:51:25,016 [3644] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:51:58,542 [8068] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:52:08,912 [8068] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:52:09,344 [8068] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_gyhvkiy2.4.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.Data.SqlClient.SqlException
+Message: INSERT 语句中列的数目小于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
+Source: .Net SqlClient Data Provider
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteDbCommand(DbCommand command, DataSourceOperation operation)
+   在 System.Web.UI.WebControls.SqlDataSourceView.ExecuteInsert(IDictionary values)
+   在 System.Web.UI.WebControls.SqlDataSource.Insert()
+   在 Duihua.WebApp.Register.btnSubmit_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 43
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-07-04 00:52:46,491 [6784] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:54:50,999 [5520] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:54:51,056 [5520] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.register_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_aekvhayp.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.NullReferenceException
+Message: 未将对象引用设置到对象的实例。
+Source: Duihua.WebApp
+   在 Duihua.WebApp.Register.CustomValidator1_ServerValidate(Object source, ServerValidateEventArgs args) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Register.aspx.cs:行号 52
+   在 System.Web.UI.WebControls.CustomValidator.OnServerValidate(String value)
+   在 System.Web.UI.WebControls.CustomValidator.EvaluateIsValid()
+   在 System.Web.UI.WebControls.BaseValidator.Validate()
+   在 System.Web.UI.Page.Validate(String validationGroup)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-07-04 00:55:54,128 [8100] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:56:54,695 [2752] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:56:57,973 [8100] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:57:12,450 [8100] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 00:57:19,179 [8100] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:57:21,118 [2752] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:57:24,446 [8100] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:58:08,301 [6192] INFO  Duihua.WebApp.Admin.AdminDefault [25] - 来自IP:::1的访问。访问者：admin
+2014-07-04 00:58:19,501 [6192] ERROR Duihua.WebApp.Global [47] - Exception: System.Web.HttpUnhandledException
+Message: 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source: System.Web
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.admin_registstudent_registlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\guojmmy\AppData\Local\Temp\Temporary ASP.NET Files\root\22176597\c097cf28\App_Web_qb0w3sm2.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Nested Exception
+
+Exception: System.ArgumentOutOfRangeException
+Message: “ddStatus”有一个无效 SelectedValue，因为它不在项目列表中。
+参数名: value
+Source: System.Web
+   在 System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   在 Duihua.Lib.Common.WebHelper.SetControlValue(Control item, Dictionary`2 dic, String key) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\WebHelper.cs:行号 71
+   在 Duihua.Lib.Common.WebHelper.Fill(Control container, Dictionary`2 dic) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\Common\WebHelper.cs:行号 47
+   在 Duihua.WebApp.Admin.RegistStudent.RegistList.lbOperator_Click(Object sender, EventArgs e) 位置 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\Admin\RegistStudent\RegistList.aspx.cs:行号 71
+   在 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+2014-07-04 01:00:25,983 [7048] INFO  Duihua.WebApp._Default [22] - 来自IP:::1的访问
+2014-07-04 01:00:28,400 [5540] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 01:00:49,733 [7968] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 01:00:56,702 [5540] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问
+2014-07-04 01:03:13,511 [4552] INFO  Duihua.WebApp.Register [20] - 来自IP:::1的访问

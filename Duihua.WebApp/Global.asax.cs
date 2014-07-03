@@ -17,17 +17,16 @@ namespace Duihua.WebApp
         /// <summary>
         /// 获取配置信息
         /// </summary>
-        public static List<Object> Config(string key) { 
-                var result = HttpRuntime.Cache.Get("Config");
-                if (result == null)
-                {
-                    result = db.GetConfigList();
-                    HttpRuntime.Cache.Insert("Config", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
-                }
-               // var temp = result as List<Dictionary<string, object>>;
-              //  temp.FindAll();
-                return null; //result as List<Object>;
-             
+        public static List<Dictionary<string, object>> Config(string key)
+        { 
+            var result = HttpRuntime.Cache.Get("Config");
+            if (result == null)
+            {
+                result = db.GetConfigList();
+                HttpRuntime.Cache.Insert("Config", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+            }
+            var temp = result as List<Dictionary<string, object>>;
+            return temp.FindAll(t => key.Equals(t["ConfigName"]));
         }
         private readonly ILog log = LogManager.GetLogger(typeof(Global));
         void Application_Start(object sender, EventArgs e)
@@ -46,7 +45,7 @@ namespace Duihua.WebApp
         void Application_Error(object sender, EventArgs e)
         {
             log.Error(Server.GetLastError());
-            Response.Redirect("~/Error/503.htm");
+          //  Response.Redirect("~/Error/503.htm");
         }
 
         void Session_Start(object sender, EventArgs e)

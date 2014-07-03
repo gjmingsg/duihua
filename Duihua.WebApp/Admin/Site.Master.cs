@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
+using Duihua.Lib.Common;
 namespace Duihua.WebApp.Admin
 {
     public partial class SiteMaster : System.Web.UI.MasterPage
@@ -13,7 +14,13 @@ namespace Duihua.WebApp.Admin
         {
 
         }
-
+        public String GetFullContextPath
+        {
+            get
+            {
+                return WebHelper.GetContextPath(this);
+            }
+        }
       
     }
 }

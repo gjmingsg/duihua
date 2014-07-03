@@ -36,16 +36,10 @@
     <Reference Include="AspNetPager">
       <HintPath>..\Lib\AspNetPager.dll</HintPath>
     </Reference>
-    <Reference Include="Commons">
-      <HintPath>..\Lib\Commons.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NVelocity">
-      <HintPath>..\Lib\NVelocity.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -128,6 +122,8 @@
     <Content Include="Images\show3.jpg" />
     <Content Include="Images\video.jpg" />
     <Content Include="Images\video_play.jpg" />
+    <Content Include="Images\对画App二维码_min.png" />
+    <Content Include="Images\对画微信二维码_min.png" />
     <Content Include="ImageValidator.aspx" />
     <Content Include="Admin\Ueditor\dialogs\anchor\anchor.html" />
     <Content Include="Admin\Ueditor\dialogs\attachment\attachment.css" />
@@ -364,7 +360,11 @@
     <Content Include="Admin\Ueditor\ueditor.parse.js" />
     <Content Include="Admin\Ueditor\ueditor.parse.min.js" />
     <Content Include="Item.aspx" />
+    <Content Include="Mobile\Default.aspx" />
+    <Content Include="Mobile\Detail.aspx" />
+    <Content Include="Mobile\Item.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-wen_play.js" />
     <Content Include="Scripts\jquery.cookie.js" />
@@ -402,6 +402,10 @@
     <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="Styles\animateCSS3.css" />
     <Content Include="Styles\Backend.css" />
+    <Content Include="Styles\bootstrap\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap\bootstrap.css" />
+    <Content Include="Styles\bootstrap\bootstrap.min.css" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\reset.css" />
     <Content Include="Styles\Site.css" />
@@ -480,6 +484,13 @@
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Font.Master.cs">
+      <DependentUpon>Font.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Font.Master.designer.cs">
+      <DependentUpon>Font.Master</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ListMasterPage.master.cs">
       <DependentUpon>ListMasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -553,6 +564,34 @@
     <Compile Include="Item.aspx.designer.cs">
       <DependentUpon>Item.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mobile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Item.aspx.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Item.aspx.designer.cs">
+      <DependentUpon>Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Mobile.Master.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Mobile.Master.designer.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -589,13 +628,17 @@
     <Content Include="Admin\Ueditor\net\scrawlUp.ashx" />
     <Content Include="Log4net.config" />
     <Content Include="Admin\ListMasterPage.master" />
-    <None Include="nvelocity-web.properties" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admin\Font.Master" />
     <None Include="Admin\Ueditor\third-party\video-js\font\vjs.eot" />
     <None Include="Admin\Ueditor\third-party\video-js\font\vjs.ttf" />
     <None Include="Admin\Ueditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Web.sitemap" />
+    <Content Include="Mobile\Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Default.aspx.resx">

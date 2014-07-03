@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duihua.WebApp", "Duihua.Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duihua.Lib", "Duihua.Lib\Duihua.Lib.csproj", "{345D0B40-EA0F-4CD4-8030-C413C467DD9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duihua.EducationWeb", "Duihua.EducationWeb\Duihua.EducationWeb.csproj", "{65FF68F0-3A4B-4F18-BE81-C0113AF6BD71}"
+EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Duihua.Database", "Duihua.Database\Duihua.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{345D0B40-EA0F-4CD4-8030-C413C467DD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{345D0B40-EA0F-4CD4-8030-C413C467DD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{345D0B40-EA0F-4CD4-8030-C413C467DD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FF68F0-3A4B-4F18-BE81-C0113AF6BD71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FF68F0-3A4B-4F18-BE81-C0113AF6BD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FF68F0-3A4B-4F18-BE81-C0113AF6BD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FF68F0-3A4B-4F18-BE81-C0113AF6BD71}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

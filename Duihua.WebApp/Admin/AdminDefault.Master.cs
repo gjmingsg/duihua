@@ -12,13 +12,17 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Text;
 using Duihua.Lib.Common;
+using log4net;
 
 namespace Duihua.WebApp.Admin
 {
     public partial class AdminDefault : System.Web.UI.MasterPage
     {
+        private readonly ILog log = LogManager.GetLogger(typeof(AdminDefault));
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            log.Info("来自IP:" + Request.UserHostAddress + "的访问。访问者：" + Page.User.Identity.Name);
             if (string.IsNullOrEmpty(Page.User.Identity.Name))
             {
                 Response.Redirect("~/Admin/Account/Login.aspx");

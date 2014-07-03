@@ -13,12 +13,12 @@ namespace Duihua.WebApp {
     public partial class _Default {
         
         /// <summary>
-        /// send_btn 控件。
+        /// btnSubmit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton send_btn;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

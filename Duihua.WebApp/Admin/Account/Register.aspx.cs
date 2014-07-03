@@ -13,7 +13,7 @@ namespace Duihua.WebApp.Admin.Account
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
+            //RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
         }
 
         protected void RegisterUser_CreatedUser(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace Duihua.WebApp.Admin.Account
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
             if (String.IsNullOrEmpty(continueUrl))
             {
-                continueUrl = "~/";
+                continueUrl = RegisterUser.FinishCompleteButtonImageUrl;
             }
             Response.Redirect(continueUrl);
         }

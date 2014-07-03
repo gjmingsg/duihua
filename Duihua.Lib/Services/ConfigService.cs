@@ -11,7 +11,7 @@ namespace Duihua.Lib.Services
     {
         private readonly DBHelper _dao = new DBHelper();
         public List<Dictionary<String,object>> GetConfigList(){
-            return _dao.QueryListData(new Dictionary<string,object>(),@"");
+            return _dao.QueryListData(new Dictionary<string, object>(), @"SELECT * FROM Config c");
         }
     }
 }

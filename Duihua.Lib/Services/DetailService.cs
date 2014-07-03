@@ -17,11 +17,12 @@ namespace Duihua.Lib.Services
         }
 
         public List<Dictionary<string,object>> GetArticleList(String Id){
-            return _dao.QueryListData(new Dictionary<string,object>(){{"Id",Id}},@"SELECT a.*,at.TypeCode FROM Article a
+            return _dao.QueryListData(new Dictionary<string,object>(){{"Id",Id}}, @"SELECT a.*,at.TypeCode FROM Article a
                     INNER JOIN   ArticleType at ON at.ID = a.TypeId 
                     INNER JOIN ArticleType at2 ON  at2.ParentID = at.ParentID
                     WHERE  at2.ID =@Id
-                    ORDER BY at.TypeCode asc");
+                    and a.[Status]=1
+                    ORDER BY at.TypeCode asc ,a.UpdateTime desc");
         }
         
     }

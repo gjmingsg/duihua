@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Duihua.Lib.Services;
 using Duihua.Lib.Common;
+using log4net;
 
 namespace Duihua.WebApp
 {
@@ -13,9 +14,10 @@ namespace Duihua.WebApp
     {
         private readonly RegisterService r = new RegisterService();
         private readonly ClassService c = new ClassService();
+        private readonly ILog log = LogManager.GetLogger(typeof(Register));
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            log.Info("来自IP:" + Request.UserHostAddress + "的访问");
         }
 
         protected void ddClassID_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,8 +38,8 @@ namespace Duihua.WebApp
         {
             if (string.IsNullOrEmpty(tbRegisterNo.Text))
             {
-                int count = r.GetRegisterCount(null, null, null);
-                tbRegisterNo.Text = string.Format("{0:yyyyMMddHHmmss}",DateTime.Now) + string.Format("%05d",count);
+                int count = r.GetRegisterCount("", "", null);
+                tbRegisterNo.Text = string.Format("{0:yyyyMMddHHmmss}",DateTime.Now) + string.Format("{0:00000}",count);
                 dsRegister.Insert();
                 lblRegisterNo.Visible = true;
             }
@@ -47,6 +49,8 @@ namespace Duihua.WebApp
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
+            if (string.IsNullOrEmpty(Session["CheckStr"]+""))
+                args.IsValid = false;
             string validateCode = Session["CheckStr"].ToString().ToLower();
             if (tbValidateCode.Text.ToLower().Equals(validateCode))
                 args.IsValid = true;

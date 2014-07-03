@@ -20,7 +20,24 @@ namespace Duihua.Lib.Common
             var Request = u;
             return Request.Url.Scheme + "://" + Request.Url.Host + ":" + Request.Url.Port + ("/".Equals(Request.ApplicationPath) ? "" : Request.ApplicationPath);
         }
+        public static Control FindControl(Control container,string ID)
+        {
+            if (ID.Equals(container.ID))
+                return container;
+         
+            foreach (Control item in container.Controls)
+            {
+                 if (ID.Equals(item.ID))
+                     return item;
+            }
 
+            foreach (Control item in container.Controls)
+            {
+                if (item.Controls.Count>0)
+                return FindControl(item, ID);
+            }
+            return null;
+        }
         public static void Fill(Control container, Dictionary<String, Object> dic)
         {
             foreach (var key in dic.Keys)

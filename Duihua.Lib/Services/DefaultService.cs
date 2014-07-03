@@ -15,6 +15,7 @@ namespace Duihua.Lib.Services
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.ParentID
 IN(SELECT at2.id FROM ArticleType at2 WHERE at2.TypeCode = '00')
@@ -35,6 +36,7 @@ ORDER BY at.TypeCode ASC");
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode = 20
 AND a.[Status] = 1
@@ -44,6 +46,7 @@ ORDER BY a.UpdateTime DESC")[0];
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode =19
 AND a.[Status] = 1
@@ -56,6 +59,7 @@ ORDER BY a.UpdateTime DESC")[0];
             var item1 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT top 1 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode='17'
 AND a.[Status] = 1
@@ -64,6 +68,7 @@ ORDER BY a.UpdateTime DESC")[0];
             var item2 = _dao.QueryListData(new Dictionary<String, Object>(), @"SELECT top 1 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode='18'
 AND a.[Status] = 1
@@ -96,6 +101,7 @@ AND at.TypeCode=16")[0];
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode = 21
 AND a.[Status] = 1
@@ -105,6 +111,7 @@ ORDER BY a.UpdateTime DESC")[0];
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode =22
 AND a.[Status] = 1
@@ -118,8 +125,9 @@ ORDER BY a.UpdateTime DESC")[0];
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
-INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='07'
+INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='24'
 AND a.[Status] = 1
 ORDER BY a.UpdateTime DESC")[0];
             return new Dictionary<String, object>() { { "item1", item1 } };
@@ -131,6 +139,7 @@ ORDER BY a.UpdateTime DESC")[0];
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='13'
 AND a.[Status] = 1
@@ -139,6 +148,7 @@ ORDER BY a.UpdateTime DESC");
 at.TypeName
 ,at.ID
 ,a.[Content]
+,a.Title
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='14'
 AND a.[Status] = 1
@@ -154,6 +164,14 @@ INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='23'
 AND a.[Status] = 1
 ORDER BY a.UpdateTime DESC");
             return new Dictionary<String, object>() {{"item0",item0}, { "item1", item1 }, { "item2", item2 } };
+        }
+
+        public Dictionary<string, object> GetResult() {
+            var item0 = _dao.QueryListData(new Dictionary<string, object>(), @"SELECT at.* FROM ArticleType at
+INNER JOIN ArticleType at2 ON at.ParentID = at2.ID
+WHERE at2.TYPEcode = '02'
+ORDER BY at.TypeName asc");
+            return new Dictionary<String, object>() { { "item0", item0 } };
         }
     }
 }

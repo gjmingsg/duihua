@@ -146,6 +146,9 @@
     <NotInBuild Include="Scripts\Test\02.添加文章，班级测试数据.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\学生管理系统.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema Objects\Database Level Objects\Storage\Files\Duihua_log.sqlfile.sql">

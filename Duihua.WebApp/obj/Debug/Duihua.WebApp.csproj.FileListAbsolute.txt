@@ -1,13 +1,9 @@
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Duihua.WebApp.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Duihua.WebApp.pdb
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\AspNetPager.dll
-E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Commons.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Duihua.Lib.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\log4net.dll
-E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\NVelocity.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Duihua.Lib.pdb
-E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\Commons.xml
-E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\NVelocity.xml
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\ResolveAssemblyReference.cache
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\Duihua.WebApp._Default.resources
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\GenerateResource.read.1.tlog

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Duihua.Lib.Services;
 using Duihua.Lib.Common;
 using System.Text.RegularExpressions;
+using log4net;
 
 namespace Duihua.WebApp
 {
@@ -14,8 +15,12 @@ namespace Duihua.WebApp
     {
         private readonly DefaultService s = new DefaultService();
         private readonly MessageService m = new MessageService();
+        private readonly ILog log = LogManager.GetLogger(typeof(_Default));
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            log.Info("来自IP:"+Request.UserHostAddress+"的访问");
+
             //send_btn.ServerClick += new EventHandler(send_btn_ServerClick);
             if (!Page.IsPostBack)
             {
@@ -34,20 +39,20 @@ namespace Duihua.WebApp
             }
         }
 
-        void send_btn_ServerClick(object sender, EventArgs e)
+       protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if ("Message".Equals(Request.QueryString["Submit"]))
+        
+            var form = WebHelper.GetForm(Request);
+            if (Validate(form))
             {
-                var form = WebHelper.GetForm(Request);
-                if (Validate(form))
-                {
-                    m.InsertMessage(form);
-                }
-                else
-                {
-                    Alert("留言提交成功");
-                }
+                m.InsertMessage(form);
+                Alert("留言提交成功");
             }
+            else
+            {
+                Alert("留言提交失败");
+            }
+            
         }
 
         private bool Validate(Dictionary<String, Object> form)
@@ -56,29 +61,30 @@ namespace Duihua.WebApp
             bool result = true;
             if(form.ContainsKey("UserName")==false){
                 result = false;
-                Alert("姓名不能为空");
+                //Alert("姓名不能为空");
             }
             if (result && form.ContainsKey("ContactWay") == false)
             {
                 result = false;
-                Alert("邮箱地址不能为空");
+                //Alert("邮箱地址不能为空");
             }
             else if (result && r.IsMatch(form["ContactWay"].ToString()) == false)
             {
                 result = false;
-                Alert("邮箱地址格式不正确");
+                //Alert("邮箱地址格式不正确");
             }
 
             if (result && form.ContainsKey("Message") == false)
             {
                 result = false;
-                Alert("内容不能为空");
+                //Alert("内容不能为空");
             }
             return result;
         }
         private void Alert(string msg) {
             ClientScript.RegisterStartupScript(ClientScript.GetType(), "msg", "<script type='text/javascript'>alert('" + msg + "');</script>");
         }
+        
         public Dictionary<String, Object> About { 
             get {
 
@@ -168,6 +174,21 @@ namespace Duihua.WebApp
                 }
                 return result as Dictionary<String, Object>;
                
+            }
+        }
+
+        public Dictionary<string, Object> Result
+        {
+            get
+            {
+                var result = HttpRuntime.Cache.Get("Result");
+                if (result == null)
+                {
+                    result = s.GetResult();
+                    HttpRuntime.Cache.Insert("Result", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                }
+                return result as Dictionary<String, Object>;
+
             }
         }
     }
