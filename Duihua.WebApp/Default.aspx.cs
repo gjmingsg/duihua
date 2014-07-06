@@ -92,7 +92,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetAbout();
-                    HttpRuntime.Cache.Insert("About", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("About", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
             } 
@@ -104,7 +104,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetWork();
-                    HttpRuntime.Cache.Insert("Work", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Work", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
                 
@@ -117,7 +117,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetTEAM();
-                    HttpRuntime.Cache.Insert("Team", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Team", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
             }
@@ -131,7 +131,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetViewpoint();
-                    HttpRuntime.Cache.Insert("Viewpoint", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Viewpoint", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
             }
@@ -144,7 +144,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetPublish();
-                    HttpRuntime.Cache.Insert("Publish", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Publish", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
                 
@@ -157,7 +157,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetContact();
-                    HttpRuntime.Cache.Insert("Contact", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Contact", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
             }
@@ -170,7 +170,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetInformation();
-                    HttpRuntime.Cache.Insert("Information", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Information", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
                
@@ -185,7 +185,7 @@ namespace Duihua.WebApp
                 if (result == null)
                 {
                     result = s.GetResult();
-                    HttpRuntime.Cache.Insert("Result", result, null, DateTime.Now.AddHours(12), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("Result", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
 

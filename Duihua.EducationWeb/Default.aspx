@@ -5,13 +5,12 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        欢迎使用 ASP.NET!
+        欢迎使用对画学生档案管理系统!
     </h2>
     <p>
-        若要了解关于 ASP.NET 的详细信息，请访问 <a href="http://www.asp.net/cn" title="ASP.NET 网站">www.asp.net/cn</a>。
+        若要了解关于对画艺术教育的详细信息，请访问 <a href="http://dwad.com.cn" title="画艺术教育">dwad.com.cn</a>。
     </p>
     <p>
-        您还可以找到 <a href="http://go.microsoft.com/fwlink/?LinkID=152368"
-            title="MSDN ASP.NET 文档">MSDN 上有关 ASP.NET 的文档</a>。
+        
     </p>
 </asp:Content>

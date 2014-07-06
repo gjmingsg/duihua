@@ -27,6 +27,8 @@
         <siteMapNode url="" title="莘路历程"  description="莘路历程" />
         <siteMapNode url="" title="单位信息"  description="单位信息" />
       </siteMapNode>
-    
+      <siteMapNode url=""  title="系统管理" description="系统管理">
+        <siteMapNode url="~/Modules/Account/UserList.aspx" title="用户管理" description="用户管理"></siteMapNode>
+      </siteMapNode>
     </siteMapNode>
 </siteMap>

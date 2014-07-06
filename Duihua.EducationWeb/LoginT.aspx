@@ -46,7 +46,7 @@
         <%--请输入用户名和密码。
         <asp:HyperLink ID="RegisterHyperLink" runat="server" EnableViewState="false">注册</asp:HyperLink> 如果您没有帐户。--%>
     </p>
-    <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false">
+    <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" DestinationPageUrl="~/Modules/Default.aspx">
         <LayoutTemplate>
             <span class="failureNotification">
                 <asp:Literal ID="FailureText" runat="server"></asp:Literal>
@@ -78,6 +78,12 @@
                         <span class="input-group-addon">
                         <asp:Image ImageAlign="Middle" ID="imgValidator" ToolTip="点击更新验证码"  runat="server" ImageUrl="~/ImageValidator.aspx?len=4&type=1" ClientIDMode="Static" CssClass="img-responsive"/>
                         </span>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbValidateCode" 
+                             CssClass="failureNotification" ErrorMessage="必须填写“验证码”。" ToolTip="必须填写“验证码”。"  Display="Dynamic" 
+                             ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
+                         <asp:CustomValidator ID="cvValidateCode" ControlToValidate="tbValidateCode"  Display="Dynamic" 
+                        runat="server" ErrorMessage="验证码不正确" ToolTip="验证码不正确"  CssClass="failureNotification" 
+                        OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="LoginUserValidationGroup">*</asp:CustomValidator>
                     </p>
                     <p>
                         <label class="checkbox">

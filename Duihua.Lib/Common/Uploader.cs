@@ -4,6 +4,7 @@ using System.Web;
 using System.IO;
 using System.Collections;
 using System.Text.RegularExpressions;
+using log4net;
 
 
 /// <summary>
@@ -19,7 +20,7 @@ public  class Uploader
      string filename = null;
      string originalName = null;
      HttpPostedFile uploadFile = null;
-
+     private readonly ILog log = LogManager.GetLogger(typeof(Uploader));
     /**
   * 上传文件的主处理方法
   * @param HttpContext
@@ -103,7 +104,7 @@ public  class Uploader
         }
         catch (Exception e)
         {
-
+            log.Error("文件错误",e);
             state = "未知错误";
             URL = "";
         }

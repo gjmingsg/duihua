@@ -1,4 +1,4 @@
-﻿<%@ Page Title="注册" Language="C#" MasterPageFile="~/Layout/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="注册" Language="C#" MasterPageFile="~/Layout/AdminDefault.master" AutoEventWireup="true"
     CodeBehind="Register.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">

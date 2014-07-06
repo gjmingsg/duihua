@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <div class="alert alert-success alert-dismissable">
 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-欢迎xxx登录系统
+欢迎 <strong><%=Page.User.Identity.Name%></strong> 登录系统
   <strong>Warning!</strong> Best check yo self, you're not looking too good.
 </div>
 <div class="panel panel-default">

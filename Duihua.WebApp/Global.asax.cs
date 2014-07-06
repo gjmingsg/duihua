@@ -45,7 +45,7 @@ namespace Duihua.WebApp
         void Application_Error(object sender, EventArgs e)
         {
             log.Error(Server.GetLastError());
-          //  Response.Redirect("~/Error/503.htm");
+            Response.Redirect("~/Default.aspx");
         }
 
         void Session_Start(object sender, EventArgs e)

@@ -32,13 +32,23 @@ namespace Duihua.Lib.Services
 
         public Dictionary<String, Object> GetArticle(String id)
         {
-            return _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } }, 
+            var l = _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } }, 
                             @"SELECT a.*,at.TypeName,ROW_NUMBER()OVER(ORDER BY updatetime desc)pageIndex
                               FROM Article a INNER JOIN ArticleType at
                             ON at.ID = a.TypeId
-                            WHERE a.ID = @Id")[0];
+                            WHERE a.ID = @Id");
+            if(l.Count==0)
+                return null;
+            return l[0];
         }
-
+        public List<Dictionary<String, Object>> GetArticleList(String id)
+        {
+            return _dao.QueryListData(new Dictionary<string, object>() { { "Id", id } },
+                            @"SELECT a.*,at.TypeName,ROW_NUMBER()OVER(ORDER BY updatetime desc)pageIndex
+                              FROM Article a INNER JOIN ArticleType at
+                            ON at.ID = a.TypeId
+                            WHERE at.ID = @Id");
+        }
         public void PubishArt(string Id) {
             _dao.ExecuteNonQuery(new Dictionary<String, Object>() { { "Id", Id } }, @"update Article set status = 1 where id = @Id");
         }

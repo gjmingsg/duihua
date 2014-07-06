@@ -39,7 +39,7 @@ namespace Duihua.WebApp
             if (string.IsNullOrEmpty(tbRegisterNo.Text))
             {
                 int count = r.GetRegisterCount("", "", null);
-                tbRegisterNo.Text = string.Format("{0:yyyyMMddHHmmss}",DateTime.Now) + string.Format("{0:00000}",count);
+                tbRegisterNo.Text = string.Format("{0:yyyyMMdd}",DateTime.Now) + string.Format("{0:00000}",count);
                 dsRegister.Insert();
                 lblRegisterNo.Visible = true;
             }

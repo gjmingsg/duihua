@@ -33,10 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AspNetPager">
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\AspNetPager.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
+    <Reference Include="log4net, Version=1.2.0.33710, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -62,10 +64,12 @@
     <Content Include="Admin\Article\Article.aspx" />
     <Content Include="Admin\Article\ArticleType.aspx" />
     <Content Include="Admin\Config\ConfigList.aspx" />
+    <Content Include="Admin\Config\FLinkList.aspx" />
     <Content Include="Admin\Message\MessageList.aspx" />
     <Content Include="Admin\RegistStudent\ClassList.aspx" />
     <Content Include="Admin\RegistStudent\RegistList.aspx" />
     <Content Include="Admin\Ueditor\Ueditor.ascx" />
+    <Content Include="Attachment\photo.swf" />
     <Content Include="Detail.aspx" />
     <Content Include="Error\403.htm" />
     <Content Include="Error\404.htm" />
@@ -74,6 +78,8 @@
     <Content Include="Admin\Account\Login.aspx" />
     <Content Include="Admin\Account\Register.aspx" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="ImageShow.aspx" />
+    <Content Include="ImageList.aspx" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\bg_btn1.gif" />
     <Content Include="Images\bg_btn2.gif" />
@@ -86,6 +92,7 @@
     <Content Include="Images\btn4.gif" />
     <Content Include="Images\btn_detail.gif" />
     <Content Include="Images\btn_report.gif" />
+    <Content Include="Images\bubble-sprite.png" />
     <Content Include="Images\call_bg.jpg" />
     <Content Include="Images\consult.png" />
     <Content Include="Images\consult_b.png" />
@@ -104,6 +111,7 @@
     <Content Include="Images\list_bg.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\logo2.png" />
     <Content Include="Images\nav1.png" />
     <Content Include="Images\nav2.png" />
     <Content Include="Images\nav3.png" />
@@ -365,6 +373,7 @@
     <Content Include="Mobile\Item.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\heiphoto.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-wen_play.js" />
     <Content Include="Scripts\jquery.cookie.js" />
@@ -400,14 +409,22 @@
     <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
     <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
     <Content Include="Scripts\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\sinaflash.js" />
+    <Content Include="Styles\album.css" />
     <Content Include="Styles\animateCSS3.css" />
     <Content Include="Styles\Backend.css" />
     <Content Include="Styles\bootstrap\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap\bootstrap.css" />
     <Content Include="Styles\bootstrap\bootstrap.min.css" />
+    <Content Include="Images\e_m_01.png" />
+    <Content Include="Images\e_m_02.png" />
+    <Content Include="Images\e_m_03.gif" />
+    <Content Include="Images\e_m_05.gif" />
+    <Content Include="Images\left.gif" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\reset.css" />
+    <Content Include="Images\right.gif" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -550,6 +567,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ImageShow.aspx.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageShow.aspx.designer.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageList.aspx.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageList.aspx.designer.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ImageValidator.aspx.cs">
       <DependentUpon>ImageValidator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -603,7 +634,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Attachment\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Duihua.Lib\Duihua.Lib.csproj">

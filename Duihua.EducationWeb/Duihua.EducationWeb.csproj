@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\Lib\AspNetPager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,6 +77,7 @@
     <Content Include="Images\课程管理.png" />
     <Content Include="ImageValidator.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Default.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
@@ -84,6 +88,9 @@
     <Content Include="Modules\Student\StudentSummary.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\ie8-responsive-file-warning.js" />
+    <Content Include="Scripts\respond.min.js" />
     <Content Include="Styles\bootstrap\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap\bootstrap.css" />
@@ -182,6 +189,13 @@
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Account\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Account\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Class\ClassList.aspx.cs">
       <DependentUpon>ClassList.aspx</DependentUpon>

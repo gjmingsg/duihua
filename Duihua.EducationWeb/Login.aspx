@@ -57,7 +57,6 @@
                 <fieldset >
                     <legend>请输入登录凭证</legend>
                     
-                    
                          <p>
                         <label for="tbStudentID" class="sr-only">学号</label>
                         <asp:TextBox ClientIDMode="Static" ID="tbStudentID" runat="server" CssClass="form-control" placeholder="学号"></asp:TextBox>
@@ -80,6 +79,13 @@
                         <span class="input-group-addon">
                         <asp:Image ImageAlign="Middle" ID="imgValidator" ToolTip="点击更新验证码"  runat="server" ImageUrl="~/ImageValidator.aspx?len=4&type=1" ClientIDMode="Static" CssClass="img-responsive"/>
                         </span>
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbValidateCode" 
+                             CssClass="failureNotification" ErrorMessage="必须填写“验证码”。" ToolTip="必须填写“验证码”。"  Display="Dynamic" 
+                             ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
+                         <asp:CustomValidator ID="cvValidateCode" ControlToValidate="tbValidateCode"  Display="Dynamic" 
+                        runat="server" ErrorMessage="验证码不正确" ToolTip="验证码不正确"  CssClass="failureNotification" 
+                        OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="LoginUserValidationGroup">*</asp:CustomValidator>
+                   
                     </p>
                     <p>
                         <label class="checkbox">
@@ -88,7 +94,9 @@
                     </p>
                 </fieldset>
                 <p class="submitButton">
-                    <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="登录" ValidationGroup="LoginUserValidationGroup" CssClass="btn btn-lg btn-primary btn-block"/>
+                    <asp:Button ID="LoginButton" runat="server" Text="登录" 
+                        ValidationGroup="LoginUserValidationGroup" 
+                        CssClass="btn btn-lg btn-primary btn-block" onclick="LoginButton_Click"/>
                 </p>
             </div>
       

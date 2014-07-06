@@ -140,6 +140,7 @@ at.TypeName
 ,at.ID
 ,a.[Content]
 ,a.Title
+, CONVERT(NVARCHAR(5),a.CreateTime,110)CreateTime
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='13'
 AND a.[Status] = 1
@@ -149,6 +150,7 @@ at.TypeName
 ,at.ID
 ,a.[Content]
 ,a.Title
+, CONVERT(NVARCHAR(5),a.CreateTime,110)CreateTime
  FROM ArticleType at
 INNER JOIN Article a ON a.TypeId = at.ID WHERE at.TypeCode ='14'
 AND a.[Status] = 1

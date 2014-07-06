@@ -1,4 +1,4 @@
-﻿<%@ Page Title="更改密码" Language="C#" MasterPageFile="~/Layout/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="更改密码" Language="C#" MasterPageFile="~/Layout/AdminDefault.master" AutoEventWireup="true"
     CodeBehind="ChangePasswordSuccess.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Account.ChangePasswordSuccess" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">

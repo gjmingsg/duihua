@@ -14,13 +14,6 @@ namespace Duihua.EducationWeb.Modules
 
         }
 
-        private void BindMenu() {
-            var menu = SiteMap.RootNode;
-            foreach (SiteMapNode item in menu.ChildNodes)
-            {
-                var title = item.Title;
-                
-            }
-        }
+      
     }
 }

@@ -34,7 +34,7 @@
 <header class="header">
 	<div class="header_m m clearfix">
     	<div class="logo lfloat">
-        	<img src="images/logo.png" class=" fade-up animate4 animated fadeInUp" alt="对画艺术与设计培训学院" />
+        	<img src="/images/logo2.png" style="width:121px" class=" fade-up animate4 animated fadeInUp" alt="对画艺术与设计培训学院" />
         </div>
         <div class="search rfloat">
         	<div class="search_t">
@@ -57,22 +57,48 @@
         </asp:ContentPlaceHolder>
    
 <!--内容区‘联系对画’结束-->
+ 
+<div class="content1_m m clearfix">
+        	<h2>友情链接</h2>
+            <hr />
+<ul  class="m menu_list " style=" color:White; text-align:center; vertical-align:middle">
+    <%var flink = Duihua.WebApp.Global.Config("flink");
+      int i = 0;
+      foreach (var linkitem in flink)
+      {
+          i++;
+          if (i % 2 == 1)
+          {
+      %>
+        <li style="float:left; font-size:medium; padding:10px">
+        <a href='<%=linkitem["ConfigValue2"] %>'><%=linkitem["ConfigValue"]%></a>
+      </li>
+      <%}
+          else
+          {
+          %>
+         <li style="float:left; font-size:medium; padding:10px">
+            <a href='<%=linkitem["ConfigValue2"] %>'><%=linkitem["ConfigValue"]%></a>
+            </li>
+          <%}
+      }
+      %>
+      </ul>
+</div>
 
 <footer class="footer">
 <div class="m" style=" color:White; text-align:center; vertical-align:middle">
   <%=Duihua.WebApp.Global.Config("copyright")[0]["ConfigValue"]%>
-  <br />
-
   </div>
 </footer>
 <!--在线报名-->
 <div class="enroll_online">
-	<a href="Register.aspx"><img src="images/enroll.png" alt="在线报名" /></a>
+	<a href="Register.aspx"><img src="/images/enroll.png" alt="在线报名" /></a>
 </div>
 
 <!--在线咨询-->
 <div class="consult_online">
-	<h1><img src="images/consult.png" alt="在线咨询" /></h1>
+	<h1><img src="/images/consult.png" alt="在线咨询" /></h1>
     <div class="consultOnline_box">
         <div class="consultOnline_t"></div>
         <div class="consultOnline_m">
