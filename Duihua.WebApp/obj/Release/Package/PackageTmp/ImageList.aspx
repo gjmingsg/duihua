@@ -32,6 +32,12 @@
 	<div class="m">
         <div class="picList">
         <%
+            if (ArticleList==null||ArticleList.Count == 0)
+            { 
+                %>
+                    没有相关作品
+                <%
+            }
             foreach (var item in ArticleList)
             {%>
                 <div class="picItem">

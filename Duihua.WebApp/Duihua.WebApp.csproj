@@ -112,6 +112,7 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo2.png" />
+    <Content Include="Images\menu.gif" />
     <Content Include="Images\nav1.png" />
     <Content Include="Images\nav2.png" />
     <Content Include="Images\nav3.png" />
@@ -368,11 +369,18 @@
     <Content Include="Admin\Ueditor\ueditor.parse.js" />
     <Content Include="Admin\Ueditor\ueditor.parse.min.js" />
     <Content Include="Item.aspx" />
+    <Content Include="Mobile\css\animateCSS3.css" />
+    <Content Include="Mobile\css\main.css" />
+    <Content Include="Mobile\css\reset.css" />
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Mobile\Detail.aspx" />
+    <Content Include="Mobile\ImageList.aspx" />
+    <Content Include="Mobile\ImageShow.aspx" />
     <Content Include="Mobile\Item.aspx" />
+    <Content Include="Mobile\js\main.js" />
+    <Content Include="Mobile\Register.aspx" />
+    <Content Include="Scripts\uaredirect.js" />
     <Content Include="Register.aspx" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\heiphoto.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-wen_play.js" />
@@ -413,10 +421,6 @@
     <Content Include="Styles\album.css" />
     <Content Include="Styles\animateCSS3.css" />
     <Content Include="Styles\Backend.css" />
-    <Content Include="Styles\bootstrap\bootstrap-theme.css" />
-    <Content Include="Styles\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Styles\bootstrap\bootstrap.css" />
-    <Content Include="Styles\bootstrap\bootstrap.min.css" />
     <Content Include="Images\e_m_01.png" />
     <Content Include="Images\e_m_02.png" />
     <Content Include="Images\e_m_03.gif" />
@@ -595,27 +599,6 @@
     <Compile Include="Item.aspx.designer.cs">
       <DependentUpon>Item.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Mobile\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\Detail.aspx.cs">
-      <DependentUpon>Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\Detail.aspx.designer.cs">
-      <DependentUpon>Detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobile\Item.aspx.cs">
-      <DependentUpon>Item.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobile\Item.aspx.designer.cs">
-      <DependentUpon>Item.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Mobile\Mobile.Master.cs">
       <DependentUpon>Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -669,6 +652,7 @@
     <Content Include="Styles\Web.config" />
     <Content Include="Web.sitemap" />
     <Content Include="Mobile\Mobile.Master" />
+    <Content Include="Mobile\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Default.aspx.resx">

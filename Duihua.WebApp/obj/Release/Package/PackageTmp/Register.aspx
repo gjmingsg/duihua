@@ -133,14 +133,14 @@ select
      </p>
      <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vsErrorInfo"  CssClass="failureNotification" ></asp:ValidationSummary>
        <div class="lfloat" id="lblRegisterNo" runat="server" visible="False">
-      <asp:Label ID="Label1" AssociatedControlID="tbRegisterNo" runat="server" Text="报名号：" CssClass="labelCss"></asp:Label>
+      <asp:Label  AssociatedControlID="tbRegisterNo" runat="server" Text="报名号：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbRegisterNo" name="RegisterNo" runat="server" CssClass="inputText" ReadOnly="true"></asp:TextBox>
       <asp:CustomValidator ID="cvRegisterNo" runat="server" ErrorMessage="报名号不能为空" 
                onservervalidate="cvRegisterNo_ServerValidate"></asp:CustomValidator>
       </div>
 
       <div class="lfloat">
-      <asp:Label ID="Label2" AssociatedControlID="tbRegistName" runat="server" Text="姓名：" CssClass="labelCss"></asp:Label>
+      <asp:Label  AssociatedControlID="tbRegistName" runat="server" Text="姓名：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbRegistName" name="RegistName" runat="server" CssClass="inputText" ClientIDMode="Static"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  ControlToValidate="tbRegistName"  runat="server" ErrorMessage="姓名不能为空"  ValidationGroup="vsErrorInfo"  ToolTip="姓名不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
        <asp:CustomValidator ID="cvRegistName" runat="server"  ControlToValidate="tbRegistName"
@@ -148,32 +148,32 @@ select
       </div>
       
       <div  class="lfloat">
-      <asp:Label ID="Label3" AssociatedControlID="tbQQ" runat="server" Text="QQ：" CssClass="labelCss"></asp:Label>
+      <asp:Label   AssociatedControlID="tbQQ" runat="server" Text="QQ：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbQQ" name="QQ" runat="server" CssClass="inputText"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ControlToValidate="tbQQ"  runat="server" ErrorMessage="QQ不能为空" ValidationGroup="vsErrorInfo" ToolTip="QQ不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
        <asp:RegularExpressionValidator ID="RegularExpressionValidator1"  ControlToValidate="tbQQ"  ValidationExpression="[1-9][0-9]{5,9}"  runat="server" ErrorMessage="QQ不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
       </div>
       
       <div  class="lfloat">
-      <asp:Label ID="Label4" AssociatedControlID="tbEmail" runat="server" Text="Email：" CssClass="labelCss"></asp:Label>
+      <asp:Label   AssociatedControlID="tbEmail" runat="server" Text="Email：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbEmail" name="Email" runat="server" CssClass="inputText"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator3"   ControlToValidate="tbEmail" runat="server" ErrorMessage="Email不能为空" ValidationGroup="vsErrorInfo" ToolTip="Email不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
       <asp:RegularExpressionValidator ID="RegularExpressionValidator2"  ControlToValidate="tbEmail" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Email不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
       </div>
        
       <div class="lfloat">
-      <asp:Label ID="Label5" AssociatedControlID="tbPhone" runat="server" Text="电话：" CssClass="labelCss"></asp:Label>
+      <asp:Label   AssociatedControlID="tbPhone" runat="server" Text="电话：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbPhone" name="Phone" runat="server" CssClass="inputText"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="tbPhone"  runat="server" ErrorMessage="电话不能为空" ValidationGroup="vsErrorInfo"  ToolTip="电话不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
       </div>
     
      <div class="lfloat">
-         <asp:Label ID="Label7"   AssociatedControlID="tbIntro" runat="server" Text="就读高中：" CssClass="labelCss"></asp:Label>
+         <asp:Label     AssociatedControlID="tbIntro" runat="server" Text="就读高中：" CssClass="labelCss"></asp:Label>
          <asp:TextBox runat="server" ID="tbIntro" name="Intro"  CssClass="inputText"></asp:TextBox>
         </div>
 
        <div class="lfloat">
-      <asp:Label ID="Label6" AssociatedControlID="ddClassID" runat="server" Text="所选班级：" CssClass="labelCss"></asp:Label>
+      <asp:Label  AssociatedControlID="ddClassID" runat="server" Text="所选班级：" CssClass="labelCss"></asp:Label>
      <asp:DropDownList ID="ddClassID" name="ClassID" runat="server" AutoPostBack="true" AppendDataBoundItems="true" 
      DataSourceID="SqlDataSource1" DataTextField="ClassName" DataValueField="ID" 
               onselectedindexchanged="ddClassID_SelectedIndexChanged">
@@ -196,7 +196,7 @@ select
         </div>
        
        <div class="lfloat">
-        <asp:Label ID="Label8"   AssociatedControlID="tbValidateCode" runat="server" Text="验证码：" CssClass="labelCss"></asp:Label>
+        <asp:Label    AssociatedControlID="tbValidateCode" runat="server" Text="验证码：" CssClass="labelCss"></asp:Label>
         <asp:TextBox ID="tbValidateCode" name="ValidateCode" runat="server" CssClass="inputText"></asp:TextBox>
         <asp:Image ImageAlign="Middle" ID="imgValidator" ToolTip="点击更新验证码"  runat="server" ImageUrl="~/ImageValidator.aspx?len=4&type=1"/>
         <asp:CustomValidator ID="CustomValidator1" ControlToValidate="tbValidateCode"  ValidationGroup="vsErrorInfo"
