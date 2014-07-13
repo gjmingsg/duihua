@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true"
+﻿<%@ Page Title="注册页面" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true"
  CodeBehind="~/Register.aspx.cs" Inherits="Duihua.WebApp.Register" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 
@@ -74,7 +74,7 @@ legend
    border: 1px solid gray;
     font-size: 20px;
     display:block;
-    margin-left:170px;
+  /*  margin-left:170px;*/
     resize: none;
     width: 400px;
    }
@@ -125,7 +125,7 @@ select
 <!--内容1区结束-->
 <form method="post" runat="server" id="FRegisterInfo">
 <section class="section1">
-<div class="m">
+<div class="leave_msg m">
 <fieldset>
     <legend>报名信息</legend>
      
@@ -149,7 +149,7 @@ select
       </div>
       
       <div  class="lfloat">
-      <asp:Label ID="Label3" AssociatedControlID="tbQQ" runat="server" Text="QQ：" CssClass="labelCss"></asp:Label>
+      <asp:Label   AssociatedControlID="tbQQ" runat="server" Text="QQ：" CssClass="labelCss"></asp:Label>
       <asp:TextBox ID="tbQQ" name="QQ" runat="server" CssClass="inputText"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ControlToValidate="tbQQ"  runat="server" ErrorMessage="QQ不能为空" ValidationGroup="vsErrorInfo" ToolTip="QQ不能为空"  CssClass="failureNotification">*</asp:RequiredFieldValidator>
        <asp:RegularExpressionValidator ID="RegularExpressionValidator1"  ControlToValidate="tbQQ"  ValidationExpression="[1-9][0-9]{5,9}"  runat="server" ErrorMessage="QQ不符合格式" ValidationGroup="vsErrorInfo"></asp:RegularExpressionValidator>
@@ -177,7 +177,7 @@ select
       <asp:Label   AssociatedControlID="ddClassID" runat="server" Text="所选班级：" CssClass="labelCss"></asp:Label>
      <asp:DropDownList ID="ddClassID" name="ClassID" runat="server" AutoPostBack="true" AppendDataBoundItems="true" 
      DataSourceID="SqlDataSource1" DataTextField="ClassName" DataValueField="ID" 
-              onselectedindexchanged="ddClassID_SelectedIndexChanged">
+              onselectedindexchanged="ddClassID_SelectedIndexChanged"  CssClass="inputText">
         <asp:ListItem Text="--请选报名的班级--" Value=""></asp:ListItem>
      </asp:DropDownList>
      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="ddClassID" runat="server" ErrorMessage="班级不能为空" ToolTip="班级不能为空"  CssClass="failureNotification" ValidationGroup="vsErrorInfo">*</asp:RequiredFieldValidator>
@@ -188,9 +188,9 @@ select
              <asp:Parameter DefaultValue="0" Name="IsFinish" Type="Int32" />
          </SelectParameters>
           </asp:SqlDataSource>
-     <asp:Label ID="lbClassInfo" runat="server" CssClass="classTip" ></asp:Label>               
+          <asp:Label ID="lbClassInfo" runat="server" CssClass="inputText classTip " Visible='false' ></asp:Label>     
       </div>
-      
+       
         <div class="lfloat">
          <asp:Label    AssociatedControlID="tbAddress" runat="server" Text="地址：" CssClass="labelCss"></asp:Label>
          <asp:TextBox runat="server" ID="tbAddress" name="Address" Rows="10" TextMode="MultiLine" CssClass="inputText"></asp:TextBox>

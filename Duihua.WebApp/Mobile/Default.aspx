@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" CodeBehind="~/Default.aspx.cs" Inherits="Duihua.WebApp._Default" %>
+﻿<%@ Page Title="首页" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" CodeBehind="~/Default.aspx.cs" Inherits="Duihua.WebApp._Default" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
@@ -99,7 +99,7 @@
         <div class="content1_apply rfloat">
         	<div class="content1Apply_t">
                 <span class="ico1"></span>
-                <h1><a href="#">在线报名</a></h1>
+                <h1><a href="Register.aspx">在线报名</a></h1>
             </div>
             <div class="content1Apply_m">
             	<h2><span>服务指南</span></h2>

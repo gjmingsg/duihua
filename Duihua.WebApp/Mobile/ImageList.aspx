@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" 
+﻿<%@ Page Title="作品列表" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" 
 CodeBehind="~/ImageList.aspx.cs" Inherits="Duihua.WebApp.ImageList" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 

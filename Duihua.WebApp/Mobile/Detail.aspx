@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" CodeBehind="~/Detail.aspx.cs" Inherits="Duihua.WebApp.Detail" %>
+﻿<%@ Page Title="明细" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" CodeBehind="~/Detail.aspx.cs" Inherits="Duihua.WebApp.Detail" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

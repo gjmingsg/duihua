@@ -9,6 +9,7 @@
 <meta name="keywords" content='<%=Duihua.WebApp.Global.Config("keywords")[0]["ConfigValue"]%>' />
 <meta name="description" content='<%=Duihua.WebApp.Global.Config("description")[0]["ConfigValue"]%>' />
 <title><%=Duihua.WebApp.Global.Config("title")[0]["ConfigValue"]%></title>
+<link rel='<%=Duihua.WebApp.Global.Config("title")[0]["ConfigValue"]%>' href="/Images/logoico.png"  type=”image/x-icon” />
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="css/animateCSS3.css" />

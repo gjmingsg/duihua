@@ -112,6 +112,7 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo2.png" />
+    <Content Include="Images\logoico.png" />
     <Content Include="Images\menu.gif" />
     <Content Include="Images\nav1.png" />
     <Content Include="Images\nav2.png" />

@@ -22,6 +22,7 @@ namespace Duihua.WebApp
 
         protected void ddClassID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbClassInfo.Visible = true;
             if (string.IsNullOrEmpty(ddClassID.SelectedValue) == false)
             {
                 var item = c.GetClass(ddClassID.SelectedValue);

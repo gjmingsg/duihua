@@ -13,7 +13,7 @@ namespace Duihua.WebApp.Mobile
         private readonly ILog log = LogManager.GetLogger(typeof(Mobile));
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Info("通过手机访问，来自IP:" + Request.UserHostAddress + "的访问");
+            log.Info("通过手机访问，来自IP:" + Request.UserHostAddress + "的访问【"+Request.RawUrl+"】");
         }
     }
 }

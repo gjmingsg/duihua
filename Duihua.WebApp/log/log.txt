@@ -2400,3 +2400,100 @@
    在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 2014-07-13 16:36:06,708 [4396] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:08:38,232 [4572] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:08:45,371 [4152] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:08:45,372 [4152] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问
+2014-07-13 17:09:12,619 [5988] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:14:36,580 [5988] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:14:37,143 [5596] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:14:37,151 [5568] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:14:44,818 [5596] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:14:44,820 [5596] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问
+2014-07-13 17:14:45,321 [5568] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:14:45,332 [5596] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:16:42,527 [5596] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:16:42,529 [5596] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问
+2014-07-13 17:16:42,952 [5700] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:16:42,961 [6012] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:17:07,297 [6012] ERROR Duihua.WebApp.Global [48] - System.Web.HttpParseException (0x80004005): 标记包含重复的“CssClass”特性。 ---> System.Web.HttpParseException (0x80004005): 标记包含重复的“CssClass”特性。 ---> System.Web.HttpException (0x80004005): 标记包含重复的“CssClass”特性。
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:17:07,347 [5568] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:17:08,877 [5988] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:17:08,882 [5596] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:17:28,844 [5988] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:17:28,871 [6012] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:17:35,385 [5596] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:17:35,387 [5596] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问
+2014-07-13 17:17:35,885 [5596] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:17:35,892 [5988] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:17:42,447 [5568] INFO  Duihua.WebApp.Register [21] - 来自IP:::1的访问
+2014-07-13 17:17:42,448 [5568] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问
+2014-07-13 17:17:42,803 [5568] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:17:42,812 [5988] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:33:43,333 [5596] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-13 17:34:15,971 [5412] INFO  Duihua.WebApp.Admin.AdminDefault [26] - 来自IP:::1的访问。访问者：admin
+2014-07-13 17:34:30,600 [5700] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-13 17:34:30,609 [5920] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
