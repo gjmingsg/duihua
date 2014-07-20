@@ -24,14 +24,14 @@
 <header class="header">
 	<div class="header_m m clearfix">
     	<div class="logo lfloat">
-        	<img src="/images/logo.png" class=" fade-up animate4 animated fadeInUp" alt="对画艺术与设计培训学院" />
+        	<img src="/images/logo2.png" class=" fade-up animate4 animated fadeInUp" alt="对画艺术与设计" />
         </div>
         <div class="search rfloat">
         	<div class="search_t">
             	<span class="current">综合搜索</span><span>搜名师</span><span>搜班级</span>
             </div>
             <div class="search_m">
-            	<input type="text" value="Search......" />
+            	<input type="text" placeholder="Search......" />
                 <button type="button">搜索</button>
             </div>
         </div>

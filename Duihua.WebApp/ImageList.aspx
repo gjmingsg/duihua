@@ -9,7 +9,10 @@
   .showPic{ display:none}
   .content1{ height:500px;}
 </style>
-
+<script src="/Scripts/uaredirect.js" type="text/javascript"></script>
+<script  type="text/javascript">
+    uaredirect("/mobile/default.aspx");
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -39,11 +42,16 @@
                 <%
             }
             foreach (var item in ArticleList)
-            {%>
+            {
+                var temp = item["Content"].ToString().Split(new String[]{"<p>","</p>"},StringSplitOptions.RemoveEmptyEntries);
+                if (temp.Length == 0)
+                    continue;
+                
+                %>
                 <div class="picItem">
                 <a href="ImageShow.aspx?ID=<%=item["ID"] %>">
-                    <div style="display:none" class="picPList" ><%=item["Content"] %></div>
-                    <div class="picInterface"></div>
+                   
+                    <div class="picInterface"><%=temp[0].Replace("Attachment/img/", "Attachment/img/min/")%></div>
                     <div style="text-overflow: ellipsis;padding:5px; width:115px"><%=item["Title"]%></div>  
                  </a>      
                 </div>
@@ -56,18 +64,13 @@
 </div>
 <div class="clearfix" style="margin:10px"></div>
 <script type="text/javascript">
-    $(function () {
-        $('.picItem').each(function () {
-            var imglist = $(this).find('.picPList').html();
-            var interface = $(this).find('.picPList>p').html();
-            interface = interface.replace('Attachment/img/', 'Attachment/img/min/');
-            $(this).find('.picInterface').html(interface);
-
-        });
-    })
-
-
-   
+//    $(function () {
+//        $('.picItem').each(function () {
+//            var imglist = $(this).find('.picPList').html();
+//            var interface = $(this).find('.picPList>p').html();
+//            interface = interface.replace('Attachment/img/', 'Attachment/img/min/');
+//            $(this).find('.picInterface').html(interface);
+//        });
+//    })
 </script>
 </asp:Content>
-

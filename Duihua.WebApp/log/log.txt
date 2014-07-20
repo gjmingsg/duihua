@@ -2497,3 +2497,303 @@
    在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 2014-07-13 17:34:30,609 [5920] INFO  Duihua.WebApp._Default [25] - 来自IP:::1的访问
+2014-07-20 11:46:43,173 [4216] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/default.aspx?】
+2014-07-20 11:47:01,418 [5000] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/ImageList.aspx?ID=AA661634-B375-45B5-9EC3-3922979DF5B7】
+2014-07-20 11:47:56,242 [1240] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/ImageList.aspx?ID=AA661634-B375-45B5-9EC3-3922979DF5B7】
+2014-07-20 11:48:04,973 [2696] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/ImageList.aspx?ID=AA661634-B375-45B5-9EC3-3922979DF5B7】
+2014-07-20 11:48:06,113 [4216] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/ImageList.aspx?ID=AA661634-B375-45B5-9EC3-3922979DF5B7】
+2014-07-20 11:49:28,049 [5084] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:49:34,617 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/ImageList.aspx?ID=2A25436B-B23B-4C53-A489-30F2EABEE505】
+2014-07-20 11:53:19,938 [4924] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/mobile/ImageList.aspx?ID=2A25436B-B23B-4C53-A489-30F2EABEE505】
+2014-07-20 11:53:30,585 [4924] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/Mobile/Default.aspx】
+2014-07-20 11:53:38,089 [2344] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/Mobile/ImageList.aspx?ID=2E3920DD-3FD1-4947-866D-6AC79317529E】
+2014-07-20 11:53:38,183 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,183 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,183 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,213 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,270 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,270 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,273 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,276 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,277 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,282 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,283 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,287 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,296 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,300 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,305 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,310 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,311 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,320 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,321 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,325 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,326 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,331 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,333 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,338 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,346 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,346 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,352 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,355 [2468] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,352 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:38,361 [2344] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:39,105 [2344] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:39,510 [4616] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:39,612 [3748] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,017 [4132] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,056 [2468] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,126 [3748] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,563 [3384] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,642 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,647 [2344] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,670 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,680 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,689 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,698 [3384] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,706 [2468] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,715 [4132] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,724 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,733 [4616] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,743 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,752 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,762 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:40,772 [2468] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,109 [3748] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,142 [2640] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,144 [4616] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,147 [2344] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,148 [2640] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,611 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:41,655 [2276] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:42,155 [4132] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:42,669 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:51,438 [4924] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:51,445 [3748] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:53:51,719 [3748] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:53:51,729 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:54:37,559 [1044] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/Mobile/ImageList.aspx?ID=2E3920DD-3FD1-4947-866D-6AC79317529E】
+2014-07-20 11:54:37,627 [4616] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:54:37,634 [1044] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:54:37,639 [3384] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:54:37,665 [4924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:54:37,682 [2640] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:54:37,688 [1044] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:13,308 [4736] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/Mobile/ImageList.aspx?ID=2E3920DD-3FD1-4947-866D-6AC79317529E】
+2014-07-20 11:56:13,435 [4132] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:13,440 [5908] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:13,451 [5916] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:13,484 [4736] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:13,489 [5924] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:13,990 [5908] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:40,597 [5916] INFO  Duihua.WebApp.Mobile.Mobile [17] - 通过手机访问，来自IP:::1的访问【/Mobile/ImageList.aspx?ID=2E3920DD-3FD1-4947-866D-6AC79317529E】
+2014-07-20 11:56:40,626 [4132] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:40,626 [5916] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:40,643 [5940] ERROR Duihua.WebApp.Global [48] - System.Web.HttpException (0x80004005): 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2014-07-20 11:56:40,649 [5940] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:40,662 [5908] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】
+2014-07-20 11:56:40,690 [5916] INFO  Duihua.WebApp.Admin.Font [17] - 通过PC访问，来自IP:::1的访问【/Default.aspx】

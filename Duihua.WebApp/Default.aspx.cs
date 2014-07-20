@@ -19,7 +19,7 @@ namespace Duihua.WebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Info("来自IP:"+Request.UserHostAddress+"的访问");
+            //log.Info("来自IP:"+Request.UserHostAddress+"的访问");
 
             //send_btn.ServerClick += new EventHandler(send_btn_ServerClick);
             if (!Page.IsPostBack)

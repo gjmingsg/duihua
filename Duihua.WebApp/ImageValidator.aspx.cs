@@ -8,12 +8,15 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 using System.Text;
+using log4net;
 namespace Duihua.WebApp
 {
     public partial class ImageValidator : System.Web.UI.Page
     {
+        private readonly ILog log = LogManager.GetLogger(typeof(ImageValidator));
         protected void Page_Load(object sender, EventArgs e)
         {
+            log.Info("来自IP:" + Request.UserHostAddress + "的访问");
             int clen = 4, ctype = 0; ;
             try
             {

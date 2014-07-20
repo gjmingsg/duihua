@@ -22,7 +22,7 @@ namespace Duihua.WebApp.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Info("来自IP:" + Request.UserHostAddress + "的访问。访问者：" + Page.User.Identity.Name);
+            log.Info("通过PC访问，来自IP:" + Request.UserHostAddress + "的访问【" + Request.RawUrl + "】");
             if (string.IsNullOrEmpty(Page.User.Identity.Name))
             {
                 Response.Redirect("~/Admin/Account/Login.aspx");

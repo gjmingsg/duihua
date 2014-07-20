@@ -17,7 +17,7 @@ namespace Duihua.WebApp
         private readonly ILog log = LogManager.GetLogger(typeof(Register));
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Info("来自IP:" + Request.UserHostAddress + "的访问");
+            //log.Info("来自IP:" + Request.UserHostAddress + "的访问");
         }
 
         protected void ddClassID_SelectedIndexChanged(object sender, EventArgs e)

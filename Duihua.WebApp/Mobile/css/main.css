@@ -107,7 +107,7 @@ h2{
 /*--头部样式--*/
 .header{
 	padding-top:1px;
-	height:559px;
+	height:400px;
 	background:url(../../images/banner.jpg) no-repeat center top #dedede;
 }
 .header_m{
@@ -813,8 +813,8 @@ p.s1{
 .float_ico{
 	width:40px;
 	height:80px;
-	/*position:fixed;*/
-	position:absolute;
+	position:fixed;
+	/*position:absolute;*/
 	z-index:1;
 	right:5px;
 	bottom:66px;

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="作品列表" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" 
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mobile/Mobile.Master" AutoEventWireup="true" 
 CodeBehind="~/ImageList.aspx.cs" Inherits="Duihua.WebApp.ImageList" %>
 <%@ Import Namespace="System.Collections.Generic" %>
 
@@ -41,11 +41,16 @@ CodeBehind="~/ImageList.aspx.cs" Inherits="Duihua.WebApp.ImageList" %>
                 <%
             }
             foreach (var item in ArticleList)
-            {%>
+            {
+                var temp = item["Content"].ToString().Split(new String[] { "<p>", "</p>" }, StringSplitOptions.RemoveEmptyEntries);
+                if (temp.Length == 0)
+                    continue;
+                
+                %>
                 <div class="picItem">
                 <a href="/ImageShow.aspx?ID=<%=item["ID"] %>">
-                    <div style="display:none" class="picPList" ><%=item["Content"] %></div>
-                    <div class="picInterface"></div>
+                  
+                    <div class="picInterface"><%=temp[0].Replace("Attachment/img/", "Attachment/img/min/")%></div>
                     <div style="text-overflow: ellipsis;padding:5px; width:115px"><%=item["Title"]%></div>  
                  </a>      
                 </div>
@@ -58,15 +63,15 @@ CodeBehind="~/ImageList.aspx.cs" Inherits="Duihua.WebApp.ImageList" %>
 </div>
 <div class="clearfix" style="margin:10px"></div>
 <script type="text/javascript">
-    $(function () {
-        $('.picItem').each(function () {
-            var imglist = $(this).find('.picPList').html();
-            var interface = $(this).find('.picPList>p').html();
-            interface = interface.replace('Attachment/img/', 'Attachment/img/min/');
-            $(this).find('.picInterface').html(interface);
+    /*   $(function () {
+    $('.picItem').each(function () {
+    var imglist = $(this).find('.picPList').html();
+    var interface = $(this).find('.picPList>p').html();
+    interface = interface.replace('Attachment/img/', 'Attachment/img/min/');
+    $(this).find('.picInterface').html(interface);
 
-        });
+    });
     })
-
+    */
 </script>
 </asp:Content>

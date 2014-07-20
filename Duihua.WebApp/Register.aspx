@@ -187,7 +187,7 @@ select
              <asp:Parameter DefaultValue="0" Name="IsFinish" Type="Int32" />
          </SelectParameters>
           </asp:SqlDataSource>
-     <asp:Label ID="lbClassInfo" runat="server" CssClass="classTip" ></asp:Label>               
+     <asp:Label ID="lbClassInfo" runat="server" CssClass="classTip" Visible="false" ></asp:Label>               
       </div>
       
         <div class="lfloat">

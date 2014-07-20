@@ -56,6 +56,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Images\学生管理.png" />
+    <Content Include="Images\用户管理.png" />
+    <Content Include="Images\角色管理.png" />
     <Content Include="Modules\Account\ChangePassword.aspx" />
     <Content Include="Modules\Account\ChangePasswordSuccess.aspx" />
     <Content Include="Login.aspx" />
@@ -63,11 +65,11 @@
     <Content Include="Modules\Account\PersonalSetting.aspx" />
     <Content Include="Modules\Account\Register.aspx" />
     <Content Include="Images\作业管理.png" />
-    <Content Include="Images\光荣榜.png" />
+    <Content Include="Images\光 荣 榜.png" />
     <Content Include="Images\入学管理.png" />
     <Content Include="Images\单位信息.png" />
     <Content Include="Images\咨询留言.png" />
-    <Content Include="Images\学生、教师互评.png" />
+    <Content Include="Images\评价考核.png" />
     <Content Include="Images\学生动态.png" />
     <Content Include="Images\本校学子.png" />
     <Content Include="Images\每周作业.png" />
@@ -80,6 +82,7 @@
     <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Default.aspx" />
+    <Content Include="Modules\Homework\Default.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
     <Content Include="Modules\Homework\HomeworkResult.aspx" />
     <Content Include="Modules\Message\ComMessageForum.aspx" />
@@ -209,6 +212,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Homework\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Homework\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Homework\HomeworkList.aspx.cs">
