@@ -1,7 +1,13 @@
-E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\ResolveAssemblyReference.cache
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\Duihua.EducationWeb.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\Duihua.EducationWeb.pdb
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\AspNetPager.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\Duihua.Lib.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\log4net.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\Duihua.Lib.pdb
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\AspNetPager.xml
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\log4net.xml
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\en\AspNetPager.resources.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\zh-CHT\AspNetPager.resources.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\ResolveAssemblyReference.cache
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\Duihua.EducationWeb.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\Duihua.EducationWeb.pdb

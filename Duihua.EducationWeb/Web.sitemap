@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="" title="对画教育管理系统"  description="对画教育管理系统">
+    <siteMapNode url="" title="对画教育管理系统"  description="对画教育管理系统" roles="*">
        
-      <siteMapNode url="" title="学生园地"  description="学生园地">
+      <siteMapNode url="" title="学生园地"  description="学生园地" roles="管理员,学生">
         <siteMapNode url="" title="入学管理"  description="入学管理" />
         <siteMapNode url="" title="课程安排"  description="课程安排" />
         <siteMapNode url="~/Modules/Homework/HomeworkResult.aspx" title="每周作业"  description="每周作业" />
         <siteMapNode url="" title="光 荣 榜"  description="光 荣 榜" />
       </siteMapNode>
 
-      <siteMapNode url="" title="家长天地"  description="家长天地">
+      <siteMapNode url="" title="家长天地"  description="家长天地" roles="管理员,家长,学生">
         <siteMapNode url="~/Modules/Student/StudentSummary.aspx" title="学生动态"  description="学生动态" />
         <siteMapNode url="~/Modules/Message/ComMessageForum.aspx" title="咨询留言"  description="咨询留言" />
       </siteMapNode>
 
-      <siteMapNode url="" title="教工之家"  description="教工之家">
-        <siteMapNode url="" title="课程管理"  description="课程管理" />
+      <siteMapNode url="" title="教工之家"  description="教工之家" roles="管理员,教师">
         <siteMapNode url="~/Modules/Class/ClassList.aspx" title="班级管理"  description="班级管理" />
+        <siteMapNode url="~/Modules/Course/CourseList.aspx" title="课程管理"  description="课程管理" />
         <siteMapNode url="~/Modules/Homework/HomeworkList.aspx" title="作业管理"  description="作业管理" />
         <siteMapNode url="" title="评价考核"  description="评价考核" />
         <siteMapNode url="~/Modules/Student/StudentList.aspx" title="学生管理"  description="学生管理" />
       </siteMapNode>
 
-      <siteMapNode url="" title="合作单位"  description="合作单位">
+      <siteMapNode url="" title="合作单位"  description="合作单位" roles="管理员,合作单位">
         <siteMapNode url="" title="本校学子"  description="本校学子" />
         <siteMapNode url="" title="莘路历程"  description="莘路历程" />
         <siteMapNode url="" title="单位信息"  description="单位信息" />
       </siteMapNode>
-      <siteMapNode url=""  title="系统管理" description="系统管理">
+      <siteMapNode url=""  title="系统管理" description="系统管理" roles="管理员">
         <siteMapNode url="~/Modules/Account/UserList.aspx" title="用户管理" description="用户管理"></siteMapNode>
         <siteMapNode url="~/Modules/Account/RoleList.aspx" title="角色管理" description="角色管理"></siteMapNode>
       </siteMapNode>

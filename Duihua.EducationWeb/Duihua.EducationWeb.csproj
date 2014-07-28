@@ -81,6 +81,10 @@
     <Content Include="Logout.aspx" />
     <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
+    <Content Include="Modules\Class\JoinClassList.aspx" />
+    <Content Include="Modules\Common\UCAttachment.ascx" />
+    <Content Include="Modules\Course\CourseDashBoard.aspx" />
+    <Content Include="Modules\Course\CourseList.aspx" />
     <Content Include="Modules\Default.aspx" />
     <Content Include="Modules\Homework\Default.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
@@ -90,14 +94,49 @@
     <Content Include="Modules\Student\StudentList.aspx" />
     <Content Include="Modules\Student\StudentSummary.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap-wysiwyg.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-apollo.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-basic.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-clj.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-css.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-dart.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-erlang.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-go.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-hs.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-lisp.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-llvm.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-lua.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-matlab.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-ml.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-mumps.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-n.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-pascal.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-proto.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-r.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-rd.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-scala.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-sql.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-tcl.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-tex.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-vb.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-vhdl.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-wiki.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-xq.js" />
+    <Content Include="Scripts\external\google-code-prettify\lang-yaml.js" />
+    <Content Include="Scripts\external\google-code-prettify\prettify.css" />
+    <Content Include="Scripts\external\google-code-prettify\prettify.js" />
+    <Content Include="Scripts\external\google-code-prettify\run_prettify.js" />
+    <Content Include="Scripts\external\jquery.hotkeys.js" />
     <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\ie8-responsive-file-warning.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Styles\bootstrap\bootstrap-theme.css" />
-    <Content Include="Styles\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Styles\bootstrap\bootstrap.css" />
-    <Content Include="Styles\bootstrap\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap-datetimepicker.min.css" />
+    <Content Include="Styles\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -207,6 +246,37 @@
     <Compile Include="Modules\Class\ClassList.aspx.designer.cs">
       <DependentUpon>ClassList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Class\JoinClassList.aspx.cs">
+      <DependentUpon>JoinClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Class\JoinClassList.aspx.designer.cs">
+      <DependentUpon>JoinClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\DownloadHandler.ashx.cs">
+      <DependentUpon>DownloadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\UCAttachment.ascx.cs">
+      <DependentUpon>UCAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Common\UCAttachment.ascx.designer.cs">
+      <DependentUpon>UCAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Course\CourseDashBoard.aspx.cs">
+      <DependentUpon>CourseDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Course\CourseDashBoard.aspx.designer.cs">
+      <DependentUpon>CourseDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Course\CourseList.aspx.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Course\CourseList.aspx.designer.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,7 +344,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Modules\Lesson\" />
+    <Folder Include="Attachment\file\" />
+    <Folder Include="Attachment\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modules\Web.config" />
@@ -290,6 +361,7 @@
     <None Include="Fonts\glyphicons-halflings-regular.eot" />
     <None Include="Fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Modules\Common\DownloadHandler.ashx" />
     <None Include="Scripts\README.md" />
   </ItemGroup>
   <ItemGroup>
