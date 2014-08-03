@@ -40,6 +40,8 @@ namespace Duihua.Lib.Common
         }
         public static void Fill(Control container, Dictionary<String, Object> dic)
         {
+            if (dic == null)
+                return;
             foreach (var key in dic.Keys)
             {
                 foreach (Control item in container.Controls){

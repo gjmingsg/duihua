@@ -9,7 +9,8 @@ namespace Duihua.Lib.Services.Education
     public class HomeWorkService
     {
         private readonly DBHelper _dao = new DBHelper();
-        public Dictionary<string,object> GetHomeWork(string id) {
+        public Dictionary<string, object> GetHomeWork(string id)
+        {
             var s = _dao.QueryListData(new Dictionary<String, Object>() { { "WorkID", id }},
                            @"SELECT hw.WorkID
                                      ,hw.CourseID
@@ -20,6 +21,7 @@ namespace Duihua.Lib.Services.Education
                                      ,hw.CreateTime
                                      , CONVERT(NVARCHAR(19),hw.BeginTime,121)BeginTime
                                      ,c.CourseName
+                                    ,(SELECT COUNT(1) FROM WorkResult wr WHERE hw.WorkID= wr.WorkID) hasSubmit
                                   FROM HomeWork hw INNER JOIN Course c ON c.CourseID = hw.CourseID
                                  WHERE hw.WorkID = @WorkID");
             if (s.Count == 0)
@@ -42,6 +44,25 @@ namespace Duihua.Lib.Services.Education
                                                     AND hw.Title LIKE '%'+@Title+'%'
                                                     and (c.CourseID = @CourseID or @CourseID = '00000000-0000-0000-0000-000000000000')
                                                     ").ToString());
+        }
+
+        public List<Dictionary<string, object>> GetMyHomeWork(string username)
+        {
+            var param = new Dictionary<String, Object>() { { "StudentName", username } };
+            return _dao.QueryListData(param, @"SELECT hw.WorkID,hw.Title,c.CourseID
+                  FROM Student s INNER JOIN JoinCourse jc ON jc.UserId = s.UserId
+                INNER JOIN Course c ON c.CourseID = jc.CourseID
+                INNER JOIN HomeWork hw ON hw.CourseID = c.CourseID
+                WHERE s.StudentName = @StudentName");
+        }
+
+        public List<Dictionary<string, object>> GetHomeworkByCourseID(string CourseID)
+        {
+            return _dao.QueryListData(new Dictionary<string, object>() { { "CourseID", CourseID } }, @"SELECT hw.WorkID,hw.Title FROM HomeWork hw WHERE hw.CourseID = @CourseID");
+        }
+
+        public int GetCountSubmit(string WorkId, string UserId) {
+            return int.Parse(_dao.QueryScalar(new Dictionary<string, object>() { { "WorkID", WorkId }, { "UserId", UserId } }, @"SELECT COUNT(1) FROM WorkResult wr WHERE wr.WorkID= @WorkID AND wr.Userid = @UserId").ToString());
         }
     }
 }

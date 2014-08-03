@@ -5,6 +5,7 @@
       <siteMapNode url="" title="学生园地"  description="学生园地" roles="管理员,学生">
         <siteMapNode url="" title="入学管理"  description="入学管理" />
         <siteMapNode url="" title="课程安排"  description="课程安排" />
+        <siteMapNode url="~/Modules/Course/CourseDashBoard.aspx" title="我的课程"  description="我的课程" />
         <siteMapNode url="~/Modules/Homework/HomeworkResult.aspx" title="每周作业"  description="每周作业" />
         <siteMapNode url="" title="光 荣 榜"  description="光 荣 榜" />
       </siteMapNode>

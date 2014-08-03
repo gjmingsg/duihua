@@ -15,6 +15,7 @@ namespace Duihua.EducationWeb.Modules.Common
         private readonly AttachmentService a = new AttachmentService();
         public string ModuleName { get { return hdModuleName.Value; } set { hdModuleName.Value = value; } }
         public string ModuleId { get{return hdModuleId.Value;} set{hdModuleId.Value = value;} }
+        public string Text { get { return lbControlName.Text; } set { lbControlName.Text = value; } }
         public bool EditMode { get { return bool.Parse( hdEditMode.Value); } set { hdEditMode.Value = value.ToString(); } }
         protected void Page_Load(object sender, EventArgs e)
         {

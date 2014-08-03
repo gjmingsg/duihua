@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Images\Weibo.png" />
     <Content Include="Images\学生管理.png" />
+    <Content Include="Images\我的课程.png" />
     <Content Include="Images\用户管理.png" />
     <Content Include="Images\角色管理.png" />
     <Content Include="Modules\Account\ChangePassword.aspx" />
@@ -84,11 +86,13 @@
     <Content Include="Modules\Class\JoinClassList.aspx" />
     <Content Include="Modules\Common\UCAttachment.ascx" />
     <Content Include="Modules\Course\CourseDashBoard.aspx" />
+    <Content Include="Modules\Course\CourseDetail.aspx" />
     <Content Include="Modules\Course\CourseList.aspx" />
     <Content Include="Modules\Default.aspx" />
     <Content Include="Modules\Homework\Default.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
     <Content Include="Modules\Homework\HomeworkResult.aspx" />
+    <Content Include="Modules\Homework\WorkResultDetail.aspx" />
     <Content Include="Modules\Message\ComMessageForum.aspx" />
     <Content Include="Modules\Message\ComMessageTopic.aspx" />
     <Content Include="Modules\Student\StudentList.aspx" />
@@ -158,6 +162,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Course.master.cs">
+      <DependentUpon>Course.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\Course.master.designer.cs">
+      <DependentUpon>Course.master</DependentUpon>
     </Compile>
     <Compile Include="Modules\Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -270,6 +281,13 @@
     <Compile Include="Modules\Course\CourseDashBoard.aspx.designer.cs">
       <DependentUpon>CourseDashBoard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Course\CourseDetail.aspx.cs">
+      <DependentUpon>CourseDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Course\CourseDetail.aspx.designer.cs">
+      <DependentUpon>CourseDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Course\CourseList.aspx.cs">
       <DependentUpon>CourseList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +322,13 @@
     </Compile>
     <Compile Include="Modules\Homework\HomeworkResult.aspx.designer.cs">
       <DependentUpon>HomeworkResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Homework\WorkResultDetail.aspx.cs">
+      <DependentUpon>WorkResultDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Homework\WorkResultDetail.aspx.designer.cs">
+      <DependentUpon>WorkResultDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Message\ComMessageForum.aspx.cs">
       <DependentUpon>ComMessageForum.aspx</DependentUpon>
@@ -362,6 +387,7 @@
     <None Include="Fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Modules\Common\DownloadHandler.ashx" />
+    <Content Include="Layout\Course.master" />
     <None Include="Scripts\README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -377,8 +403,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4353</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9999</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

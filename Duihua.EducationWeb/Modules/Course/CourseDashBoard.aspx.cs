@@ -11,7 +11,45 @@ namespace Duihua.EducationWeb.Modules.Course
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) {
+                BindCourse();
+            }
         }
+        private void BindCourse() {
+            SqlDataSource1.SelectParameters["userName"].DefaultValue = HttpContext.Current.User.Identity.Name;
+            Repeater1.DataSource = SqlDataSource1;
+            Repeater1.DataBind();
+        }
+        protected string GetStatus(object all, object part)
+        {
+            switch (GetProgress(all, part)) { 
+                case 0:
+                    return "未开始";
+                case 100:
+                    return "已结束";
+                default:
+                    return "进行中";
+            }
+        }
+        protected long GetProgress(object all,object part) {
+            long a = long.Parse(all.ToString());
+            long b = long.Parse(part.ToString());
+            if (b < 0)
+                return 0;
+            if (b > a)
+                return 100;
+            else
+                return b*100 / a;
+        }
+        protected void btnGotoCourse_Click(object sender, EventArgs e)
+        {
+            Button b = sender as Button;
+            Response.Redirect("CourseDetail.aspx?CourseID=" + b.Attributes["_id"]);
+        }
+        protected void btnLeaveMessage_Click(object sender, EventArgs e)
+        { 
+            
+        }
+        
     }
 }

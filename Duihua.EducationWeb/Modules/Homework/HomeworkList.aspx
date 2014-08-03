@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="HomeworkList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Homework.HomeworkList" %>
+﻿<%@ Page Title="作业管理" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="HomeworkList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Homework.HomeworkList" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <%@ Register Src="~/Modules/Common/UCAttachment.ascx" TagName="Attachment" TagPrefix="UC" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
@@ -240,7 +240,7 @@ WHERE WorkID  = @WrokID">
           <asp:TextBox ID="eID" runat="server" name="WorkID" CssClass="hidden"></asp:TextBox>
           <asp:DropDownList ID="eCourseID" name="CourseID"  ClientIDMode="Static" runat="server" DataSourceID="SqlDataSource2"  CssClass="form-control"
             DataTextField="CourseName" DataValueField="CourseID" >
-            <%--<asp:ListItem Value="00000000-0000-0000-0000-000000000000" Text="--请选择作业所属课程--"></asp:ListItem>--%>
+          
           </asp:DropDownList>
           <asp:SqlDataSource  ConnectionString="<%$ ConnectionStrings:DuihuaDB %>"  ID="SqlDataSource2" runat="server" 
           SelectCommand="SELECT c.CourseID,c.CourseName FROM Course c WHERE c.CourseID = @CourseID or @CourseID='00000000-0000-0000-0000-000000000000'">
@@ -248,12 +248,12 @@ WHERE WorkID  = @WrokID">
                     <asp:QueryStringParameter QueryStringField="CourseID" Name="CourseID" ConvertEmptyStringToNull="true" DefaultValue="00000000-0000-0000-0000-000000000000" />
               </SelectParameters>
           </asp:SqlDataSource>
-        <%--  <asp:RequiredFieldValidator  ControlToValidate="eCourseID" runat="server" ErrorMessage="“课程名称”必选" ValidationGroup="vsError"></asp:RequiredFieldValidator>--%>
+       
       </div>
       <div class="form-group">
           <label for="eTitle">作业名称：</label>
           <asp:TextBox ID="eTitle" ClientIDMode="Static" runat="server" name="Title"  CssClass="form-control"  placeholder="作业名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ControlToValidate="eTitle"  runat="server" ErrorMessage="“作业名称”必填"   CssClass="help-block"  Display="Dynamic"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ControlToValidate="eTitle" ValidationGroup="vs"  runat="server" ErrorMessage="“作业名称”必填"   CssClass="help-block"  Display="Dynamic"></asp:RequiredFieldValidator>
       </div>
     
       <div class="form-group">
@@ -262,7 +262,7 @@ WHERE WorkID  = @WrokID">
             <asp:TextBox ID="eBeginTime" ClientIDMode="Static" runat="server" name="BeginTime"   CssClass="form-control"></asp:TextBox>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="eBeginTime" runat="server"    ErrorMessage="“提交时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vs"  ControlToValidate="eBeginTime" runat="server"    ErrorMessage="“提交时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
         </div>
        </div>
        <div class="form-group">
@@ -271,15 +271,15 @@ WHERE WorkID  = @WrokID">
             <asp:TextBox ID="eDeadLine" ClientIDMode="Static" runat="server" name="DeadLine"  CssClass="form-control"></asp:TextBox>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="eDeadLine" runat="server"  ErrorMessage="“截止时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ValidationGroup="vs" ControlToValidate="eDeadLine" runat="server"  ErrorMessage="“截止时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
          </div>
        </div>
       
        <div class="form-group">
         <label for="eScore">分值：</label>
         <asp:TextBox ID="eScore" ClientIDMode="Static" Text="100" runat="server" name="Score"  CssClass="form-control"></asp:TextBox>
-           <asp:RequiredFieldValidator  runat="server" ErrorMessage="“分值”必填"  ControlToValidate="eScore"      CssClass="help-block"></asp:RequiredFieldValidator>
-           <asp:RegularExpressionValidator runat="server" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]*$" CssClass="help-block"  Display="Dynamic"></asp:RegularExpressionValidator>
+           <asp:RequiredFieldValidator  runat="server"  ValidationGroup="vs"  ErrorMessage="“分值”必填"  ControlToValidate="eScore"      CssClass="help-block"></asp:RequiredFieldValidator>
+           <asp:RegularExpressionValidator runat="server"  ValidationGroup="vs" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]*$" CssClass="help-block"  Display="Dynamic"></asp:RegularExpressionValidator>
       </div>
       <div class="form-group">
         <label for="eContent">作业详细说明：</label>
@@ -291,7 +291,7 @@ WHERE WorkID  = @WrokID">
    </div>
    <div class="panel-footer">
       <div class="form-group col-sm-offset-10 col-sm-2">
-         <asp:Button ID="btnSave" runat="server" Text="保存"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
+         <asp:Button ID="btnSave" runat="server" Text="保存" ValidationGroup="vs"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
          <asp:Button ID="btnBack" runat="server" Text="返回"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
           
       </div>
@@ -309,7 +309,7 @@ WHERE WorkID  = @WrokID">
         autoclose: 1,
         todayHighlight: 1,
         startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh:ii"
+        format: "yyyy-mm-dd hh"
     });
     $(".form_eDeadLine").datetimepicker({
         language: 'zh-CN',
@@ -318,7 +318,7 @@ WHERE WorkID  = @WrokID">
         autoclose: 1,
         todayHighlight: 1,
         startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh:ii"
+        format: "yyyy-mm-dd hh"
     });
     
 </script> 

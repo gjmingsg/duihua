@@ -4,7 +4,7 @@
 ,a.AttachmentName
 ,a.AttachmentId
 ,a.DownCount
-,a.[Size] FROM Attachment a WHERE a.ModuleName = @ModuleName
+, FLOOR(a.[Size]/1024)Size FROM Attachment a WHERE a.ModuleName = @ModuleName
 AND a.ModuleId = @ModuleId" DeleteCommand="DELETE FROM Attachment WHERE AttachmentId = @ID"
  >
     <SelectParameters>
@@ -19,9 +19,10 @@ AND a.ModuleId = @ModuleId" DeleteCommand="DELETE FROM Attachment WHERE Attachme
 <asp:HiddenField ID="hdModuleName" runat="server" />
 <asp:HiddenField ID="hdEditMode" runat="server" />
   <div class="panel panel-info">
-      <div class="panel-heading">  <label for="Attachment1">附件：</label></div>
-      <div class="panel-body">
+      <div class="panel-heading">
+      <asp:Label ID="lbControlName" AssociatedControlID="Repeater2" runat="server" Text="附件："></asp:Label>
       </div>
+      
  <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -30,7 +31,7 @@ AND a.ModuleId = @ModuleId" DeleteCommand="DELETE FROM Attachment WHERE Attachme
                         <th>操作</th>
                         <%} %>
                         <th>附件名称</th>
-                        <th>附件大小</th>
+                        <th>大小(kb)</th>
                         <th>下载次数</th>
                     </tr>
                 </thead>

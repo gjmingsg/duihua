@@ -42,14 +42,15 @@ namespace Duihua.Lib.Services.Education
             var list = _dao.QueryListData(param, @"SELECT
                                                     s.SemesterName
                                                     ,cg.GradeName 
-                                                    , CONVERT(NVARCHAR(19),c.StartTime,121) StartTime
-                                                    ,CONVERT(NVARCHAR(19),c.EndTime,121) EndTime
+                                                    , CONVERT(NVARCHAR(10),c.StartTime,121) StartTime
+                                                    ,CONVERT(NVARCHAR(10),c.EndTime,121) EndTime
                                                     ,C.Syllabus
                                                     ,C.CourseID
                                                     ,C.Cover
                                                     ,C.CreateTime
                                                     ,C.CourseName
                                                     ,t2.TeachName
+                                                    ,t2.Intro
                                                     ,s.SemesterID
                                                     ,cg.ClassID
                                                     ,(SELECT COUNT(1) FROM JoinCourse j WHERE j.CourseID = c.CourseID) studentCount
@@ -63,6 +64,14 @@ namespace Duihua.Lib.Services.Education
                 return null;
             else
                 return list[0];
+        }
+
+        public List<Dictionary<string,object>> GetMyCourse(string username){
+            var param = new Dictionary<String, Object>() { { "StudentName", username } };
+             return _dao.QueryListData(param, @"SELECT c.CourseID,c.CourseName
+                      FROM Student s INNER JOIN JoinCourse jc ON jc.UserId = s.UserId
+                    INNER JOIN Course c ON c.CourseID = jc.CourseID
+                    WHERE s.StudentName = @StudentName");
         }
     }
 }

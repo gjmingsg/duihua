@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Class.ClassList" %>
+﻿<%@ Page Title="班级信息管理" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="ClassList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Class.ClassList" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 
@@ -185,7 +185,7 @@ ORDER BY pageIndex asc
       <div class="form-group">
          <label for="tbGradeName">班级名称：</label>
          <asp:TextBox ID="tbGradeName" ClientIDMode="Static" runat="server" name="GradeName" CssClass="form-control" placeholder="班级名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ControlToValidate="tbGradeName" runat="server" ErrorMessage="“班级名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ValidationGroup="vd" ControlToValidate="tbGradeName" runat="server" ErrorMessage="“班级名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
       </div>
       <div class="form-group">
           <label for="ddSemesterID">学年：</label>
@@ -210,7 +210,7 @@ ORDER BY pageIndex asc
    </div>
    <div class="panel-footer">
       <div class="form-group col-sm-offset-10 col-sm-2">
-         <asp:Button ID="btnSave" runat="server" Text="保存"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
+         <asp:Button ID="btnSave" runat="server" Text="保存" ValidationGroup="vd"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
          <asp:Button ID="btnBack" runat="server" Text="返回"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
       </div>
       <br />

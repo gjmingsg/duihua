@@ -10,3 +10,7 @@ E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debu
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\GenerateResource.write.1.tlog
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\Duihua.WebApp.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\obj\Debug\Duihua.WebApp.pdb
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\AspNetPager.xml
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\log4net.xml
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\en\AspNetPager.resources.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.WebApp\bin\zh-CHT\AspNetPager.resources.dll

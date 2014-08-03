@@ -31,18 +31,16 @@
       <div class="panel-body">
       <%foreach (SiteMapNode item1 in item.ChildNodes)
         { %>
-       <div class="thumbnail">
-       <a href='<%=item1.Url %>'>
-      <img src='../Images/<%=item1.Title %>.png' alt='<%=item1.Title %>' class="img-rounded" />
-      </a>
-      <div class="caption">
-        <h4><%=item1.Title %></h4>
-        <p><%=item1.Description %></p>
-        
-      </div>
-    </div>
-    <%} %>
-    
+       <div class="thumbnail col-sm-2 col-md-2 col-xs-12">
+          <a href='<%=item1.Url %>'>
+            <img src='../Images/<%=item1.Title %>.png' alt='<%=item1.Title %>' class="img-rounded" />
+          </a>
+          <div class="caption">
+            <h4><%=item1.Title %></h4>
+            <p><%=item1.Description %></p>
+          </div>
+        </div>
+        <%} %>
       </div>
     </div>
   </div>

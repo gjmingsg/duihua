@@ -45,6 +45,8 @@ namespace Duihua.EducationWeb
                 if (student!=null)
                 {
                     FormsAuthentication.SetAuthCookie(student["StudentName"].ToString(), false);
+                    //Session["UserId"] = student["UserId"];
+                    Session.Add("UserId", student["UserId"]);
                     Response.Redirect("~/Modules/Default.aspx");
                 }
                 else {

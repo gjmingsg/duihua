@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true"  EnableEventValidation="false"
+﻿<%@ Page Title="查询需要加入班级的学生" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true"  EnableEventValidation="false"
  CodeBehind="JoinClassList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Class.JoinClassList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     

@@ -13,7 +13,12 @@ namespace Duihua.EducationWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            LoginUser.LoggedIn += new EventHandler(LoginUser_LoggedIn);
+        }
+
+        void LoginUser_LoggedIn(object sender, EventArgs e)
+        {
+            //Session["UserId"] = student["UserId"];
         }
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {

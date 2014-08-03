@@ -46,7 +46,7 @@
         <%--请输入用户名和密码。
         <asp:HyperLink ID="RegisterHyperLink" runat="server" EnableViewState="false">注册</asp:HyperLink> 如果您没有帐户。--%>
     </p>
-    <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" DestinationPageUrl="~/Modules/Default.aspx">
+    <asp:Login ID="LoginUser" runat="server"  EnableViewState="false" RenderOuterTable="false" DestinationPageUrl="~/Modules/Default.aspx">
         <LayoutTemplate>
             <span class="failureNotification">
                 <asp:Literal ID="FailureText" runat="server"></asp:Literal>

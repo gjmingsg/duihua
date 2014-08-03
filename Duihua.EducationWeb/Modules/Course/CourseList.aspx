@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="CourseList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Course.CourseList" %>
+﻿<%@ Page Title="课程信息管理" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="CourseList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Course.CourseList" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript" src="../../Scripts/bootstrap-datetimepicker.min.js"></script>
@@ -158,8 +158,8 @@ s.SemesterName
 ,t2.TeachName
 ,(SELECT COUNT(1) FROM JoinCourse j WHERE j.CourseID = c.CourseID) studentCount
 ,(SELECT COUNT(1) FROM HomeWork hw WHERE hw.CourseID = c.CourseID) homeworkCount
-,CONVERT(NVARCHAR(20),c.StartTime,121) StartTime
-,CONVERT(NVARCHAR(20),c.EndTime,121) EndTime
+,CONVERT(NVARCHAR(19),c.StartTime,121) StartTime
+,CONVERT(NVARCHAR(19),c.EndTime,121) EndTime
 ,c.CourseID
 ,ROW_NUMBER () OVER (ORDER BY c.StartTime DESC) pageindex
  FROM Course c LEFT JOIN TeachJoinCourse t ON c.CourseID = t.CourseID
@@ -179,7 +179,19 @@ ORDER BY pageIndex asc
       ,[EndTime] = @EndTime
       ,[Syllabus] = @Syllabus
       ,[Cover] = @Cover
-WHERE [CourseID] =@CourseID">
+WHERE [CourseID] =@CourseID
+delete from TeachJoinCourse where courseID= @courseID
+ INSERT INTO TeachJoinCourse
+            (
+	            UserId,
+	            CourseID
+            )
+            VALUES
+            (
+	            @TeacherId,
+	            @courseID   
+            )
+            ">
         <DeleteParameters>
             <asp:Parameter Name="CourseID" />
         </DeleteParameters>
@@ -200,6 +212,7 @@ WHERE [CourseID] =@CourseID">
             <asp:ControlParameter ControlID="eSyllabus" Name="Syllabus" />
             <asp:ControlParameter ControlID="tbCover" Name="Cover" />
             <asp:ControlParameter ControlID="eID" Name="CourseID" />
+            <asp:ControlParameter ControlID="eTeacherId" Name="TeacherId" />
         </UpdateParameters>
         <SelectParameters>
              <asp:ControlParameter ControlID="hdend"  ConvertEmptyStringToNull="false" Name="end" />
@@ -269,7 +282,7 @@ WHERE [CourseID] =@CourseID">
 
 <div runat="server" id="detail" visible="false"  class="panel panel-success">
   <div class="panel-heading">
-        <h3 class="panel-title">编辑班级信息</h3>
+        <h3 class="panel-title">编辑课程信息</h3>
     </div>
     <div class="panel-body">
       <div class="form-group">
@@ -302,7 +315,7 @@ WHERE [CourseID] =@CourseID">
       </div>
       <div class="form-group">
         <label for="eCourseName">课程名称：</label>
-        <asp:TextBox ID="eCourseName" ClientIDMode="Static" runat="server" name="CourseName"  CssClass="form-control" placeholder="课程名称"></asp:TextBox>
+        <asp:TextBox ID="eCourseName" ClientIDMode="Static"  ValidationGroup="vs" runat="server" name="CourseName"  CssClass="form-control" placeholder="课程名称"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="eCourseName" runat="server" ErrorMessage="“课程名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
       </div>
       <div class="form-group">
@@ -310,7 +323,7 @@ WHERE [CourseID] =@CourseID">
         <div>
             <div class="col-md-6  col-xs-6">
                 <div class="input-group input-append date form_StartTime" data-date='<%=DateTime.Now %>'>
-                     <asp:TextBox ID="eStartTime" ClientIDMode="Static" name="StartTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
+                     <asp:TextBox ID="eStartTime" ValidationGroup="vs" ClientIDMode="Static" name="StartTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="eStartTime" runat="server" ErrorMessage="“课程时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
@@ -319,7 +332,7 @@ WHERE [CourseID] =@CourseID">
 
             <div class="col-md-6  col-xs-6">
                 <div class="input-group input-append date form_EndTime" data-date='<%=DateTime.Now %>' >
-                     <asp:TextBox ID="eEndTime" ClientIDMode="Static" name="EndTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
+                     <asp:TextBox ID="eEndTime" ClientIDMode="Static" ValidationGroup="vs" name="EndTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="eEndTime" runat="server" ErrorMessage="“课程时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
@@ -338,7 +351,7 @@ WHERE [CourseID] =@CourseID">
                 </span>
           </div>
 
-          <asp:TextBox ID="tbCover" runat="server" name="Cover" style="display:none" ></asp:TextBox>
+          <asp:TextBox ID="tbCover" runat="server"  name="Cover" style="display:none" ></asp:TextBox>
           <asp:Image ID="ImgCover" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
       </div>
       
@@ -350,7 +363,7 @@ WHERE [CourseID] =@CourseID">
    </div>
    <div class="panel-footer">
       <div class="form-group col-sm-offset-10 col-sm-2">
-         <asp:Button ID="btnSave" runat="server" Text="保存"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
+         <asp:Button ID="btnSave" runat="server" Text="保存"  ValidationGroup="vs" OnClick="btnSave_Click" CssClass="btn btn-primary"/>
          <asp:Button ID="btnBack" runat="server" Text="返回"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
       </div>
       <br />
@@ -365,11 +378,8 @@ WHERE [CourseID] =@CourseID">
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0,
-              startDate:'<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd hh:ii'
+            startDate: '<%=DateTime.Now %>',
+            format: 'yyyy-mm-dd'
         });
         $('.form_EndTime').datetimepicker({
             language: 'zh-CN',
@@ -377,11 +387,8 @@ WHERE [CourseID] =@CourseID">
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0,
             startDate: '<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
     });
    
