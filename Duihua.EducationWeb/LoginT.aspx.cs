@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
 using Duihua.Lib.Common;
+using System.Net;
 
 namespace Duihua.EducationWeb
 {
@@ -18,7 +19,10 @@ namespace Duihua.EducationWeb
 
         void LoginUser_LoggedIn(object sender, EventArgs e)
         {
-            //Session["UserId"] = student["UserId"];
+            var username = WebHelper.FindControl(LoginUser, "UserName") as TextBox;
+            var o = Membership.GetUser(username.Text);
+
+            Session.Add("UserId", o.ProviderUserKey); 
         }
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
@@ -37,5 +41,7 @@ namespace Duihua.EducationWeb
             else
                 args.IsValid = false;
         }
+
+      
     }
 }

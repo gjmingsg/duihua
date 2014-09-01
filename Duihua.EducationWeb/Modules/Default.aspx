@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Default" %>
+﻿<%@ Page Title="控制面板" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 <style type="text/css">
 .thumbnail{float:left; margin:10px;}

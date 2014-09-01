@@ -38,6 +38,13 @@
   border-top-right-radius: 0;
 }
 </style>
+<script type="text/javascript" >
+    $(document).ready(function () {
+        $('#imgValidator').click(function () {
+            $(this).attr('src', "ImageValidator.aspx?len=4&type=1&r" + Math.random());
+        });
+    });
+</script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
      <h2 class="form-signin-heading">

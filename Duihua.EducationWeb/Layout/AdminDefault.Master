@@ -90,9 +90,12 @@ code {
                     <li  class="active"> 
                         <a href="/Modules/Default.aspx">管理面板</a>
                     </li>
+                    <%if (HttpContext.Current.User.IsInRole("学生") || HttpContext.Current.User.IsInRole("教师"))
+                      { %>
                      <li> 
                         <a href="/Modules/Course/CourseDashBoard.aspx">我的课程</a>
                     </li>
+                    <%} %>
                       <li> 
                         <a href="/Modules/Message/ComMessageForum.aspx">论坛</a>
                     </li>
@@ -100,7 +103,7 @@ code {
                         <a href="/modules/Account/PersonalSetting.aspx">个人设置</a>
                     </li>
                      <li> 
-                        <a href="/modules/help.aspx">帮助</a>
+                        <a href="/modules/common/help.aspx">帮助</a>
                     </li>
                     <li>
                         <a href="/Logout.aspx" class="active">注销</a> 

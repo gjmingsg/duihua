@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="Personal.master.cs" Inherits="Duihua.EducationWeb.Layout.Personal" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+  <script type="text/javascript">
+      $(function () {
+          $('#second-menu>a').each(function () {
+              var url = $(this).attr('href').toLowerCase();
+              //alert(url + ' ' + document.URL + ' ' + document.URL.indexOf(url));
+              if (document.URL.toLowerCase().indexOf(url) >= 0)
+                  $(this).addClass('active');
+              else
+                  $(this).removeClass('active');
+          });
+      });
+    </script>
+ <asp:ContentPlaceHolder ID="Head" runat="server"/>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+        <%-- <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">展开</button>
+          </p>
+        --%>    <asp:ContentPlaceHolder ID="Main" runat="server"/>
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+          <div class="list-group"  id="second-menu">
+            <a href="/modules/account/PersonalSetting.aspx" class="list-group-item active">个人信息</a>
+            <a href="/modules/message/personmessage.aspx" class="list-group-item">我的留言</a>
+            <a href="/modules/account/changepassword.aspx" class="list-group-item">修改密码</a>
+            <%if (HttpContext.Current.User.IsInRole("学生") || HttpContext.Current.User.IsInRole("家长"))
+              { %>
+            <a href="/modules/Student/MyClassmate.aspx?ClassID=<%=ClassID %>" class="list-group-item">我的班级</a>
+            <a href="/Modules/Course/CourseDashBoard.aspx" class="list-group-item">我的课程</a>
+            <%} %>
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+    <asp:HiddenField ID="hdClassID" runat="server" />
+ 
+</asp:Content>

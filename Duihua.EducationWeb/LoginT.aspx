@@ -37,6 +37,13 @@
   border-top-right-radius: 0;
 }
 </style>
+<script type="text/javascript" >
+    $(document).ready(function () {
+        $('#imgValidator').click(function () {
+            $(this).attr('src', "ImageValidator.aspx?len=4&type=1&r" + Math.random());
+        });
+    });
+</script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
      <h2 class="form-signin-heading">
@@ -46,7 +53,9 @@
         <%--请输入用户名和密码。
         <asp:HyperLink ID="RegisterHyperLink" runat="server" EnableViewState="false">注册</asp:HyperLink> 如果您没有帐户。--%>
     </p>
-    <asp:Login ID="LoginUser" runat="server"  EnableViewState="false" RenderOuterTable="false" DestinationPageUrl="~/Modules/Default.aspx">
+    <asp:Login ID="LoginUser" runat="server"  EnableViewState="false" 
+         RenderOuterTable="false" DestinationPageUrl="~/Modules/Default.aspx" 
+       >
         <LayoutTemplate>
             <span class="failureNotification">
                 <asp:Literal ID="FailureText" runat="server"></asp:Literal>

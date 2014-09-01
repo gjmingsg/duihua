@@ -55,15 +55,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Images\admin.png" />
+    <Content Include="Images\boy.png" />
+    <Content Include="Images\build.png" />
+    <Content Include="Images\girl.png" />
+    <Content Include="Images\noimage.jpg" />
+    <Content Include="Images\noimage_small.jpg" />
+    <Content Include="Images\Teacher.png" />
     <Content Include="Images\Weibo.png" />
     <Content Include="Images\学生管理.png" />
+    <Content Include="Images\师资管理.png" />
     <Content Include="Images\我的课程.png" />
-    <Content Include="Images\用户管理.png" />
+    <Content Include="Images\教务管理.png" />
+    <Content Include="Images\账号信息.png" />
     <Content Include="Images\角色管理.png" />
     <Content Include="Modules\Account\ChangePassword.aspx" />
     <Content Include="Modules\Account\ChangePasswordSuccess.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LoginT.aspx" />
+    <Content Include="Modules\Account\CooperatorList.aspx" />
     <Content Include="Modules\Account\PersonalSetting.aspx" />
     <Content Include="Modules\Account\Register.aspx" />
     <Content Include="Images\作业管理.png" />
@@ -81,20 +91,25 @@
     <Content Include="Images\课程管理.png" />
     <Content Include="ImageValidator.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Modules\Account\RoleList.aspx" />
+    <Content Include="Modules\Account\TeacherList.aspx" />
     <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Class\JoinClassList.aspx" />
+    <Content Include="Modules\Common\Help.aspx" />
     <Content Include="Modules\Common\UCAttachment.ascx" />
+    <Content Include="Modules\Common\UploadImage.ascx" />
     <Content Include="Modules\Course\CourseDashBoard.aspx" />
     <Content Include="Modules\Course\CourseDetail.aspx" />
     <Content Include="Modules\Course\CourseList.aspx" />
     <Content Include="Modules\Default.aspx" />
-    <Content Include="Modules\Homework\Default.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
-    <Content Include="Modules\Homework\HomeworkResult.aspx" />
+    <Content Include="Modules\Homework\WeeklyHomework.aspx" />
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
     <Content Include="Modules\Message\ComMessageForum.aspx" />
     <Content Include="Modules\Message\ComMessageTopic.aspx" />
+    <Content Include="Modules\Message\PersonMessage.aspx" />
+    <Content Include="Modules\Student\MyClassmate.aspx" />
     <Content Include="Modules\Student\StudentList.aspx" />
     <Content Include="Modules\Student\StudentSummary.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
@@ -170,6 +185,13 @@
     <Compile Include="Layout\Course.master.designer.cs">
       <DependentUpon>Course.master</DependentUpon>
     </Compile>
+    <Compile Include="Layout\Personal.master.cs">
+      <DependentUpon>Personal.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\Personal.master.designer.cs">
+      <DependentUpon>Personal.master</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Account\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +219,13 @@
     </Compile>
     <Compile Include="LoginT.aspx.designer.cs">
       <DependentUpon>LoginT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Account\CooperatorList.aspx.cs">
+      <DependentUpon>CooperatorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Account\CooperatorList.aspx.designer.cs">
+      <DependentUpon>CooperatorList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Account\PersonalSetting.aspx.cs">
       <DependentUpon>PersonalSetting.aspx</DependentUpon>
@@ -243,6 +272,20 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Account\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Account\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Account\TeacherList.aspx.cs">
+      <DependentUpon>TeacherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Account\TeacherList.aspx.designer.cs">
+      <DependentUpon>TeacherList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Account\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,12 +310,26 @@
     <Compile Include="Modules\Common\DownloadHandler.ashx.cs">
       <DependentUpon>DownloadHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Common\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Common\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Common\UCAttachment.ascx.cs">
       <DependentUpon>UCAttachment.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\Common\UCAttachment.ascx.designer.cs">
       <DependentUpon>UCAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\UploadImage.ascx.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Common\UploadImage.ascx.designer.cs">
+      <DependentUpon>UploadImage.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Course\CourseDashBoard.aspx.cs">
       <DependentUpon>CourseDashBoard.aspx</DependentUpon>
@@ -302,13 +359,6 @@
     <Compile Include="Modules\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Homework\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modules\Homework\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Homework\HomeworkList.aspx.cs">
       <DependentUpon>HomeworkList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,12 +366,12 @@
     <Compile Include="Modules\Homework\HomeworkList.aspx.designer.cs">
       <DependentUpon>HomeworkList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Homework\HomeworkResult.aspx.cs">
-      <DependentUpon>HomeworkResult.aspx</DependentUpon>
+    <Compile Include="Modules\Homework\WeeklyHomework.aspx.cs">
+      <DependentUpon>WeeklyHomework.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\Homework\HomeworkResult.aspx.designer.cs">
-      <DependentUpon>HomeworkResult.aspx</DependentUpon>
+    <Compile Include="Modules\Homework\WeeklyHomework.aspx.designer.cs">
+      <DependentUpon>WeeklyHomework.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Homework\WorkResultDetail.aspx.cs">
       <DependentUpon>WorkResultDetail.aspx</DependentUpon>
@@ -343,6 +393,20 @@
     </Compile>
     <Compile Include="Modules\Message\ComMessageTopic.aspx.designer.cs">
       <DependentUpon>ComMessageTopic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Message\PersonMessage.aspx.cs">
+      <DependentUpon>PersonMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Message\PersonMessage.aspx.designer.cs">
+      <DependentUpon>PersonMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Student\MyClassmate.aspx.cs">
+      <DependentUpon>MyClassmate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Student\MyClassmate.aspx.designer.cs">
+      <DependentUpon>MyClassmate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Student\StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
@@ -388,6 +452,7 @@
     <None Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Modules\Common\DownloadHandler.ashx" />
     <Content Include="Layout\Course.master" />
+    <Content Include="Layout\Personal.master" />
     <None Include="Scripts\README.md" />
   </ItemGroup>
   <ItemGroup>

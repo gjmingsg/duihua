@@ -23,7 +23,6 @@
              <div class="form-group col-sm-2 col-xs-3">
                 <label class="sr-only" for="tbTeachName">教师名称</label>
                 <asp:TextBox runat="server" ClientIDMode="Static"  ID="tbTeachName" CssClass="form-control" placeholder="输入教师名称"></asp:TextBox>
-
             </div>
         </div>
         <div class="col-sm-12  col-xs-12">
@@ -38,8 +37,7 @@
             </div>
             <div class="form-group  col-sm-2 col-xs-2">
                 <asp:Button runat="server" ID="btnNew" ClientIDMode="Static" Text="添加" onclick="btnNew_Click" CssClass="btn btn-primary"/>
-                <asp:HiddenField ID="HiddenField1" runat="server" />
-                <asp:HiddenField ID="HiddenField2" runat="server" />
+             
             </div>
         </div>
         <br />

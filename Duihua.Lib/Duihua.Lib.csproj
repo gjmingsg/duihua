@@ -39,6 +39,7 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -47,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Common\Config.cs" />
     <Compile Include="Common\DBHelper.cs" />
+    <Compile Include="Common\ExtensionMethod.cs" />
     <Compile Include="Common\ImageHelper.cs" />
     <Compile Include="Common\Uploader.cs" />
     <Compile Include="Common\WebHelper.cs" />
@@ -58,9 +60,12 @@
     <Compile Include="Services\DetailService.cs" />
     <Compile Include="Services\Education\AttachmentService.cs" />
     <Compile Include="Services\Education\ClassGradeService.cs" />
+    <Compile Include="Services\Education\CooperatorService.cs" />
     <Compile Include="Services\Education\CourseService.cs" />
     <Compile Include="Services\Education\HomeWorkService.cs" />
     <Compile Include="Services\Education\StudentService.cs" />
+    <Compile Include="Services\Education\TeacherService.cs" />
+    <Compile Include="Services\Education\UserService.cs" />
     <Compile Include="Services\Education\WorkResultService.cs" />
     <Compile Include="Services\MessageService.cs" />
     <Compile Include="Services\RegisterService.cs" />

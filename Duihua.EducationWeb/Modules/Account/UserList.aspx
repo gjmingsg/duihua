@@ -1,19 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Account.UserList" %>
+﻿<%@ Page Title="用户管理" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Account.UserList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="block"> 
-			<div class="fl"> 
-				<button id="AddUser">新增用户</button>
-			</div>
-		<%--	<div class="fr" id="search"> 
-			<input type="text" id="txtSearch" />
-			<input type="button" id="btnSearch" value="搜索" />
-			</div>
-			<div class="clear"></div>--%>
-		</div><!--end: block -->
-		
-    <asp:GridView ID="gvUserList" runat="server" DataSourceID="dbdUserList" CssClass="table" AutoGenerateColumns="false">
+
+    <asp:GridView ID="gvUserList" runat="server" DataSourceID="dbdUserList" Width="99%" CssClass="table  table-hover" AlternatingRowStyle-BorderWidth="0" RowStyle-BorderWidth="0" BorderWidth=0 AutoGenerateColumns="false">
     <Columns>
     <asp:BoundField DataField="UserName" HeaderText="账号" />
     <asp:BoundField DataField="Email" HeaderText="邮箱" />
