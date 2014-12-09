@@ -147,7 +147,7 @@ namespace Duihua.EducationWeb.Modules.Student
         {
             //Random t = new Random(DateTime.Now.Second);
             ///密码为身份证号
-            Membership.CreateUser(eStudentName.Text,eIDCard.Text,eEmail.Text);
+            Membership.CreateUser(eStudentName.Text,"123456",eEmail.Text);
             
             eUserId.Text = Membership.GetUser(eStudentName.Text).ProviderUserKey.ToString();
             e.Command.Parameters["@UserId"].Value = eUserId.Text;

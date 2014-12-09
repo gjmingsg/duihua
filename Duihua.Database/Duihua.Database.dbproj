@@ -149,6 +149,9 @@
     <NotInBuild Include="Scripts\Post-Deployment\学生管理系统.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="ed.scmp">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema Objects\Database Level Objects\Storage\Files\Duihua_log.sqlfile.sql">

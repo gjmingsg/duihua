@@ -30,6 +30,14 @@ namespace Duihua.Lib.Services.Education
                 return null;
             return l[0];
         }
-        
+        public List<Dictionary<string, object>> GetWorkResultScore(string CourseID, string UserId)
+        {
+            var l = _dao.QueryListData(new Dictionary<string, object>() { { "UserId", UserId }, { "CourseID", CourseID } },
+                @"SELECT hw.WorkID,isnull(wr.Score,0) Score
+  FROM HomeWork hw LEFT JOIN WorkResult wr ON wr.WorkID = hw.WorkID and wr.UserId =@UserId
+WHERE hw.CourseID = @CourseID
+ORDER BY hw.BeginTime ASC");
+            return l;
+        }
     }
 }

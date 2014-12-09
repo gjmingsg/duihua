@@ -73,5 +73,13 @@ namespace Duihua.Lib.Services.Education
                     INNER JOIN Course c ON c.CourseID = jc.CourseID
                     WHERE s.StudentName = @StudentName");
         }
+
+        public List<Dictionary<string, object>> GetMyCourseByUserId(string UserId)
+        {
+            var param = new Dictionary<String, Object>() { { "UserId", UserId } };
+            return _dao.QueryListData(param, @"SELECT c.CourseID,c.CourseName,c.Syllabus
+                              FROM Course c INNER JOIN JoinCourse jc ON jc.CourseID = c.CourseID
+                            WHERE jc.UserId = @UserId");
+        }
     }
 }

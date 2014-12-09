@@ -58,7 +58,7 @@ namespace Duihua.Lib.Services.Education
 
         public List<Dictionary<string, object>> GetHomeworkByCourseID(string CourseID)
         {
-            return _dao.QueryListData(new Dictionary<string, object>() { { "CourseID", CourseID } }, @"SELECT hw.WorkID,hw.Title FROM HomeWork hw WHERE hw.CourseID = @CourseID");
+            return _dao.QueryListData(new Dictionary<string, object>() { { "CourseID", CourseID } }, @"SELECT hw.WorkID,hw.Title,hw.BeginTime FROM HomeWork hw WHERE hw.CourseID = @CourseID ORDER BY hw.BeginTime ASC");
         }
 
         public int GetCountSubmit(string WorkId, string UserId) {

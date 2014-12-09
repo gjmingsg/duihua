@@ -60,9 +60,11 @@
     <Compile Include="Services\DetailService.cs" />
     <Compile Include="Services\Education\AttachmentService.cs" />
     <Compile Include="Services\Education\ClassGradeService.cs" />
+    <Compile Include="Services\Education\ComMessageService.cs" />
     <Compile Include="Services\Education\CooperatorService.cs" />
     <Compile Include="Services\Education\CourseService.cs" />
     <Compile Include="Services\Education\HomeWorkService.cs" />
+    <Compile Include="Services\Education\NoticeService.cs" />
     <Compile Include="Services\Education\StudentService.cs" />
     <Compile Include="Services\Education\TeacherService.cs" />
     <Compile Include="Services\Education\UserService.cs" />

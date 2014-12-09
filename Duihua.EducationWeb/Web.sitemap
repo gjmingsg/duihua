@@ -11,11 +11,11 @@
       </siteMapNode>
 
       <siteMapNode url="" title="家长天地"  description="家长天地" roles="家长,学生">
-        <siteMapNode url="~/Modules/Student/StudentSummary.aspx" title="学生动态"  description="学生动态" />
+        <siteMapNode url="~/Modules/Student/StudentSummary.aspx" title="学业动态"  description="学业动态" />
         <siteMapNode url="~/Modules/Message/ComMessageForum.aspx" title="咨询留言"  description="咨询留言" />
       </siteMapNode>
 
-      <siteMapNode url="" title="教工之家"  description="教工之家" roles="教师">
+      <siteMapNode url="" title="教工之家"  description="教工之家" roles="教师,管理员">
         <siteMapNode url="~/Modules/Class/ClassList.aspx" title="班级管理"  description="班级管理" />
         <siteMapNode url="~/Modules/Course/CourseList.aspx" title="课程管理"  description="课程管理" />
         <siteMapNode url="~/Modules/Homework/HomeworkList.aspx" title="作业管理"  description="作业管理" />

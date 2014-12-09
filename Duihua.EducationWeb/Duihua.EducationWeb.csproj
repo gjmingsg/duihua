@@ -82,7 +82,7 @@
     <Content Include="Images\单位信息.png" />
     <Content Include="Images\咨询留言.png" />
     <Content Include="Images\评价考核.png" />
-    <Content Include="Images\学生动态.png" />
+    <Content Include="Images\学业动态.png" />
     <Content Include="Images\本校学子.png" />
     <Content Include="Images\每周作业.png" />
     <Content Include="Images\班级管理.png" />
@@ -108,7 +108,9 @@
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
     <Content Include="Modules\Message\ComMessageForum.aspx" />
     <Content Include="Modules\Message\ComMessageTopic.aspx" />
+    <Content Include="Modules\Message\MessageDetail.aspx" />
     <Content Include="Modules\Message\PersonMessage.aspx" />
+    <Content Include="Modules\Notice\PersonNotice.aspx" />
     <Content Include="Modules\Student\MyClassmate.aspx" />
     <Content Include="Modules\Student\StudentList.aspx" />
     <Content Include="Modules\Student\StudentSummary.aspx" />
@@ -394,12 +396,29 @@
     <Compile Include="Modules\Message\ComMessageTopic.aspx.designer.cs">
       <DependentUpon>ComMessageTopic.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Message\MessageDetail.aspx.cs">
+      <DependentUpon>MessageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Message\MessageDetail.aspx.designer.cs">
+      <DependentUpon>MessageDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Message\PersonMessage.aspx.cs">
       <DependentUpon>PersonMessage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\Message\PersonMessage.aspx.designer.cs">
       <DependentUpon>PersonMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Notice\PersonNotice.aspx.cs">
+      <DependentUpon>PersonNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Notice\PersonNotice.aspx.designer.cs">
+      <DependentUpon>PersonNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ReadHandler.ashx.cs">
+      <DependentUpon>ReadHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Student\MyClassmate.aspx.cs">
       <DependentUpon>MyClassmate.aspx</DependentUpon>
@@ -447,12 +466,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Layout\AdminDefault.Master" />
+    <Content Include="App_Browsers\IE10.browser" />
+    <Content Include="App_Browsers\IE10Fix.browser" />
     <None Include="Fonts\glyphicons-halflings-regular.eot" />
     <None Include="Fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Modules\Common\DownloadHandler.ashx" />
     <Content Include="Layout\Course.master" />
     <Content Include="Layout\Personal.master" />
+    <Content Include="Modules\ReadHandler.ashx" />
     <None Include="Scripts\README.md" />
   </ItemGroup>
   <ItemGroup>

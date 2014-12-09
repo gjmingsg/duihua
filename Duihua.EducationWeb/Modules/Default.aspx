@@ -9,7 +9,8 @@
 <div class="alert alert-success alert-dismissable">
 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 欢迎 <strong><%=Page.User.Identity.Name%></strong> 登录系统
-  <strong>Warning!</strong> Best check yo self, you're not looking too good.
+<asp:Literal runat="server" ID="lnotice"></asp:Literal>
+<asp:Literal runat="server" ID="lmessage"></asp:Literal>
 </div>
 <div class="panel panel-default">
 <div class="panel-group" id="accordion">
