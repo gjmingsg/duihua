@@ -15,6 +15,12 @@ namespace Duihua.EducationWeb.Modules
         {
             context.Response.ContentType = "text/plain";
             context.Response.Write("Hello World");
+            var id = context.Request.QueryString["id"];
+            var type = context.Request.QueryString["ItemName"];
+            if ("Notice".Equals(type))
+                context.Response.Redirect("~/Notice/NoticeDetail.aspx?CourseID="+id);
+            else
+                context.Response.Redirect("~/Message/MessageDetail.aspx?messageId="+id);
         }
 
         public bool IsReusable

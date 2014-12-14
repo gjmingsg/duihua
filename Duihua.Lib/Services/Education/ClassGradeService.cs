@@ -45,5 +45,16 @@ AND cg.GradeName LIKE '%'+@GradeName+'%'").ToString());
             else
                 return list[0];
         }
+
+        public Dictionary<String, Object> GetMyClassGrade(string userId)
+        {
+            var param = new Dictionary<String, Object>() { { "UserId", userId } };
+            var list = _dao.QueryListData(param, @"SELECT cg.* FROM ClassGrade cg INNER JOIN JoinClass jc ON jc.ClassID = cg.ClassID WHERE jc.UserId = @UserId");
+            if (list.Count == 0)
+                return null;
+            else
+                return list[0];
+        }
+
     }
 }

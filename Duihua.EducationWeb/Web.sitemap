@@ -32,6 +32,7 @@
         <siteMapNode url="~/Modules/Student/StudentList.aspx" title="学生管理" description="学生管理"></siteMapNode>
         <siteMapNode url="~/Modules/Account/CooperatorList.aspx" title="单位信息"  description="单位信息" />
         <siteMapNode url="~/Modules/Account/UserList.aspx" title="账号信息"  description="账号信息" />
+        <siteMapNode url="~/Modules/Notice/SystemNotice.aspx" title="系统公告"  description="系统公告" />
         <!--<siteMapNode url="~/Modules/Account/RoleList.aspx" title="角色管理" description="角色管理"></siteMapNode>-->
       </siteMapNode>
     </siteMapNode>

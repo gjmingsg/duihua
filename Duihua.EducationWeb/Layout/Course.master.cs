@@ -10,8 +10,7 @@ namespace Duihua.EducationWeb.Layout
 {
     public partial class Course : System.Web.UI.MasterPage
     {
-        
-        protected string Url { get { return Request.RawUrl; } }
+
         private readonly CourseService c = new CourseService();
         private readonly HomeWorkService h = new HomeWorkService();
         public string CourseID { get { return Request.QueryString["CourseID"]; } }

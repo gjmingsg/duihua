@@ -4,16 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
-
+using log4net.Config;
+using log4net;
 namespace Duihua.EducationWeb
 {
     public class Global : System.Web.HttpApplication
     {
-
+        private readonly ILog log = LogManager.GetLogger(typeof(Global));
         void Application_Start(object sender, EventArgs e)
         {
             // 在应用程序启动时运行的代码
-
+            DOMConfigurator.ConfigureAndWatch(new System.IO.FileInfo(AppDomain.CurrentDomain.BaseDirectory + @"\Log4net.config"));
         }
 
         void Application_End(object sender, EventArgs e)
@@ -25,7 +26,7 @@ namespace Duihua.EducationWeb
         void Application_Error(object sender, EventArgs e)
         {
             // 在出现未处理的错误时运行的代码
-
+            log.Error(Server.GetLastError());
         }
 
         void Session_Start(object sender, EventArgs e)
