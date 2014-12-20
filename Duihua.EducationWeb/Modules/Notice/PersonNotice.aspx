@@ -21,7 +21,7 @@
   <tr class='<%#GetStatus(Eval("ItemStatus")) %>'>  
         
              <td>
-                <a href='../ReadHandler.ashx?Id=<%#Eval("NoticeID") %>&ItemName=Notice'>
+                <a href='../ReadHandler.ashx?Id=<%#Eval("NoticeID") %>&ItemName=Notice'  target="_blank">
                     <%#Eval("Title")%>
                 </a>
             </td>
@@ -52,8 +52,8 @@
                         ,t.Title
                         ,t.CreateTime
                         ,(select au.UserName FROM  aspnet_Users au where t.creator = au.UserId)UserName
-                        ,case when ISNULL(nms.ItemStatus,'I') = 'I' THEN '未开始'
-                            ELSE '已结束' end ItemStatus
+                        ,case when ISNULL(nms.ItemStatus,'I') = 'I' THEN '未读'
+                            ELSE '已读' end ItemStatus
                         FROM Notice t
                         LEFT JOIN NoticeMessageStatus nms ON nms.ItemId = t.NoticeID AND nms.UserId =@UserId">
 <SelectParameters>

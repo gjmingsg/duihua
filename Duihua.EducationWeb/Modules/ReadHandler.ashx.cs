@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Duihua.Lib.Services.Education;
+using System.Web.SessionState;
 
 namespace Duihua.EducationWeb.Modules
 {
     /// <summary>
     /// ReadHandler 的摘要说明
     /// </summary>
-    public class ReadHandler : IHttpHandler
+    public class ReadHandler : IHttpHandler, IReadOnlySessionState
     {
-
+        private readonly NoticeMessageStatusService s = new NoticeMessageStatusService();
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            //context.Response.ContentType = "text/plain";
+            //context.Response.Write("Hello World");
             var id = context.Request.QueryString["id"];
             var type = context.Request.QueryString["ItemName"];
+            s.SetStatus(id, context.Session["UserId"] + "", type, "R");
             if ("Notice".Equals(type))
-                context.Response.Redirect("~/Notice/NoticeDetail.aspx?CourseID="+id);
+                context.Response.Redirect("~/Modules/Notice/NoticeDetail.aspx?NoticeID=" + id);
             else
-                context.Response.Redirect("~/Message/MessageDetail.aspx?messageId="+id);
+                context.Response.Redirect("~/Modules/Message/MessageDetail.aspx?MessageId=" + id);
         }
 
         public bool IsReusable

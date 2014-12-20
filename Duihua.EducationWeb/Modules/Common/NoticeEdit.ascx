@@ -10,7 +10,7 @@
       </div>
        <div class="form-group">
            <label for="Content">公告内容：</label>
-          <textarea id="Content" name="Content" runat="server" cols="20" rows="2" clientidmode="Static"></textarea>
+          <textarea id="Content" name="Content" runat="server" style=" height:200px" cols="20" rows="2" clientidmode="Static"></textarea>
           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Content" 
             CssClass="failureNotification" ErrorMessage="必须填写“内容”。" ToolTip="必须填写“内容”。" 
             ValidationGroup="RegisterArtValidationGroup">*</asp:RequiredFieldValidator>
@@ -22,6 +22,15 @@
         <script type="text/javascript" charset="utf-8" src="<%=GetFullContextPath %>/scripts/Ueditor/ueditor.all.min.js"> </script>
         <script type="text/javascript" charset="utf-8" src="<%=GetFullContextPath %>/scripts/Ueditor/lang/zh-cn/zh-cn.js"></script>
         <script type="text/javascript">
+            window.UEDITOR_CONFIG.toolbars = [
+            ['source', 'undo', 'redo', '|',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
+                'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+                'rowspacingtop', 'rowspacingbottom', 'lineheight', 'fontsize', 'directionalityltr', 'directionalityrtl', 'indent', '|',
+                'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', 'link', 'unlink', 'anchor', '|',
+                'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'insertframe', '|',
+                'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'preview']
+        ];
             UE.getEditor('<%=Content.ClientID %>');
         </script>
       </div>

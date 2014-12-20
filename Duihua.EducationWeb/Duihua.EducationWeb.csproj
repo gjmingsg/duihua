@@ -68,6 +68,7 @@
     <Content Include="Images\noimage.jpg" />
     <Content Include="Images\noimage_small.jpg" />
     <Content Include="Images\Teacher.png" />
+    <Content Include="Images\topicicon.png" />
     <Content Include="Images\Weibo.png" />
     <Content Include="Images\学生管理.png" />
     <Content Include="Images\师资管理.png" />
@@ -104,6 +105,7 @@
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Class\JoinClassList.aspx" />
     <Content Include="Modules\Common\Help.aspx" />
+    <Content Include="Modules\Common\MessageEdit.ascx" />
     <Content Include="Modules\Common\NoticeEdit.ascx" />
     <Content Include="Modules\Common\UCAttachment.ascx" />
     <Content Include="Modules\Common\UploadImage.ascx" />
@@ -111,11 +113,14 @@
     <Content Include="Modules\Course\CourseDetail.aspx" />
     <Content Include="Modules\Course\CourseList.aspx" />
     <Content Include="Modules\Default.aspx" />
+    <Content Include="Modules\Forum\Forum.aspx" />
+    <Content Include="Modules\Forum\Topic.aspx" />
+    <Content Include="Modules\Forum\TopicTypeMgt.aspx" />
+    <Content Include="Modules\Forum\TopicTypeSub.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
     <Content Include="Modules\Homework\WeeklyHomework.aspx" />
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
-    <Content Include="Modules\Message\ComMessageForum.aspx" />
-    <Content Include="Modules\Message\ComMessageTopic.aspx" />
+    <Content Include="Modules\Message\MessageAdd.aspx" />
     <Content Include="Modules\Message\MessageDetail.aspx" />
     <Content Include="Modules\Message\PersonMessage.aspx" />
     <Content Include="Modules\Notice\CourseNotice.aspx" />
@@ -564,6 +569,13 @@
     <Compile Include="Modules\Common\Help.aspx.designer.cs">
       <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Common\MessageEdit.ascx.cs">
+      <DependentUpon>MessageEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Common\MessageEdit.ascx.designer.cs">
+      <DependentUpon>MessageEdit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Common\NoticeEdit.ascx.cs">
       <DependentUpon>NoticeEdit.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -613,6 +625,34 @@
     <Compile Include="Modules\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Forum\Forum.aspx.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Forum\Forum.aspx.designer.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Forum\Topic.aspx.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Forum\Topic.aspx.designer.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Forum\TopicTypeMgt.aspx.cs">
+      <DependentUpon>TopicTypeMgt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Forum\TopicTypeMgt.aspx.designer.cs">
+      <DependentUpon>TopicTypeMgt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Forum\TopicTypeSub.aspx.cs">
+      <DependentUpon>TopicTypeSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Forum\TopicTypeSub.aspx.designer.cs">
+      <DependentUpon>TopicTypeSub.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Homework\HomeworkList.aspx.cs">
       <DependentUpon>HomeworkList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -634,19 +674,12 @@
     <Compile Include="Modules\Homework\WorkResultDetail.aspx.designer.cs">
       <DependentUpon>WorkResultDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Message\ComMessageForum.aspx.cs">
-      <DependentUpon>ComMessageForum.aspx</DependentUpon>
+    <Compile Include="Modules\Message\MessageAdd.aspx.cs">
+      <DependentUpon>MessageAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modules\Message\ComMessageForum.aspx.designer.cs">
-      <DependentUpon>ComMessageForum.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Message\ComMessageTopic.aspx.cs">
-      <DependentUpon>ComMessageTopic.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modules\Message\ComMessageTopic.aspx.designer.cs">
-      <DependentUpon>ComMessageTopic.aspx</DependentUpon>
+    <Compile Include="Modules\Message\MessageAdd.aspx.designer.cs">
+      <DependentUpon>MessageAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Message\MessageDetail.aspx.cs">
       <DependentUpon>MessageDetail.aspx</DependentUpon>
@@ -766,9 +799,6 @@
       <Project>{345D0B40-EA0F-4CD4-8030-C413C467DD9D}</Project>
       <Name>Duihua.Lib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

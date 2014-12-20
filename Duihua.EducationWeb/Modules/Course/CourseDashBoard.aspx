@@ -1,4 +1,6 @@
-﻿<%@ Page Title="我的课程" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="CourseDashBoard.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Course.CourseDashBoard" %>
+﻿<%@ Page Title="我的课程" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master"
+AutoEventWireup="true" CodeBehind="CourseDashBoard.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Course.CourseDashBoard" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -10,12 +12,20 @@
          <div class="thumbnail">
                 <asp:Image ID="ImgShowImg" runat="server" ImageUrl='<%#Eval("Cover") %>' CssClass="img-responsive img-thumbnail"/>  
                     <h2><%#Eval("CourseName")%></h2><span class="label label-danger"><%#GetStatus(Eval("datelength"), Eval("datespend"))%></span>
-                    <p>任课老师：<%#Eval("TeachName")%><asp:Button OnClick="btnLeaveMessage_Click" runat="server" Text="留言" CssClass="btn btn-warning btn-sm" style="margin-left:5px;" /></p>
+                    <p>
+                    任课老师：<%#Eval("TeachName")%>
+                    
+                    <asp:Button  OnClick="btnSendMessage_Click"  runat="server" Text="留言" 
+                    CssClass="btn btn-warning btn-sm" style="margin-left:5px;" _id='<%#Eval("UserId") %>'/>
+
+                    </p>
                     <p class="bg-warning">课程时间：<%#Eval("StartTime")%>~<%#Eval("EndTime")%></p>
                     
                     <div class="progress">
                       <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow='<%#GetProgress(Eval("datelength"),Eval("datespend")) %>' aria-valuemin="0" aria-valuemax="100" style='width: <%#GetProgress(Eval("datelength"),Eval("datespend")) %>%'>
-                        <span class="sr-only"><%#GetProgress(Eval("datelength"),Eval("datespend")) %>% Complete</span>
+                        <span class="sr-only">
+                        <%#GetProgress(Eval("datelength"),Eval("datespend")) %>% Complete
+                        </span>
                       </div>
                     </div>
                     <div class="col-lg-offset-5 col-sm-offset-5">
@@ -36,7 +46,7 @@
       ,CONVERT(NVARCHAR(19),c.EndTime,121) [EndTime]
       ,[Cover]
       ,[CreateTime]
-      ,t.UserId
+      ,t.UserId 
       ,t2.TeachName
       ,DATEDIFF(ss,[StartTime],[EndTime]) datelength
       ,DATEDIFF(ss,[StartTime],GETDATE()) datespend
@@ -52,5 +62,4 @@
         </SelectParameters>
      </asp:SqlDataSource>
 </div>
-
 </asp:Content>

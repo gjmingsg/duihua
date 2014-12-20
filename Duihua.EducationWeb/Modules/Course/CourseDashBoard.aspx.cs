@@ -44,12 +44,14 @@ namespace Duihua.EducationWeb.Modules.Course
         protected void btnGotoCourse_Click(object sender, EventArgs e)
         {
             Button b = sender as Button;
+            
             Response.Redirect("CourseDetail.aspx?CourseID=" + b.Attributes["_id"]);
         }
-        protected void btnLeaveMessage_Click(object sender, EventArgs e)
-        { 
-            
+
+        protected void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            Button b = sender as Button;
+            Response.Redirect("../Message/MessageAdd.aspx?Receivor=" + b.Attributes["_id"] +"&ReturnUrl="+Request.RawUrl);
         }
-        
     }
 }

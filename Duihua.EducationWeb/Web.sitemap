@@ -12,7 +12,7 @@
 
       <siteMapNode url="" title="家长天地"  description="家长天地" roles="家长,学生">
         <siteMapNode url="~/Modules/Student/StudentSummary.aspx" title="学业动态"  description="学业动态" />
-        <siteMapNode url="~/Modules/Message/ComMessageForum.aspx" title="咨询留言"  description="咨询留言" />
+        <siteMapNode url="~/Modules/Forum/TopicTypeSub.aspx?TypeId=0bfd8578-696e-4f7c-bbee-690ac92210ad" title="咨询留言"  description="咨询留言" />
       </siteMapNode>
 
       <siteMapNode url="" title="教工之家"  description="教工之家" roles="教师,管理员">

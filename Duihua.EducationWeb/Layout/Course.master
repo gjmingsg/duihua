@@ -187,7 +187,7 @@ h6, .h6 {
             <ol class="list-unstyled">
               <li><a href='../Course/CourseDetail.aspx?CourseID=<%=CourseID %>'>课程大纲</a></li>
               <li><a href='../Notice/CourseNotice.aspx?CourseID=<%=CourseID %>'>课程公告</a></li>
-              <li><a href='../Message/CourseMessage?CourseID=<%=CourseID %>'>讨论组</a></li>
+              <li><a href='../Forum/TopicTypeSub.aspx?TypeId=<%=CourseID %>'>讨论组</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->

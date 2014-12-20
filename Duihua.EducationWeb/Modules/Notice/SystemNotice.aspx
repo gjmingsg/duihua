@@ -39,8 +39,7 @@
                  <asp:LinkButton ID="LinkButton3"   runat="server" CssClass="fl btn3" CausesValidation="False" CommandName="Delete"
                        OnClick="lbOperator_Click"   Text="删除" OnClientClick="return confirm('确认要删除吗？');" _Id='<%#Eval("NoticeID") %>' />
              </td>
-             <td> </td>
-             <td><%#Eval("Title")%></td>
+             <td><a href="NoticeDetail.aspx?NoticeID=<%#Eval("NoticeID") %>" target="_blank"><%#Eval("Title")%></a></td>
             <td><%#Eval("CreateTime")%></td>
             <td><%#Eval("UserName")%></td>
          

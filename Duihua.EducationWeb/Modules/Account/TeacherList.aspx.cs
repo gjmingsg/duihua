@@ -146,7 +146,7 @@ namespace Duihua.EducationWeb.Modules.Account
             var path = ConfigurationManager.AppSettings["Attachment"] + "/img/";
 
             fPicUrl.SaveAs(Server.MapPath(path) + fileName);
-            string targetFileName = h.ThumbPic(Server.MapPath(path), fileName, 250, 150, true);
+            string targetFileName = h.ThumbPic(Server.MapPath(path), fileName, 95, 85, true);
             ePicUrl.Text = path + targetFileName;
             ImgPicUrl.ImageUrl = ePicUrl.Text;
             ImgPicUrl.Visible = true;

@@ -64,9 +64,12 @@
     <Compile Include="Services\Education\CooperatorService.cs" />
     <Compile Include="Services\Education\CourseService.cs" />
     <Compile Include="Services\Education\HomeWorkService.cs" />
+    <Compile Include="Services\Education\NoticeMessageStatusService.cs" />
     <Compile Include="Services\Education\NoticeService.cs" />
     <Compile Include="Services\Education\StudentService.cs" />
     <Compile Include="Services\Education\TeacherService.cs" />
+    <Compile Include="Services\Education\TopicService.cs" />
+    <Compile Include="Services\Education\TopicTypeService.cs" />
     <Compile Include="Services\Education\UserService.cs" />
     <Compile Include="Services\Education\WorkResultService.cs" />
     <Compile Include="Services\MessageService.cs" />

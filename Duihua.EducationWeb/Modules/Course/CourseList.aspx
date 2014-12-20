@@ -126,6 +126,18 @@
            ,@Syllabus
            ,@Cover
            ,GETDATE())
+
+           INSERT INTO  [dbo].[TopicType]
+           ([TypeId]
+           ,[TypeName]
+           ,[ParentId]
+           ,[IsOpen])
+     VALUES
+           (@courseID 
+           ,@CourseName 
+           ,'7A10235E-D4A4-46BA-AB34-9521F32845D1'
+           ,0)
+
            INSERT INTO TeachJoinCourse
             (
 	            UserId,

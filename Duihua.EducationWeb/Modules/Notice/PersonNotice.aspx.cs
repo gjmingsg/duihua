@@ -36,10 +36,10 @@ namespace Duihua.EducationWeb.Modules.Notice
             string color = string.Empty;
             switch (v)
             {
-                case "I":
+                case "未读":
                     color = "active";
                     break;
-                case "R":
+                case "已读":
                     color = "danger";
                     break;
             }
