@@ -19,9 +19,11 @@ namespace Duihua.EducationWeb.Layout
             get {
                 if (string.IsNullOrEmpty(hdClassID.Value))
                 {
+                   
                     var s = Session["Student"] as Dictionary<String, Object>;
-                    if (s == null)
-                        Response.Redirect("~/Login.aspx");
+                    if (s == null || s.ContainsKey("ClassID")==false)
+                        //Response.Redirect("~/Login.aspx");
+                        return Guid.Empty.ToString();
                     hdClassID.Value = s["ClassID"].ToString() ;
                 }
                 return hdClassID.Value;

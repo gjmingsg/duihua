@@ -36,11 +36,17 @@
     <Reference Include="AspNetPager">
       <HintPath>..\Lib\AspNetPager.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\Lib\NPOI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -758,7 +764,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Attachment\file\" />
     <Folder Include="Attachment\img\" />
   </ItemGroup>
   <ItemGroup>
@@ -774,6 +779,9 @@
     <Content Include="Layout\AdminDefault.Master" />
     <Content Include="App_Browsers\IE10.browser" />
     <Content Include="App_Browsers\IE10Fix.browser" />
+    <None Include="Attachment\file\学生数据收集.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Fonts\glyphicons-halflings-regular.eot" />
     <None Include="Fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Fonts\glyphicons-halflings-regular.woff" />

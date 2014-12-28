@@ -309,7 +309,7 @@ WHERE WorkID  = @WrokID">
         autoclose: 1,
         todayHighlight: 1,
         startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh"
+        format: "yyyy-mm-dd hh:ii:ss"
     });
     $(".form_eDeadLine").datetimepicker({
         language: 'zh-CN',
@@ -318,7 +318,7 @@ WHERE WorkID  = @WrokID">
         autoclose: 1,
         todayHighlight: 1,
         startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh"
+        format: "yyyy-mm-dd hh:ii:ss"
     });
     
 </script> 

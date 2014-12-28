@@ -44,10 +44,12 @@ s.[UserId]
       ,s.[Address]
       ,s.[Status]
       ,s.[Sex]
+,jc.ClassID
      ,CONVERT(NVARCHAR(10),s.[RegisterTime],121)[RegisterTime]
       ,s.[PicUrl]
 ,au.MobileAlias,am.Email,c.CooperatorName
                         FROM [dbo].[Student] s
+                        left JOIN JoinClass jc ON jc.UserId = s.UserId
                         INNER JOIN aspnet_Users au ON au.UserId = s.UserId
                         INNER JOIN aspnet_Membership am ON am.UserId = au.UserId 
                         LEFT JOIN Cooperator c ON c.CooperatorId = s.CooperatorId

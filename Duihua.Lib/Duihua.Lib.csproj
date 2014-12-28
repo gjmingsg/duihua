@@ -42,6 +42,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
   </ItemGroup>

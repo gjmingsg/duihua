@@ -140,7 +140,7 @@ namespace Duihua.EducationWeb.Modules.Course
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            int size = 2;           //文件大小限制,单位MB                             //文件大小限制，单位MB
+            int size = 10;           //文件大小限制,单位MB                             //文件大小限制，单位MB
             string[] filetype = { ".gif", ".png", ".jpg", ".jpeg", ".bmp" };         //文件允许格式
             if (!eCover.HasFile){
                 return;

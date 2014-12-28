@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="f:\ed" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="f:\ed" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="Scripts/external/google-code-prettify/lang-css.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Images/admin.png" publishTime="08/13/2014 23:20:18" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/charts.html" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Modules/Class/ClassList.aspx" publishTime="08/03/2014 13:34:03" />
     <file relUrl="Modules/Homework/HomeworkList.aspx" publishTime="08/03/2014 13:36:45" />
+    <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/table/edittable.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/preview/preview.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Images/评价考核.png" publishTime="06/24/2014 13:09:03" />
@@ -15,20 +16,20 @@
     <file relUrl="Scripts/Ueditor/third-party/highcharts/highcharts.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/gmap/gmap.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/external/google-code-prettify/lang-xq.js" publishTime="07/28/2014 22:36:13" />
-    <file relUrl="Scripts/Ueditor/dialogs/table/edittable.css" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Modules/Course/CourseList.aspx" publishTime="12/20/2014 22:56:07" />
     <file relUrl="Scripts/Ueditor/themes/default/images/cursor_h.png" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Styles/bootstrap.min.css" publishTime="07/27/2014 08:24:50" />
     <file relUrl="Scripts/Ueditor/third-party/codemirror/codemirror.js" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/bootstrap.min.js" publishTime="06/21/2014 23:07:17" />
-    <file relUrl="Web.sitemap" publishTime="12/20/2014 15:08:40" />
+    <file relUrl="Web.sitemap" publishTime="12/20/2014 22:49:22" />
     <file relUrl="Scripts/external/google-code-prettify/lang-sql.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/external/google-code-prettify/lang-dart.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Scripts/Ueditor/themes/default/css/ueditor.min.css" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/themes/default/images/arrow_down.png" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/dialogs/snapscreen/snapscreen.html" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/emptyH.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/third-party/jquery-1.10.2.min.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="bin/en/AspNetPager.resources.dll" publishTime="07/23/2013 08:33:25" />
     <file relUrl="Scripts/Ueditor/dialogs/spechars/spechars.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/Ueditor/dialogs/link/link.html" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/dialogs/map/show.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/themes/default/images/scale.png" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/Ueditor/net/getContent.ashx" publishTime="12/14/2014 16:47:00" />
@@ -53,14 +54,14 @@
     <file relUrl="Scripts/Ueditor/dialogs/image/images/none_focus.jpg" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/external/google-code-prettify/prettify.css" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/adapters/mootools-adapter.js" publishTime="12/14/2014 16:47:03" />
-    <file relUrl="Scripts/Ueditor/lang/en/en.js" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/ueditor.all.min.js" publishTime="12/14/2014 16:47:04" />
+    <file relUrl="Scripts/Ueditor/ueditor.config.js" publishTime="12/14/2014 16:47:04" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/table/edittable.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/insertframe/insertframe.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/lang/en/images/music.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/themes/default/images/cursor_h.gif" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/themes/default/images/button-bg.gif" publishTime="12/14/2014 16:47:00" />
+    <file relUrl="Scripts/Ueditor/dialogs/video/video.html" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/fileprogress.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Images/光 荣 榜.png" publishTime="06/24/2014 13:09:03" />
     <file relUrl="Modules/Common/UCAttachment.ascx" publishTime="08/03/2014 13:56:29" />
@@ -76,22 +77,22 @@
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/no-data-to-display.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Modules/Message/PersonMessage.aspx" publishTime="12/20/2014 14:29:37" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/images/charts0.png" publishTime="12/14/2014 16:46:57" />
-    <file relUrl="bin/Duihua.EducationWeb.pdb" publishTime="12/20/2014 22:33:09" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/charts.css" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/external/google-code-prettify/lang-apollo.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Scripts/external/google-code-prettify/lang-clj.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Modules/Web.config" publishTime="06/27/2014 23:32:08" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/funnel.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/external/google-code-prettify/lang-scala.js" publishTime="07/28/2014 22:36:13" />
+    <file relUrl="Modules/Forum/Topic.aspx" publishTime="12/20/2014 22:27:55" />
+    <file relUrl="Scripts/Ueditor/themes/default/images/button-bg.gif" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Images/课程管理.png" publishTime="06/24/2014 13:09:03" />
-    <file relUrl="Scripts/Ueditor/dialogs/template/images/pre4.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/dialogs/snapscreen/snapscreen.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/lang/en/images/imglabel.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/brush.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/third-party/codemirror/codemirror.css" publishTime="12/14/2014 16:47:02" />
-    <file relUrl="bin/Duihua.EducationWeb.dll" publishTime="12/20/2014 22:33:09" />
+    <file relUrl="bin/Duihua.EducationWeb.dll" publishTime="12/28/2014 14:46:41" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/external/google-code-prettify/lang-tex.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_default.png" publishTime="12/14/2014 16:46:57" />
-    <file relUrl="Modules/Class/JoinClassList.aspx" publishTime="08/03/2014 13:35:03" />
     <file relUrl="Scripts/Ueditor/dialogs/spechars/spechars.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Images/boy.png" publishTime="08/09/2014 14:32:05" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/yface.gif" publishTime="12/14/2014 16:46:58" />
@@ -105,18 +106,16 @@
     <file relUrl="Scripts/Ueditor/lang/zh-cn/images/music.png" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/external/google-code-prettify/lang-pascal.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Modules/Notice/SystemNotice.aspx" publishTime="12/15/2014 23:43:41" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/gray.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/music/music.css" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/bootstrap-wysiwyg.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Scripts/Ueditor/dialogs/wordimage/fClipboard_ueditor.swf" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/themes/default/images/highlighted.gif" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Images/topicicon.png" publishTime="12/20/2014 15:31:15" />
-    <file relUrl="Scripts/Ueditor/lang/en/images/copy.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Modules/Common/UploadImage.ascx" publishTime="08/16/2014 17:01:38" />
     <file relUrl="Scripts/Ueditor/themes/default/images/tangram-colorpicker.png" publishTime="12/14/2014 16:47:02" />
     <file relUrl="bin/log4net.xml" publishTime="05/18/2014 17:58:19" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/emotion.css" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/external/google-code-prettify/lang-erlang.js" publishTime="07/28/2014 22:36:12" />
-    <file relUrl="Scripts/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/ie8-responsive-file-warning.js" publishTime="07/04/2014 23:16:53" />
     <file relUrl="Fonts/glyphicons-halflings-regular.svg" publishTime="06/21/2014 23:07:18" />
     <file relUrl="Scripts/Ueditor/lang/en/images/listbackground.png" publishTime="12/14/2014 16:46:59" />
@@ -128,24 +127,24 @@
     <file relUrl="Scripts/Ueditor/lang/zh-cn/images/imglabel.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/swfupload.speed.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/cface.gif" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/Ueditor/dialogs/anchor/anchor.html" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Modules/Account/UserList.aspx" publishTime="08/09/2014 14:04:54" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/jxface2.gif" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/Ueditor/dialogs/wordimage/wordimage.js" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/heatmap.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/themes/default/images/sortable.png" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/chart.config.js" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/swfupload.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/external/google-code-prettify/lang-basic.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Scripts/Ueditor/dialogs/video/images/left_focus.jpg" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/heatmap.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/0.gif" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/themes/default/images/cursor_v.gif" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/third-party/video-js/video.dev.js" publishTime="12/14/2014 16:47:04" />
     <file relUrl="Scripts/bootstrap-datetimepicker.zh-CN.js" publishTime="07/23/2014 00:39:13" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/annotations.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/net/scrawlUp.ashx" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/external/google-code-prettify/prettify.js" publishTime="07/28/2014 22:36:13" />
-    <file relUrl="bin/Duihua.Lib.dll" publishTime="12/20/2014 22:23:12" />
-    <file relUrl="bin/AspNetPager.dll" publishTime="07/23/2013 08:33:25" />
+    <file relUrl="bin/Duihua.Lib.dll" publishTime="12/28/2014 14:35:52" />
+    <file relUrl="Scripts/Ueditor/lang/en/images/addimage.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Global.asax" publishTime="06/21/2014 21:45:04" />
     <file relUrl="Scripts/Ueditor/dialogs/tangram.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/themes/default/images/charts.png" publishTime="12/14/2014 16:47:00" />
@@ -159,13 +158,13 @@
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/empty.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/addimg.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/net/getMovie.ashx" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/themes/default/images/videologo.gif" publishTime="12/14/2014 16:47:02" />
+    <file relUrl="Modules/Forum/Forum.aspx" publishTime="12/20/2014 16:34:32" />
     <file relUrl="About.aspx" publishTime="07/04/2014 23:06:02" />
     <file relUrl="Modules/Default.aspx" publishTime="12/08/2014 23:03:11" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/adapters/standalone-framework.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/highcharts-more.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Modules/Common/Help.aspx" publishTime="08/16/2014 16:40:26" />
-    <file relUrl="Layout/Site.Master" publishTime="08/09/2014 17:31:19" />
+    <file relUrl="Layout/Site.Master" publishTime="12/28/2014 13:43:46" />
     <file relUrl="Scripts/Ueditor/themes/default/images/arrow_up.png" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/neweditor-tab-bg.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/image/images/left_focus.jpg" publishTime="12/14/2014 16:46:58" />
@@ -174,35 +173,36 @@
     <file relUrl="Modules/Notice/NoticeDetail.aspx" publishTime="12/15/2014 23:38:46" />
     <file relUrl="Scripts/Ueditor/dialogs/template/images/pre0.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/external/google-code-prettify/lang-ml.js" publishTime="07/28/2014 22:36:12" />
-    <file relUrl="Scripts/Ueditor/dialogs/scrawl/scrawl.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Default.aspx" publishTime="08/06/2014 00:06:30" />
+    <file relUrl="Scripts/Ueditor/dialogs/template/images/pre4.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Default.aspx" publishTime="12/28/2014 13:42:59" />
     <file relUrl="Modules/Student/MyClassmate.aspx" publishTime="09/01/2014 23:12:26" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/images/charts1.png" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/template/template.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/template/images/pre2.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="07/03/2014 10:56:49" />
     <file relUrl="Modules/Common/DownloadHandler.ashx" publishTime="07/27/2014 13:26:46" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/scaleH.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Styles/Site.css" publishTime="06/21/2014 21:45:04" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/redoH.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Styles/bootstrap-datetimepicker.min.css" publishTime="07/23/2014 00:36:13" />
-    <file relUrl="Modules/Student/StudentSummary.aspx" publishTime="12/13/2014 22:12:24" />
+    <file relUrl="Scripts/Ueditor/lang/en/en.js" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/bootstrap-datetimepicker.min.js" publishTime="06/24/2014 18:28:43" />
     <file relUrl="Scripts/Ueditor/index.html" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/dark-blue.js" publishTime="12/14/2014 16:47:03" />
-    <file relUrl="Modules/Forum/Topic.aspx" publishTime="12/20/2014 22:27:55" />
     <file relUrl="Modules/Account/Register.aspx" publishTime="07/04/2014 23:44:43" />
     <file relUrl="Scripts/Ueditor/dialogs/help/help.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Modules/Course/CourseDetail.aspx" publishTime="12/14/2014 16:42:10" />
     <file relUrl="Scripts/Ueditor/dialogs/template/config.js" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/external/jquery.hotkeys.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/third-party/video-js/video-js.css" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/third-party/snapscreen/UEditorSnapscreen.exe" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/themes/default/images/toolbar_bg.png" publishTime="12/14/2014 16:47:02" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/adapters/standalone-framework.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/highcharts-more.src.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Images/Weibo.png" publishTime="07/29/2014 23:36:50" />
+    <file relUrl="Scripts/bootstrap-wysiwyg.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Log4net.config" publishTime="12/20/2014 15:17:46" />
     <file relUrl="LoginT.aspx" publishTime="08/09/2014 17:35:30" />
     <file relUrl="Scripts/Ueditor/ueditor.parse.min.js" publishTime="12/14/2014 16:47:04" />
+    <file relUrl="Scripts/Ueditor/themes/default/images/videologo.gif" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/themes/iframe.css" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/Ueditor/third-party/video-js/video-js.swf" publishTime="12/14/2014 16:47:04" />
@@ -220,17 +220,18 @@
     <file relUrl="Scripts/Ueditor/themes/default/images/arrow.png" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/images/charts4.png" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Modules/Forum/TopicTypeMgt.aspx" publishTime="12/20/2014 15:22:53" />
+    <file relUrl="bin/NPOI.dll" publishTime="12/11/2014 05:49:58" />
     <file relUrl="Modules/Homework/WorkResultDetail.aspx" publishTime="08/03/2014 17:00:37" />
     <file relUrl="Scripts/Ueditor/themes/default/images/neweditor-tab-bg.png" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/external/google-code-prettify/lang-llvm.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Images/本校学子.png" publishTime="07/17/2014 07:24:12" />
-    <file relUrl="Modules/Student/StudentList.aspx" publishTime="08/09/2014 23:15:51" />
-    <file relUrl="Scripts/Ueditor/dialogs/video/video.html" publishTime="12/14/2014 16:46:59" />
+    <file relUrl="Modules/Student/StudentList.aspx" publishTime="12/28/2014 14:43:24" />
+    <file relUrl="Scripts/respond.min.js" publishTime="07/04/2014 23:15:28" />
     <file relUrl="Scripts/external/google-code-prettify/lang-go.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/swfupload_fp9.swf" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/themes/default/images/anchor.gif" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/searchreplace/searchreplace.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Layout/AdminDefault.Master" publishTime="12/20/2014 15:42:07" />
+    <file relUrl="Layout/AdminDefault.Master" publishTime="12/28/2014 13:43:30" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/highcharts.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Images/系统公告.png" publishTime="12/14/2014 20:58:47" />
     <file relUrl="Scripts/Ueditor/dialogs/background/background.js" publishTime="12/14/2014 16:46:57" />
@@ -241,52 +242,52 @@
     <file relUrl="Images/班级管理.png" publishTime="07/17/2014 07:23:15" />
     <file relUrl="Styles/bootstrap.css" publishTime="07/27/2014 08:24:50" />
     <file relUrl="Scripts/external/google-code-prettify/lang-vb.js" publishTime="07/28/2014 22:36:13" />
-    <file relUrl="Modules/ReadHandler.ashx" publishTime="12/08/2014 23:34:38" />
+    <file relUrl="Scripts/Ueditor/themes/default/images/filescan.png" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/emotion.js" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/third-party/video-js/font/vjs.svg" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/bface.gif" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/external/google-code-prettify/lang-proto.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Images/入学管理.png" publishTime="06/24/2014 13:09:03" />
     <file relUrl="Scripts/Ueditor/dialogs/music/music.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Images/咨询留言.png" publishTime="07/17/2014 07:21:18" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/undoH.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Images/build.png" publishTime="08/09/2014 14:33:55" />
     <file relUrl="Scripts/Ueditor/themes/default/images/icons.gif" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Images/学业动态.png" publishTime="06/24/2014 13:09:03" />
     <file relUrl="Scripts/external/google-code-prettify/lang-hs.js" publishTime="07/28/2014 22:36:12" />
-    <file relUrl="Modules/Notice/CourseNotice.aspx" publishTime="12/14/2014 20:44:21" />
+    <file relUrl="bin/Duihua.Lib.pdb" publishTime="12/28/2014 14:35:52" />
     <file relUrl="Scripts/Ueditor/themes/default/images/spacer.gif" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Modules/Account/CooperatorList.aspx" publishTime="08/09/2014 22:52:15" />
-    <file relUrl="Modules/Forum/Forum.aspx" publishTime="12/20/2014 16:34:32" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/callbacks.js" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/delimg.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/themes/default/images/icons-all.gif" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Modules/Homework/WeeklyHomework.aspx" publishTime="08/31/2014 23:49:51" />
     <file relUrl="Scripts/Ueditor/dialogs/image/image.js" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Modules/Course/CourseList.aspx" publishTime="08/16/2014 17:01:18" />
+    <file relUrl="Modules/ReadHandler.ashx" publishTime="12/08/2014 23:34:38" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/images/charts5.png" publishTime="12/14/2014 16:46:57" />
-    <file relUrl="Layout/Course.master" publishTime="12/14/2014 16:41:40" />
+    <file relUrl="Layout/Course.master" publishTime="12/20/2014 22:36:08" />
     <file relUrl="Scripts/Ueditor/dialogs/video/video.css" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Images/girl.png" publishTime="08/09/2014 14:31:37" />
     <file relUrl="Modules/Account/ChangePassword.aspx" publishTime="08/09/2014 22:58:15" />
     <file relUrl="Modules/Account/ChangePasswordSuccess.aspx" publishTime="08/09/2014 23:00:07" />
-    <file relUrl="Images/build.png" publishTime="08/09/2014 14:33:55" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/adapters/standalone-framework.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/size.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/delimgH.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="ImageValidator.aspx" publishTime="06/25/2014 21:53:50" />
     <file relUrl="Scripts/external/google-code-prettify/lang-yaml.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/swfupload.queue.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/external/google-code-prettify/lang-rd.js" publishTime="07/28/2014 22:36:12" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/funnel.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/themes/default/images/dialog-title-bg.png" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/map.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Modules/Message/MessageAdd.aspx" publishTime="12/20/2014 14:16:16" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/dark-green.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="bin/Attachment/file/学生数据收集.xls" publishTime="12/28/2014 14:45:39" />
     <file relUrl="Images/我的课程.png" publishTime="08/02/2014 23:24:29" />
     <file relUrl="Scripts/Ueditor/themes/default/images/table-cell-align.png" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Scripts/Ueditor/lang/en/images/deletedisable.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Images/莘路历程.png" publishTime="06/24/2014 13:09:03" />
-    <file relUrl="Modules/Common/MessageEdit.ascx" publishTime="12/20/2014 13:47:59" />
-    <file relUrl="Scripts/Ueditor/dialogs/help/help.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/external/google-code-prettify/lang-lisp.js" publishTime="07/28/2014 22:36:12" />
+    <file relUrl="Scripts/Ueditor/lang/en/images/copy.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/emotion.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Images/教务管理.png" publishTime="07/17/2014 07:25:17" />
     <file relUrl="Images/角色管理.png" publishTime="07/17/2014 07:20:29" />
@@ -298,7 +299,6 @@
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/drilldown.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/table/dragicon.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Images/noimage.jpg" publishTime="08/09/2014 14:29:05" />
-    <file relUrl="Scripts/Ueditor/third-party/jquery-1.10.2.min.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/third-party/swfupload/swfupload.cookies.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/video/images/right_focus.jpg" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Images/每周作业.png" publishTime="06/24/2014 13:09:03" />
@@ -314,22 +314,26 @@
     <file relUrl="Scripts/Ueditor/themes/default/images/sparator_v.png" publishTime="12/14/2014 16:47:02" />
     <file relUrl="Modules/Forum/TopicTypeSub.aspx" publishTime="12/20/2014 21:00:07" />
     <file relUrl="Scripts/Ueditor/lang/en/images/alldeletebtnupskin.png" publishTime="12/14/2014 16:46:59" />
-    <file relUrl="Scripts/Ueditor/ueditor.config.js" publishTime="12/14/2014 16:47:04" />
+    <file relUrl="Scripts/external/jquery.hotkeys.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/lang/en/images/rotaterightenable.png" publishTime="12/14/2014 16:46:59" />
+    <file relUrl="Scripts/Ueditor/dialogs/help/help.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/lang/zh-cn/images/copy.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/map.src.js" publishTime="12/14/2014 16:47:03" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/grid.js" publishTime="12/14/2014 16:47:03" />
-    <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" publishTime="12/14/2014 16:46:57" />
+    <file relUrl="Modules/Common/MessageEdit.ascx" publishTime="12/20/2014 13:47:59" />
+    <file relUrl="Modules/Class/JoinClassList.aspx" publishTime="08/03/2014 13:35:03" />
     <file relUrl="Scripts/Ueditor/themes/default/images/icons.png" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/Ueditor/dialogs/help/help.css" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/exporting.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/images/charts3.png" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/third-party/SyntaxHighlighter/shCore.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/net/getRemoteImage.ashx" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/respond.min.js" publishTime="07/04/2014 23:15:28" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/skies.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/dialogs/wordimage/wordimage.js" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/video/images/center_focus.jpg" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/image/image.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Images/Teacher.png" publishTime="08/13/2014 23:04:26" />
     <file relUrl="Scripts/Ueditor/dialogs/searchreplace/searchreplace.js" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/html5shiv.js" publishTime="07/04/2014 23:16:06" />
     <file relUrl="Scripts/Ueditor/dialogs/template/images/pre3.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/template/template.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/charts/charts.js" publishTime="12/14/2014 16:46:57" />
@@ -338,47 +342,47 @@
     <file relUrl="Scripts/Ueditor/themes/default/images/cancelbutton.gif" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/internal.js" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/table/edittd.html" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/external/google-code-prettify/lang-scala.js" publishTime="07/28/2014 22:36:13" />
+    <file relUrl="Scripts/Ueditor/dialogs/link/link.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/third-party/video-js/video.js" publishTime="12/14/2014 16:47:04" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" publishTime="12/14/2014 16:46:57" />
-    <file relUrl="Scripts/external/google-code-prettify/lang-basic.js" publishTime="07/28/2014 22:36:12" />
-    <file relUrl="Scripts/Ueditor/themes/default/images/cursor_v.gif" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/lang/en/images/addimage.png" publishTime="12/14/2014 16:46:59" />
-    <file relUrl="bin/Duihua.Lib.pdb" publishTime="12/20/2014 22:23:12" />
+    <file relUrl="Modules/Notice/CourseNotice.aspx" publishTime="12/14/2014 20:44:21" />
+    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/grid.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" publishTime="12/14/2014 16:46:57" />
+    <file relUrl="Scripts/Ueditor/dialogs/anchor/anchor.html" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" publishTime="12/14/2014 16:46:57" />
     <file relUrl="Scripts/Ueditor/themes/default/images/unhighlighted.gif" publishTime="12/14/2014 16:47:02" />
-    <file relUrl="Web.config" publishTime="12/20/2014 22:33:31" />
-    <file relUrl="Scripts/Ueditor/dialogs/map/show.html" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Web.config" publishTime="12/28/2014 14:39:35" />
+    <file relUrl="bin/Duihua.EducationWeb.pdb" publishTime="12/28/2014 14:46:41" />
     <file relUrl="Scripts/external/google-code-prettify/lang-wiki.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/themes/default/dialogbase.css" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Images/作业管理.png" publishTime="06/24/2014 13:09:03" />
     <file relUrl="Scripts/Ueditor/net/fileUp.ashx" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/redo.png" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/html5shiv.js" publishTime="07/04/2014 23:16:06" />
+    <file relUrl="Modules/Student/StudentSummary.aspx" publishTime="12/13/2014 22:12:24" />
     <file relUrl="Modules/Common/NoticeEdit.ascx" publishTime="12/20/2014 10:58:00" />
-    <file relUrl="Images/Weibo.png" publishTime="07/29/2014 23:36:50" />
+    <file relUrl="bin/AspNetPager.dll" publishTime="07/23/2013 08:33:25" />
     <file relUrl="Scripts/Ueditor/dialogs/wordimage/wordimage.html" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/music/music.js" publishTime="12/14/2014 16:46:58" />
-    <file relUrl="Scripts/Ueditor/third-party/video-js/font/vjs.svg" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/external/google-code-prettify/lang-vhdl.js" publishTime="07/28/2014 22:36:13" />
     <file relUrl="Scripts/Ueditor/themes/default/images/pagebreak.gif" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/canvas-tools.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/data.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="App_Browsers/IE10.browser" publishTime="11/16/2014 22:42:14" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/gray.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/themes/default/images/arrow_down.png" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/net/imageManager.ashx" publishTime="12/14/2014 16:47:00" />
     <file relUrl="Scripts/Ueditor/dialogs/template/images/pre1.png" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/exporting.src.js" publishTime="12/14/2014 16:47:03" />
     <file relUrl="Scripts/Ueditor/lang/zh-cn/images/localimage.png" publishTime="12/14/2014 16:47:00" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/modules/exporting.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/dialogs/table/edittable.css" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/lang/en/images/rotateleftdisable.png" publishTime="12/14/2014 16:46:59" />
-    <file relUrl="Scripts/Ueditor/themes/default/images/filescan.png" publishTime="12/14/2014 16:47:01" />
+    <file relUrl="bin/NPOI.xml" publishTime="12/11/2014 05:49:58" />
     <file relUrl="Layout/Personal.master" publishTime="12/08/2014 23:05:42" />
-    <file relUrl="Scripts/Ueditor/dialogs/scrawl/images/emptyH.png" publishTime="12/14/2014 16:46:58" />
+    <file relUrl="Scripts/external/google-code-prettify/lang-lisp.js" publishTime="07/28/2014 22:36:12" />
     <file relUrl="Styles/bootstrap-theme.css" publishTime="07/27/2014 08:24:51" />
     <file relUrl="Scripts/Ueditor/themes/default/images/lock.gif" publishTime="12/14/2014 16:47:01" />
     <file relUrl="Scripts/Ueditor/dialogs/attachment/fileTypeMaps.js" publishTime="12/14/2014 16:46:57" />
-    <file relUrl="Scripts/Ueditor/third-party/highcharts/themes/skies.js" publishTime="12/14/2014 16:47:03" />
+    <file relUrl="Scripts/Ueditor/dialogs/scrawl/scrawl.html" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/dialogs/emotion/images/wface.gif" publishTime="12/14/2014 16:46:58" />
     <file relUrl="Scripts/Ueditor/lang/en/images/deleteenable.png" publishTime="12/14/2014 16:46:59" />
     <file relUrl="Scripts/Ueditor/dialogs/template/template.css" publishTime="12/14/2014 16:46:58" />

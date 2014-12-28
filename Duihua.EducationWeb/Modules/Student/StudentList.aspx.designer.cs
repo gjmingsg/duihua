@@ -85,6 +85,15 @@ namespace Duihua.EducationWeb.Modules.Student {
         protected global::System.Web.UI.WebControls.Button btnNew;
         
         /// <summary>
+        /// msg 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label msg;
+        
+        /// <summary>
         /// Repeater1 控件。
         /// </summary>
         /// <remarks>
@@ -344,5 +353,41 @@ namespace Duihua.EducationWeb.Modules.Student {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBack;
+        
+        /// <summary>
+        /// fuExcelFile 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuExcelFile;
+        
+        /// <summary>
+        /// btnImportExcel 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnImportExcel;
+        
+        /// <summary>
+        /// TextBox1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        
+        /// <summary>
+        /// Image1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }

@@ -87,10 +87,10 @@ font-size: 16px;
               <h1>对画艺术教育</h1>
               <h2>欢迎使用对画学生档案管理系统!</h2>
               <p>
-                <a class="btn btn-lg btn-primary btn-shadow bs3-link" href="/login.aspx" role="button">登&nbsp;录&nbsp;系&nbsp;统</a>
+                <a class="btn btn-lg btn-primary btn-shadow bs3-link" href="/loginT.aspx" role="button">登&nbsp;录&nbsp;系&nbsp;统</a>
               </p>
 
-                <a class="bs2-link" href="http://dwad.com.cn" target="_blank" role="button">画艺术教育官网</a>
+                <a class="bs2-link" href="http://dwad.com.cn" target="_blank" role="button">对画艺术教育官网</a>
 
             </div>
           </div>

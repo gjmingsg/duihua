@@ -48,14 +48,15 @@
             </div>
             <div class="form-group  col-sm-offset-1 col-xs-offset-1 col-sm-2 col-xs-2">
                 <asp:Button runat="server" ID="btnNew" ClientIDMode="Static" Text="添加" onclick="btnNew_Click" CssClass="btn btn-primary"/>
-               
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">导入学生</button>
             </div>
         </div>
         <br />
         <br />
     </div>
     
-     
+     <asp:Label runat="server" ID="msg" ForeColor="Red"></asp:Label>
+
 <div class="table-responsive">
 <table class="table table-hover">
         <thead>
@@ -150,7 +151,11 @@
                               ,s.[Intro]
                               ,s.[IDCard]
                               ,s.[Address]
-                              ,s.[Status]
+                              
+                               ,CASE s.[Status] when '0' THEN '入学未交费'
+                              WHEN '1' THEN '入学已缴费'
+							WHEN '2' THEN '毕业' end as [Status]
+
                               ,s.[Sex]
                               ,CONVERT(NVARCHAR(10),s.[RegisterTime],121)[RegisterTime]
                               ,ROW_NUMBER() OVER (ORDER BY s.CreateDate DESC) pageindex
@@ -394,6 +399,39 @@ UpdateCommand="UPDATE [dbo].[Student]
        <br />
    </div>
 </div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">导入学生数据</h4>
+      </div>
+      <div class="modal-body">
+         <div class="form-group">
+        <label for="ePicUrl">学生数据表格（只支持excel 97~2003）：</label>
+           <div class="input-group">
+                
+                <asp:FileUpload ID="fuExcelFile" runat="server" ClientIDMode="Static" CssClass="form-control" placeholder="学生数据表格"/>
+                <span class="input-group-btn">
+                    <asp:Button ID="btnImportExcel" runat="server" Text="上传"  
+                    CssClass="btn btn-success" OnClick="btnImportExcel_Click"/>
+                    <button type="button" class="btn btn-success" id="templateDownload">模板下载</button>
+                </span>
+          </div>
+
+          <asp:TextBox ID="TextBox1" runat="server"  name="PicUrl" style="display:none" ></asp:TextBox>
+          <asp:Image ID="Image1" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
     $(function () {
         $('.form_RegisterTime').datetimepicker({
@@ -405,7 +443,10 @@ UpdateCommand="UPDATE [dbo].[Student]
             startDate: '<%=DateTime.Now %>',
             format: 'yyyy-mm-dd'
         });
-      
+
+        $('#templateDownload').click(function () {
+            window.open('/Attachment/file/学生数据收集.xls');
+        });
     });
    
 </script>

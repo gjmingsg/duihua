@@ -11,3 +11,7 @@ E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bi
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\ResolveAssemblyReference.cache
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\Duihua.EducationWeb.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\obj\Debug\Duihua.EducationWeb.pdb
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\ICSharpCode.SharpZipLib.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\NPOI.dll
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\NPOI.xml
+E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.EducationWeb\bin\Attachment\file\学生数据收集.xls

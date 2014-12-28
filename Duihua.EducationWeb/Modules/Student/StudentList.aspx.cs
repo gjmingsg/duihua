@@ -8,12 +8,18 @@ using System.Configuration;
 using Duihua.Lib.Common;
 using Duihua.Lib.Services.Education;
 using System.Web.Security;
+using System.IO;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using System.Text;
+
 
 namespace Duihua.EducationWeb.Modules.Student
 {
     public partial class StudentList : System.Web.UI.Page
     {
         private readonly StudentService s = new StudentService();
+        private readonly UserService u = new UserService();
         protected void Page_Load(object sender, EventArgs e)
         {
             AspNetPager1.RecordCount = s.GetStudentCount(sIDCard.Text, sStudentName.Text, sStatus.SelectedValue,sCooperatorId.SelectedValue);
@@ -148,7 +154,6 @@ namespace Duihua.EducationWeb.Modules.Student
             //Random t = new Random(DateTime.Now.Second);
             ///密码为身份证号
             Membership.CreateUser(eStudentName.Text,"123456",eEmail.Text);
-            
             eUserId.Text = Membership.GetUser(eStudentName.Text).ProviderUserKey.ToString();
             e.Command.Parameters["@UserId"].Value = eUserId.Text;
             Roles.AddUsersToRole(new string[] { eStudentName.Text }, "学生");
@@ -173,5 +178,83 @@ namespace Duihua.EducationWeb.Modules.Student
             Membership.UpdateUser(u);
         }
 
+
+        protected void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            
+            string[] filetype = { ".xls"};         //文件允许格式
+            if (!fuExcelFile.HasFile)
+            {
+                return;
+            }
+            string[] temp = fuExcelFile.FileName.Split('.');
+            var currentType = "." + temp[temp.Length - 1].ToLower();
+            if (Array.IndexOf(filetype, currentType) == -1)
+            {
+                return;
+            }
+           
+            var fileName = Guid.NewGuid().ToString() + "@" + fuExcelFile.FileName;
+            var path = ConfigurationManager.AppSettings["Attachment"] + "/file/";
+            fuExcelFile.SaveAs(Server.MapPath(path) + fileName);
+
+            ImportData(Server.MapPath(path) + fileName);
+        }
+        private readonly Dictionary<string, string> Column = new Dictionary<string, string>() { 
+         {"序号","RowNum"}
+        ,{"学号", "StuNumber" }
+        ,{"姓名", "StudentName" } 
+        ,{"性别","Sex"}
+        ,{"班别","ClassName"}
+        ,{"宿舍号","RoomId"}
+        ,{"身份证","IDCard"}
+        ,{"家庭住址","Address"}
+        ,{"原所在学校","CooperatorName"}
+        ,{"本人电话","Phone"}
+        ,{"家长姓名","ParentName"}
+        ,{"家长电话","ParentPhone"}
+        ,{"入学时间","RegisterTime"}};
+        private void ImportData(string strFileName)
+        {
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            try
+            {
+                HSSFWorkbook hssfworkbook;
+                using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
+                {
+                    hssfworkbook = new HSSFWorkbook(file);
+                }
+                ISheet sheet = hssfworkbook.GetSheetAt(0);
+                System.Collections.IEnumerator rows = sheet.GetRowEnumerator();
+                IRow headerRow = sheet.GetRow(0);
+                int cellCount = headerRow.LastCellNum;
+                var keys = Column.Keys.ToList();
+                List<string> ulist = new List<string>();
+                StringBuilder sb = new StringBuilder();
+                for (int i = (sheet.FirstRowNum + 2); i <= sheet.LastRowNum; i++)
+                {
+                    IRow row = sheet.GetRow(i);
+                    dic = new Dictionary<string, object>();
+                    for (int j = row.FirstCellNum; j < cellCount; j++)
+                    {
+                        if (row.GetCell(j)==null)
+                            dic.Add(Column[keys[j]],DBNull.Value);
+                        else
+                            dic.Add(Column[keys[j]], row.GetCell(j).ToString()+"");
+                    }
+                    string rs = u.InsertStudent(dic);
+                    if(string.IsNullOrEmpty(rs))
+                        ulist.Add(dic["StudentName"] + "");
+                    else
+                        sb.Append(rs);
+                }
+                if(ulist.Count>0)
+                    Roles.AddUsersToRole(ulist.ToArray(), "学生");
+                msg.Text = sb.ToString();
+            }
+            catch (Exception e) {
+                msg.Text = e.Message ;
+            }
+        }
     }
 }

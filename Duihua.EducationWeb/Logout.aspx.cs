@@ -15,7 +15,9 @@ namespace Duihua.EducationWeb
             FormsAuthentication.SignOut();
             Session.Abandon();
             Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
-            FormsAuthentication.RedirectToLoginPage();
+            Response.Redirect("~/Default.aspx");
+            //FormsAuthentication.RedirectToLoginPage();
+
         }
     }
 }

@@ -33,7 +33,9 @@
             <a href="/modules/account/changepassword.aspx" class="list-group-item">修改密码</a>
             <%if (HttpContext.Current.User.IsInRole("学生") || HttpContext.Current.User.IsInRole("家长"))
               { %>
-            <a href="/modules/Student/MyClassmate.aspx?ClassID=<%=ClassID %>" class="list-group-item">我的班级</a>
+            <% if(ClassID.Equals(Guid.Empty.ToString())==false){ %>
+                <a href="/modules/Student/MyClassmate.aspx?ClassID=<%=ClassID %>" class="list-group-item">我的班级</a>
+            <%} %>
             <a href="/Modules/Course/CourseDashBoard.aspx" class="list-group-item">我的课程</a>
             <%} %>
           </div>
