@@ -29,12 +29,12 @@ namespace Duihua.Lib.Common
             {
                  if (ID.Equals(item.ID))
                      return item;
-            }
-
-            foreach (Control item in container.Controls)
-            {
-                if (item.Controls.Count>0)
-                return FindControl(item, ID);
+                 if (item.Controls.Count > 0)
+                 {
+                     var c = FindControl(item, ID);
+                     if (c != null)
+                         return c;
+                 }
             }
             return null;
         }

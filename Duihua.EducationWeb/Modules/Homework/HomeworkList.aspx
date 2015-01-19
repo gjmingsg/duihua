@@ -67,7 +67,7 @@
                  <asp:LinkButton   runat="server" CssClass="fl btn3" CausesValidation="False" CommandName="Delete"
                        OnClick="lbOperator_Click"   Text="删除" OnClientClick="return confirm('确认要删除吗？');" _Id='<%#Eval("WorkID") %>' />
              </td>
-             <td><a href='HomeworkResult.aspx?WorkID=<%#Eval("WorkID") %>&ReturnUrl=<%=Request.RawUrl %>'>
+             <td><a href='WorkResultDetail.aspx?WorkID=<%#Eval("WorkID") %>&CourseID=<%#Eval("CourseID") %>&ReturnUrl=<%=Request.RawUrl %>'>
              <span class="label label-info"><%#Eval("hasSubmitHomeworkCount")%> </span>/ 
              <span class="label label-success"><%#Eval("allNeedSumbitCount")%></span></a></td>
              <td><%#Eval("CourseName")%></td>
@@ -199,7 +199,7 @@ WHERE WorkID  = @WrokID">
     </div>
     
     <div class="panel-body">
-        课程名称：<asp:Label runat="server" name="GradeName"></asp:Label>
+        课程名称：<asp:Label runat="server" name="CourseName"></asp:Label>
         <asp:TextBox ID="tbWorkID" runat="server" name="WorkID" CssClass="hidden"></asp:TextBox>
         <br />
         <br />
@@ -279,7 +279,7 @@ WHERE WorkID  = @WrokID">
         <label for="eScore">分值：</label>
         <asp:TextBox ID="eScore" ClientIDMode="Static" Text="100" runat="server" name="Score"  CssClass="form-control"></asp:TextBox>
            <asp:RequiredFieldValidator  runat="server"  ValidationGroup="vs"  ErrorMessage="“分值”必填"  ControlToValidate="eScore"      CssClass="help-block"></asp:RequiredFieldValidator>
-           <asp:RegularExpressionValidator runat="server"  ValidationGroup="vs" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]*$" CssClass="help-block"  Display="Dynamic"></asp:RegularExpressionValidator>
+           <asp:RegularExpressionValidator runat="server"  ValidationGroup="vs" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]+(.[0-9]{0,1})$" CssClass="help-block"  Display="Dynamic"></asp:RegularExpressionValidator>
       </div>
       <div class="form-group">
         <label for="eContent">作业详细说明：</label>

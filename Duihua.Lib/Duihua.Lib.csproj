@@ -65,6 +65,7 @@
     <Compile Include="Services\Education\CooperatorService.cs" />
     <Compile Include="Services\Education\CourseService.cs" />
     <Compile Include="Services\Education\HomeWorkService.cs" />
+    <Compile Include="Services\Education\KPIService.cs" />
     <Compile Include="Services\Education\NoticeMessageStatusService.cs" />
     <Compile Include="Services\Education\NoticeService.cs" />
     <Compile Include="Services\Education\StudentService.cs" />

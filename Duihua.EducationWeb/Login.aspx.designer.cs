@@ -85,24 +85,6 @@ namespace Duihua.EducationWeb {
         protected global::System.Web.UI.WebControls.Image imgValidator;
         
         /// <summary>
-        /// RequiredFieldValidator3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
-        /// cvValidateCode 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cvValidateCode;
-        
-        /// <summary>
         /// RememberMe 控件。
         /// </summary>
         /// <remarks>

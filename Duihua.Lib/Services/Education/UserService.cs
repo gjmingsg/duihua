@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using Duihua.Lib.Common;
 using System.Web.Security;
+using log4net;
 
 namespace Duihua.Lib.Services.Education
 {
     public class UserService
     {
+        private readonly ILog log = LogManager.GetLogger(typeof(UserService));
         private readonly DBHelper _dao = new DBHelper();
         public Dictionary<String, Object> GetUser(string ID) {
             var l = _dao.QueryListData(new Dictionary<string, object>() { { "UserId", ID } }, 
@@ -93,14 +95,20 @@ where  am.userid = @UserId");
         {
             try
             {
-                var lCooperator = _dao.QueryListData(new Dictionary<string, object>() { { "CooperatorName", dic["CooperatorName"] } }, sqlCooperator);
-                if (lCooperator == null || lCooperator.Count == 0)
+                if (string.IsNullOrEmpty(dic["CooperatorName"] + ""))
                 {
-                    Membership.CreateUser(dic["CooperatorName"].ToString(), "123456");
-                    var CooperatorId = Membership.GetUser(dic["CooperatorName"].ToString()).ProviderUserKey.ToString();
-                    var Creator = "B780FF21-DEF6-499E-8955-DF440F4B3A68";
-                    dic.Add("CooperatorId", CooperatorId);
-                    _dao.ExecuteNonQuery(new Dictionary<string, object>() { 
+                    dic.Add("CooperatorId", DBNull.Value);
+                }
+                else
+                {
+                    var lCooperator = _dao.QueryListData(new Dictionary<string, object>() { { "CooperatorName", dic["CooperatorName"] } }, sqlCooperator);
+                    if (lCooperator == null || lCooperator.Count == 0)
+                    {
+                        Membership.CreateUser(dic["CooperatorName"].ToString(), "123456");
+                        var CooperatorId = Membership.GetUser(dic["CooperatorName"].ToString()).ProviderUserKey.ToString();
+                        var Creator = "B780FF21-DEF6-499E-8955-DF440F4B3A68";
+                        dic.Add("CooperatorId", CooperatorId);
+                        _dao.ExecuteNonQuery(new Dictionary<string, object>() { 
                             { "CooperatorId", CooperatorId } 
                             ,{"Creator",Creator}
                             ,{"CooperatorName",dic["CooperatorName"]}
@@ -108,13 +116,14 @@ where  am.userid = @UserId");
                             ,{"Intro",dic["CooperatorName"]}
                             }, sqlInsertCooperator);
 
-                    Roles.AddUsersToRole(new string[] { dic["CooperatorName"].ToString() }, "合作单位");
+                        Roles.AddUsersToRole(new string[] { dic["CooperatorName"].ToString() }, "合作单位");
+                    }
+                    else
+                    {
+                        dic.Add("CooperatorId", lCooperator[0]["CooperatorId"]);
+                    }
                 }
-                else
-                {
-                    dic.Add("CooperatorId", lCooperator[0]["CooperatorId"]);
-                }
-                var count = int.Parse(_dao.QueryScalar(new Dictionary<string, object>() { { "StudentName", dic["StudentName"] } }, "SELECT COUNT(1) FROM aspnet_Users au WHERE au.UserName = @StudentName").ToString());
+                var count = int.Parse(_dao.QueryScalar(new Dictionary<string, object>() { { "StudentName", dic["StudentName"] } }, "SELECT COUNT(1) FROM Student s WHERE s.StudentName = @StudentName").ToString());
                 if (count > 0)
                 {
                     return string.Format("第【{0}】行的学生名称【{1}】在系统中存在，或者重名，请修改名称或这个给该名称加前缀。<br/>", dic["RowNum"], dic["StudentName"]);
@@ -129,12 +138,20 @@ where  am.userid = @UserId");
                 dic.Add("Email", DBNull.Value);
                 dic.Add("PicUrl", DBNull.Value);
                 dic.Add("Status", "1");
-                Membership.CreateUser(dic["StudentName"].ToString(), "123456");
-                dic.Add("UserId", Membership.GetUser(dic["StudentName"].ToString()).ProviderUserKey.ToString());
+                var useritem = Membership.GetUser(dic["StudentName"].ToString());
+                if (useritem == null)
+                {
+                    Membership.CreateUser(dic["StudentName"].ToString(), "123456");
+                    dic.Add("UserId", Membership.GetUser(dic["StudentName"].ToString()).ProviderUserKey.ToString());
+                }
+                else {
+                    dic.Add("UserId", useritem.ProviderUserKey.ToString());
+                }
                 _dao.ExecuteNonQuery(dic, sqlInsertStudent);
                 
             }
             catch (Exception e) {
+                log.Error(e.Message, e);
                 return e.Message;
             }
             return "";

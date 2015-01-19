@@ -15,8 +15,6 @@ namespace Duihua.EducationWeb.Modules
         private readonly NoticeMessageStatusService s = new NoticeMessageStatusService();
         public void ProcessRequest(HttpContext context)
         {
-            //context.Response.ContentType = "text/plain";
-            //context.Response.Write("Hello World");
             var id = context.Request.QueryString["id"];
             var type = context.Request.QueryString["ItemName"];
             s.SetStatus(id, context.Session["UserId"] + "", type, "R");

@@ -20,9 +20,9 @@ namespace Duihua.EducationWeb.Modules
                 var mcount = message.GetUnReadMessage(userid);
                 var ncount = notice.GetUnReadNotice(userid);
                 if(mcount>0)
-                    lmessage.Text = string.Format("有<strong><a href='Message/PersonMessage.aspx'>{0}</a></strong>条未读消息。", mcount);
+                    lmessage.Text = string.Format("有<strong><span class='label label-danger'><a href='Message/PersonMessage.aspx'>{0}</a></span></strong>条未读消息。", mcount);
                 if(ncount>0)
-                    lmessage.Text = string.Format("有<strong><a href='Notice/PersonNotice.aspx'>{0}</a></strong>条未读通知。", ncount);
+                    lmessage.Text = string.Format("有<strong><span class='label label-danger'><a href='Notice/PersonNotice.aspx'>{0}</a></span></strong>条未读通知。", ncount);
             }
         }
 

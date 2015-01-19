@@ -188,6 +188,10 @@ h6, .h6 {
               <li><a href='../Course/CourseDetail.aspx?CourseID=<%=CourseID %>'>课程大纲</a></li>
               <li><a href='../Notice/CourseNotice.aspx?CourseID=<%=CourseID %>'>课程公告</a></li>
               <li><a href='../Forum/TopicTypeSub.aspx?TypeId=<%=CourseID %>'>讨论组</a></li>
+              <li><a href='../Student/MyCoursemate.aspx?CourseID=<%=CourseID %>'>班级通讯录</a></li>
+              <%if (HttpContext.Current.User.IsInRole("学生")){ %>
+              <li><a href='../KPI/FillKPI.aspx?CourseID=<%=CourseID %>'>课程&教师评估</a></li>
+              <%} %>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->

@@ -58,5 +58,22 @@ WHERE cg.ClassID = @ClassID");
             }
 
         }
+
+        public Dictionary<String, Object> GetTeacherByCourseID(string CourseID)
+        {
+            var l = _dao.QueryListData(new Dictionary<string, object>() { { "CourseID", CourseID } }
+                                , @"SELECT top 1 t.* FROM TeachJoinCourse cg 
+                INNER JOIN Teacher t ON t.UserId = cg.UserId
+                WHERE cg.CourseID = @CourseID");
+            if (l.Count == 0)
+                return null;
+            else
+            {
+                if (!l[0].ContainsKey("PicUrl"))
+                    l[0].Add("PicUrl", "~/images/Teacher.png");
+                return l[0];
+            }
+
+        }
     }
 }

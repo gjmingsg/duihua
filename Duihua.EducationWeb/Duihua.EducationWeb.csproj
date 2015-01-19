@@ -70,17 +70,25 @@
     <Content Include="Images\admin.png" />
     <Content Include="Images\boy.png" />
     <Content Include="Images\build.png" />
+    <Content Include="Images\forum.png" />
     <Content Include="Images\girl.png" />
     <Content Include="Images\noimage.jpg" />
     <Content Include="Images\noimage_small.jpg" />
     <Content Include="Images\Teacher.png" />
     <Content Include="Images\topicicon.png" />
     <Content Include="Images\Weibo.png" />
+    <Content Include="Images\内部论坛.png" />
+    <Content Include="Images\学年管理.png" />
     <Content Include="Images\学生管理.png" />
     <Content Include="Images\师资管理.png" />
     <Content Include="Images\我的课程.png" />
     <Content Include="Images\教务管理.png" />
+    <Content Include="Images\教学评价.png" />
+    <Content Include="Images\教师排行.png" />
     <Content Include="Images\系统公告.png" />
+    <Content Include="Images\考核分数.png" />
+    <Content Include="Images\考核指标.png" />
+    <Content Include="Images\论坛管理.png" />
     <Content Include="Images\账号信息.png" />
     <Content Include="Images\角色管理.png" />
     <Content Include="Modules\Account\ChangePassword.aspx" />
@@ -121,11 +129,17 @@
     <Content Include="Modules\Default.aspx" />
     <Content Include="Modules\Forum\Forum.aspx" />
     <Content Include="Modules\Forum\Topic.aspx" />
-    <Content Include="Modules\Forum\TopicTypeMgt.aspx" />
     <Content Include="Modules\Forum\TopicTypeSub.aspx" />
+    <Content Include="Modules\Forum\AllForum.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
     <Content Include="Modules\Homework\WeeklyHomework.aspx" />
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
+    <Content Include="Modules\KPI\FillKPI.aspx" />
+    <Content Include="Modules\KPI\FillKPITaskList.aspx" />
+    <Content Include="Modules\KPI\KPIItemDetail.aspx" />
+    <Content Include="Modules\KPI\KPIList.aspx" />
+    <Content Include="Modules\KPI\KPIRange.aspx" />
+    <Content Include="Modules\KPI\KPIResultList.aspx" />
     <Content Include="Modules\Message\MessageAdd.aspx" />
     <Content Include="Modules\Message\MessageDetail.aspx" />
     <Content Include="Modules\Message\PersonMessage.aspx" />
@@ -136,6 +150,7 @@
     <Content Include="Modules\Student\MyClassmate.aspx" />
     <Content Include="Modules\Student\StudentList.aspx" />
     <Content Include="Modules\Student\StudentSummary.aspx" />
+    <Content Include="Modules\Student\MyCoursemate.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap-wysiwyg.js" />
     <Content Include="Scripts\Chart.min.js" />
@@ -645,19 +660,19 @@
     <Compile Include="Modules\Forum\Topic.aspx.designer.cs">
       <DependentUpon>Topic.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Forum\TopicTypeMgt.aspx.cs">
-      <DependentUpon>TopicTypeMgt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modules\Forum\TopicTypeMgt.aspx.designer.cs">
-      <DependentUpon>TopicTypeMgt.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Forum\TopicTypeSub.aspx.cs">
       <DependentUpon>TopicTypeSub.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\Forum\TopicTypeSub.aspx.designer.cs">
       <DependentUpon>TopicTypeSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Forum\AllForum.aspx.cs">
+      <DependentUpon>AllForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Forum\AllForum.aspx.designer.cs">
+      <DependentUpon>AllForum.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Homework\HomeworkList.aspx.cs">
       <DependentUpon>HomeworkList.aspx</DependentUpon>
@@ -679,6 +694,48 @@
     </Compile>
     <Compile Include="Modules\Homework\WorkResultDetail.aspx.designer.cs">
       <DependentUpon>WorkResultDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\FillKPI.aspx.cs">
+      <DependentUpon>FillKPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\FillKPI.aspx.designer.cs">
+      <DependentUpon>FillKPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\FillKPITaskList.aspx.cs">
+      <DependentUpon>FillKPITaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\FillKPITaskList.aspx.designer.cs">
+      <DependentUpon>FillKPITaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIItemDetail.aspx.cs">
+      <DependentUpon>KPIItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIItemDetail.aspx.designer.cs">
+      <DependentUpon>KPIItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIList.aspx.cs">
+      <DependentUpon>KPIList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIList.aspx.designer.cs">
+      <DependentUpon>KPIList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIRange.aspx.cs">
+      <DependentUpon>KPIRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIRange.aspx.designer.cs">
+      <DependentUpon>KPIRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIResultList.aspx.cs">
+      <DependentUpon>KPIResultList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIResultList.aspx.designer.cs">
+      <DependentUpon>KPIResultList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Message\MessageAdd.aspx.cs">
       <DependentUpon>MessageAdd.aspx</DependentUpon>
@@ -752,6 +809,13 @@
     </Compile>
     <Compile Include="Modules\Student\StudentSummary.aspx.designer.cs">
       <DependentUpon>StudentSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Student\MyCoursemate.aspx.cs">
+      <DependentUpon>MyCoursemate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Student\MyCoursemate.aspx.designer.cs">
+      <DependentUpon>MyCoursemate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Layout\Site.Master.cs">

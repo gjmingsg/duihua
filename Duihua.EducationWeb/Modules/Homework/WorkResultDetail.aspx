@@ -138,7 +138,7 @@
 
             <div class="table-responsive">
                 <asp:GridView ID="GridView1" runat="server" AllowSorting="True" CssClass="table-hover table" 
-                    AutoGenerateColumns="False" DataSourceID="SqlDataSource2" DataKeyNames="WorkID,UserId">
+                    AutoGenerateColumns="False" DataSourceID="SqlDataSource2" DataKeyNames="WorkID,UserId" Width="100%">
                     <EmptyDataTemplate>
                         <div class="alert alert-info" role="alert">暂时没有作业需要批改</div>
                     </EmptyDataTemplate>

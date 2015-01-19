@@ -30,7 +30,7 @@ namespace Duihua.EducationWeb.Layout
                 if (result == null)
                 {
                     result = c.GetCourse(CourseID);
-                    HttpRuntime.Cache.Insert("Course" + CourseID, result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
+                    //HttpRuntime.Cache.Insert("Course" + CourseID, result, null, DateTime.Now.AddMinutes(2), TimeSpan.Zero);
                 }
                 return result as Dictionary<String, Object>;
             }
@@ -42,7 +42,7 @@ namespace Duihua.EducationWeb.Layout
                 if (result == null)
                 {
                     result = h.GetHomeworkByCourseID(CourseID);
-                    HttpRuntime.Cache.Insert("HomeworkByCourseID" + CourseID, result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
+                    //HttpRuntime.Cache.Insert("HomeworkByCourseID" + CourseID, result, null, DateTime.Now.AddMinutes(2), TimeSpan.Zero);
                 }
                 return result as List<Dictionary<string, object>>;
             }

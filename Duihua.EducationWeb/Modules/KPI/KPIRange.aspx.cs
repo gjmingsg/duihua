@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Duihua.EducationWeb.Modules.Forum
+namespace Duihua.EducationWeb.Modules.KPI
 {
-    public partial class TopicTypeMgt : System.Web.UI.Page
+    public partial class KPIRange : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

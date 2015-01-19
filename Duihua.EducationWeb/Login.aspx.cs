@@ -24,7 +24,7 @@ namespace Duihua.EducationWeb
             if (Session["CheckStr"] == null)
             {
                 args.IsValid = false;
-                cvValidateCode.ErrorMessage = "验证码过期";
+                //cvValidateCode.ErrorMessage = "验证码过期";
                 return;
             }
             validateCode = Session["CheckStr"].ToString().ToLower();

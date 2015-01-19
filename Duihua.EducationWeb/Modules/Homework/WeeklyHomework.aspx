@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="本周作业" Language="C#" MasterPageFile="~/Layout/AdminDefault.Master" AutoEventWireup="true" CodeBehind="WeeklyHomework.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Homework.WeeklyHomework" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
+<style type="text/css">
+.thumbnail{ height:310px}
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -9,7 +11,7 @@
         <%foreach (var item in MyCourse)
           { %>
           <ul class="nav nav-sidebar">
-            <li><a href="HomeworkResult.aspx?CourseID=<%=item["CourseID"] %>"><%=item["CourseName"].ToString()%></a></li>
+            <li><a href="WeeklyHomework.aspx?CourseID=<%=item["CourseID"] %>"><%=item["CourseName"].ToString()%></a></li>
           </ul>
          <%} %>
         </div>
@@ -22,7 +24,7 @@
                 <ItemTemplate>
                 <div class="col-sm-6 col-md-6">
                 <div class="thumbnail">
-                     <h3><%#Eval("Title")%></h3>
+                     <h3>【<%#Eval("CourseName")%>】<%#Eval("Title")%></h3>
                      <dl class="dl-horizontal">
         
                        <dt><label>作业分数：</label></dt>
@@ -56,7 +58,7 @@
                             ,hw.BeginTime 
                             ,hw.[Content] FROM HomeWork hw
                             INNER JOIN Course c ON c.CourseID = hw.CourseID
-                            WHERE hw.CourseID = @CourseID
+                            WHERE (@CourseID='00000000-0000-0000-0000-000000000000' or hw.CourseID = @CourseID)
                             AND GETDATE() <= hw.DeadLine
                             AND GETDATE() >= hw.BeginTime"
                         ConnectionString="<%$ ConnectionStrings:DuihuaDB %>">

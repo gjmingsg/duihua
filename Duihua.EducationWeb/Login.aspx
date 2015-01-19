@@ -48,7 +48,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
      <h2 class="form-signin-heading">
-        登录
+        家长通道
     </h2>
     <p>
         <%--请输入用户名和密码。
@@ -80,19 +80,13 @@
                     </p>
                     
 
-                    <p class="input-group">
+                    <p class="input-group hidden">
                         <label for="tbValidateCode" class="sr-only">验证码</label>
-                        <asp:TextBox  ClientIDMode="Static" ID="tbValidateCode" runat="server" CssClass="form-control"   placeholder="验证码"></asp:TextBox>
+                        <asp:TextBox  ClientIDMode="Static" ID="tbValidateCode" runat="server" CssClass="form-control" Visible="false"   placeholder="验证码"></asp:TextBox>
                         <span class="input-group-addon">
                         <asp:Image ImageAlign="Middle" ID="imgValidator" ToolTip="点击更新验证码"  runat="server" ImageUrl="~/ImageValidator.aspx?len=4&type=1" ClientIDMode="Static" CssClass="img-responsive"/>
                         </span>
-                          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="tbValidateCode" 
-                             CssClass="failureNotification" ErrorMessage="必须填写“验证码”。" ToolTip="必须填写“验证码”。"  Display="Dynamic" 
-                             ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
-                         <asp:CustomValidator ID="cvValidateCode" ControlToValidate="tbValidateCode"  Display="Dynamic" 
-                        runat="server" ErrorMessage="验证码不正确" ToolTip="验证码不正确"  CssClass="failureNotification" 
-                        OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="LoginUserValidationGroup">*</asp:CustomValidator>
-                   
+                        
                     </p>
                     <p>
                         <label class="checkbox">

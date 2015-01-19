@@ -14,10 +14,13 @@ namespace Duihua.EducationWeb.Modules.Homework
         private readonly CourseService c = new CourseService();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) {
-                if (Repeater1.Items.Count == 0)
-                    lbEmptyText.Visible = true;
-            }
+            lbEmptyText.Visible = Repeater1.Items.Count == 0;
+            Repeater1.ItemDataBound += new RepeaterItemEventHandler(Repeater1_ItemDataBound);
+        }
+
+        void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            lbEmptyText.Visible = !(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem);
         }
 
         public List<Dictionary<string,object>> MyCourse { 
@@ -26,7 +29,7 @@ namespace Duihua.EducationWeb.Modules.Homework
                 if (result == null)
                 {
                     result = c.GetMyCourse(HttpContext.Current.User.Identity.Name);
-                    HttpRuntime.Cache.Insert("MyCourse", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("MyCourse", result, null, DateTime.Now.AddHours(2), TimeSpan.Zero);
                 }
                 return result as List<Dictionary<String, Object>>;
             }
@@ -39,7 +42,7 @@ namespace Duihua.EducationWeb.Modules.Homework
                 if (result == null)
                 {
                     result = h.GetMyHomeWork(HttpContext.Current.User.Identity.Name);
-                    HttpRuntime.Cache.Insert("MyHomeWork", result, null, DateTime.Now.AddHours(1), TimeSpan.Zero);
+                    HttpRuntime.Cache.Insert("MyHomeWork", result, null, DateTime.Now.AddMinutes(2), TimeSpan.Zero);
                 }
                 return result as List<Dictionary<String, Object>>;
             }
