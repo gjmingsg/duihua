@@ -30,6 +30,7 @@
                   </asp:RadioButtonList>
                  </label>
               </div>
+              <hr />
           </ItemTemplate>
           </asp:Repeater>
 
@@ -60,7 +61,7 @@
        
           <div class="form-group">
               <label for="Memo">总体评价：</label>
-              <asp:TextBox ID="Memo" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="10"></asp:TextBox>
+              <asp:TextBox ID="Memo" name="Memo" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="10"></asp:TextBox>
               <asp:HiddenField ID="KPITeacherId" runat="server" />
           </div>
         </div>
@@ -82,6 +83,7 @@
             <p>发布时间：<span class="label label-info"><%#Eval("CreateTime")%></span></p>
             <asp:Button ID="btnViewDetail" runat="server" Text="查看详情" CssClass="btn btn-primary btn-sm" OnClick="btnViewDetail_Click" _KPITeacherId='<%#Eval("KPITeacherId") %>' _KPIReleaseId='<%#Eval("KPIReleaseId") %>'/>
         </div>
+        <hr />
      </ItemTemplate>
      </asp:Repeater>
      </div>

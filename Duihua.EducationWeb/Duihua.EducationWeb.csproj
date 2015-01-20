@@ -118,6 +118,7 @@
     <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Class\JoinClassList.aspx" />
+    <Content Include="Modules\Class\Semester.aspx" />
     <Content Include="Modules\Common\Help.aspx" />
     <Content Include="Modules\Common\MessageEdit.ascx" />
     <Content Include="Modules\Common\NoticeEdit.ascx" />
@@ -139,6 +140,7 @@
     <Content Include="Modules\KPI\KPIItemDetail.aspx" />
     <Content Include="Modules\KPI\KPIList.aspx" />
     <Content Include="Modules\KPI\KPIRange.aspx" />
+    <Content Include="Modules\KPI\KPIResultDetail.aspx" />
     <Content Include="Modules\KPI\KPIResultList.aspx" />
     <Content Include="Modules\Message\MessageAdd.aspx" />
     <Content Include="Modules\Message\MessageDetail.aspx" />
@@ -580,6 +582,13 @@
     <Compile Include="Modules\Class\JoinClassList.aspx.designer.cs">
       <DependentUpon>JoinClassList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Class\Semester.aspx.cs">
+      <DependentUpon>Semester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Class\Semester.aspx.designer.cs">
+      <DependentUpon>Semester.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Common\DownloadHandler.ashx.cs">
       <DependentUpon>DownloadHandler.ashx</DependentUpon>
     </Compile>
@@ -729,6 +738,13 @@
     </Compile>
     <Compile Include="Modules\KPI\KPIRange.aspx.designer.cs">
       <DependentUpon>KPIRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIResultDetail.aspx.cs">
+      <DependentUpon>KPIResultDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\KPI\KPIResultDetail.aspx.designer.cs">
+      <DependentUpon>KPIResultDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\KPI\KPIResultList.aspx.cs">
       <DependentUpon>KPIResultList.aspx</DependentUpon>

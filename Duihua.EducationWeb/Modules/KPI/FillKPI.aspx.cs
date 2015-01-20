@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Common;
 using Duihua.Lib.Services.Education;
+using Duihua.Lib.Common;
 
 namespace Duihua.EducationWeb.Modules.KPI
 {
@@ -15,6 +16,9 @@ namespace Duihua.EducationWeb.Modules.KPI
         protected void Page_Load(object sender, EventArgs e)
         {
             rptKPIFill.ItemDataBound += new RepeaterItemEventHandler(rptKPIFill_ItemDataBound);
+            if (!IsPostBack) {
+                
+            }
         }
 
         void rptKPIFill_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -22,11 +26,13 @@ namespace Duihua.EducationWeb.Modules.KPI
             if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item) {
                 var b = e.Item.FindControl("Score") as RadioButtonList;
                 var score = int.Parse(b.Attributes["_val"]);
-                var _sel = int.Parse(b.Attributes["_sel"]);
+                
                 for (int i = 1; i <= score; i++) {
                     b.Items.Add(new ListItem() { Text = i.ToString() +"分", Value = i.ToString() });
                 }
-                b.SelectedIndex = _sel - 1;
+                int _sel = 0;
+                if (int.TryParse(b.Attributes["_sel"], out _sel))
+                    b.SelectedIndex = _sel - 1;
             }
         }
         protected void btnViewDetail_Click(object sender, EventArgs e)
@@ -37,6 +43,7 @@ namespace Duihua.EducationWeb.Modules.KPI
             panelfoot.Visible = true;
             SqlDataSource1.SelectParameters["KPIReleaseId"].DefaultValue = b.Attributes["_KPIReleaseId"];
             KPITeacherId.Value = b.Attributes["_KPITeacherId"];
+            WebHelper.Fill(panelbody, kpi.GetKPITeacher(new Dictionary<string, object>() { { "KPITeacherId", KPITeacherId.Value } }));
         }
         protected void btnBack_Click(object sender, EventArgs e)
         {
