@@ -25,7 +25,7 @@
             <asp:Repeater ID="Repeater2" runat="server"  DataSourceID="SqlDataSource2">
             <ItemTemplate>
                 <li>
-                    <a href="PKIResultDetail.aspx?CourseID=<%#Eval("CourseID") %>">
+                    <a href="KPIResultDetail.aspx?CourseID=<%#Eval("CourseID") %>&KPIReleaseId=<%#Eval("KPIReleaseId") %>">
                         考核课程：<%#Eval("CourseName")%>/<span class='label label-warning'>获得分数：<%#Eval("allscore")%></span>
                     </a>
                     【课程学生总数/参与填报学生数：<span class='label label-danger'><%#Eval("hasfill")%>/<%#Eval("hasfill")%></span>】
@@ -34,7 +34,7 @@
             </asp:Repeater>
             </ul>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
-                SelectCommand="SELECT c.CourseID,c.CourseName
+                SelectCommand="SELECT c.CourseID,c.CourseName,k.KPIReleaseId
 ,SUM(ISNULL(k2.Score,0)) allscore
 ,(SELECT sum(isnull(t.IsFinish,0)) FROM kpiteacher t WHERE t.KPIReleaseId =@KPIReleaseId AND t.CourseID = c.CourseID) hasfill
 ,(SELECT COUNT(t.KPITeacherId) FROM kpiteacher t WHERE t.KPIReleaseId = @KPIReleaseId AND t.CourseID = c.CourseID) needfill
@@ -43,7 +43,7 @@ INNER JOIN KPIScore k2 ON k2.KPITeacherId = k.KPITeacherId
 INNER JOIN TeachJoinCourse tjc ON tjc.CourseID = c.CourseID 
 WHERE k.KPIReleaseId = @KPIReleaseId
 AND tjc.UserId =@UserId 
-GROUP BY c.CourseID,c.CourseName
+GROUP BY c.CourseID,c.CourseName,k.KPIReleaseId
 " >
                 <SelectParameters>
                     <asp:SessionParameter Name="UserId" SessionField="UserId" DefaultValue ="00000000-0000-0000-0000-000000000000" />

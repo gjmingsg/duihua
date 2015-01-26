@@ -68,6 +68,7 @@
     <Compile Include="Services\Education\KPIService.cs" />
     <Compile Include="Services\Education\NoticeMessageStatusService.cs" />
     <Compile Include="Services\Education\NoticeService.cs" />
+    <Compile Include="Services\Education\SemesterService.cs" />
     <Compile Include="Services\Education\StudentService.cs" />
     <Compile Include="Services\Education\TeacherService.cs" />
     <Compile Include="Services\Education\TopicService.cs" />

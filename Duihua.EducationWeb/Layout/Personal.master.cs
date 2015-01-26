@@ -14,7 +14,12 @@ namespace Duihua.EducationWeb.Layout
         {
             
         }
-
+        public bool IsLogin { 
+            get {
+                return (!string.IsNullOrEmpty(Session["UserId"] + "") && string.IsNullOrEmpty(Request.QueryString["UserId"])) || 
+                    (!string.IsNullOrEmpty(Request.QueryString["UserId"]) && Request.QueryString["UserId"].Equals(Session["UserId"] + "")); 
+            }
+        }
         public string ClassID{
             get {
                 if (string.IsNullOrEmpty(hdClassID.Value))

@@ -7,9 +7,9 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Duihua.EducationWeb.Modules.Class {
+namespace Duihua.EducationWeb.Modules.Homework {
     
     
-    public partial class Semester {
+    public partial class StudentRange {
     }
 }

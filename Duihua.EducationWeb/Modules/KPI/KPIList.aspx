@@ -14,7 +14,7 @@
         <table class="table table-hover">
             <thead>
               <tr>
-                  <th>操作</th> 
+                  <th style=" width: 180px;">操作</th> 
                   <th>评估指标</th>
                 <%--  <th>是否启用</th>--%>
                   <th>描述</th>

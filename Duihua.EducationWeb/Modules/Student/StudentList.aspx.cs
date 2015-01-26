@@ -242,6 +242,7 @@ namespace Duihua.EducationWeb.Modules.Student
                         else
                             dic.Add(Column[keys[j]], row.GetCell(j).ToString()+"");
                     }
+                    dic.Add("SemesterID", SemesterID.SelectedValue);
                     string rs = u.InsertStudent(dic);
                     if(string.IsNullOrEmpty(rs))
                         ulist.Add(dic["StudentName"] + "");

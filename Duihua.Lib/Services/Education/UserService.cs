@@ -46,7 +46,8 @@ where  am.userid = @UserId");
                                        ,[Status]
                                        ,[Sex]
                                        ,[RegisterTime]
-                                       ,[PicUrl])
+                                       ,[PicUrl]
+                                        ,SemesterID)
                                  VALUES
                                        (@UserId
                                        ,@CooperatorId
@@ -62,7 +63,8 @@ where  am.userid = @UserId");
                                        ,@Status
                                        ,@Sex
                                        ,@RegisterTime
-                                       ,@PicUrl)";
+                                       ,@PicUrl
+                                        ,@SemesterID)";
         string sqlCooperator = @"SELECT [CooperatorId]
                                           ,[CooperatorName]
                                           ,[Address]
@@ -156,6 +158,12 @@ where  am.userid = @UserId");
             }
             return "";
         }
-
+        public List<string> GetUserRole(string userid) {
+            var list =  _dao.QueryListData(new Dictionary<string, object>() { { "UserId" ,userid} }, @"SELECT ar.RoleName FROM aspnet_UsersInRoles auir
+INNER JOIN aspnet_Roles ar ON ar.RoleId = auir.RoleId
+ WHERE auir.UserId = @UserId");
+            var l  = from item in list select item["RoleName"].ToString();
+            return l.ToList<string>();
+        }
     }
 }

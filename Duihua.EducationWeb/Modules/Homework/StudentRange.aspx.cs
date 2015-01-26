@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Duihua.EducationWeb.Modules.Class
+namespace Duihua.EducationWeb.Modules.Homework
 {
-    public partial class Semester : System.Web.UI.Page
+    public partial class StudentRange : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

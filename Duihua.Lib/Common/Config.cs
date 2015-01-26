@@ -18,7 +18,7 @@ namespace Duihua.Lib.Common
         Student = 0,
          [EnumMember(Value = "合作单位")]
         Cooperator = 1,
-           [EnumMember(Value = "老师")]
+           [EnumMember(Value = "教师")]
         Teacher = 2,
             [EnumMember(Value = "教务")]
         SuperTeacher = 3,

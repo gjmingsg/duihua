@@ -70,6 +70,9 @@
     <Content Include="Images\admin.png" />
     <Content Include="Images\boy.png" />
     <Content Include="Images\build.png" />
+    <Content Include="Images\cup_3.png" />
+    <Content Include="Images\cup_1.png" />
+    <Content Include="Images\cup_2.png" />
     <Content Include="Images\forum.png" />
     <Content Include="Images\girl.png" />
     <Content Include="Images\noimage.jpg" />
@@ -84,7 +87,7 @@
     <Content Include="Images\我的课程.png" />
     <Content Include="Images\教务管理.png" />
     <Content Include="Images\教学评价.png" />
-    <Content Include="Images\教师排行.png" />
+    <Content Include="Images\课程排行.png" />
     <Content Include="Images\系统公告.png" />
     <Content Include="Images\考核分数.png" />
     <Content Include="Images\考核指标.png" />
@@ -118,7 +121,6 @@
     <Content Include="Modules\Account\UserList.aspx" />
     <Content Include="Modules\Class\ClassList.aspx" />
     <Content Include="Modules\Class\JoinClassList.aspx" />
-    <Content Include="Modules\Class\Semester.aspx" />
     <Content Include="Modules\Common\Help.aspx" />
     <Content Include="Modules\Common\MessageEdit.ascx" />
     <Content Include="Modules\Common\NoticeEdit.ascx" />
@@ -133,6 +135,7 @@
     <Content Include="Modules\Forum\TopicTypeSub.aspx" />
     <Content Include="Modules\Forum\AllForum.aspx" />
     <Content Include="Modules\Homework\HomeworkList.aspx" />
+    <Content Include="Modules\Homework\StudentRange.aspx" />
     <Content Include="Modules\Homework\WeeklyHomework.aspx" />
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
     <Content Include="Modules\KPI\FillKPI.aspx" />
@@ -149,10 +152,12 @@
     <Content Include="Modules\Notice\NoticeDetail.aspx" />
     <Content Include="Modules\Notice\PersonNotice.aspx" />
     <Content Include="Modules\Notice\SystemNotice.aspx" />
+    <Content Include="Modules\Semester\SemesterList.aspx" />
     <Content Include="Modules\Student\MyClassmate.aspx" />
     <Content Include="Modules\Student\StudentList.aspx" />
     <Content Include="Modules\Student\StudentSummary.aspx" />
     <Content Include="Modules\Student\MyCoursemate.aspx" />
+    <Content Include="Modules\Student\CooperatorStudentList.aspx" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap-wysiwyg.js" />
     <Content Include="Scripts\Chart.min.js" />
@@ -582,13 +587,6 @@
     <Compile Include="Modules\Class\JoinClassList.aspx.designer.cs">
       <DependentUpon>JoinClassList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Class\Semester.aspx.cs">
-      <DependentUpon>Semester.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modules\Class\Semester.aspx.designer.cs">
-      <DependentUpon>Semester.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Common\DownloadHandler.ashx.cs">
       <DependentUpon>DownloadHandler.ashx</DependentUpon>
     </Compile>
@@ -689,6 +687,13 @@
     </Compile>
     <Compile Include="Modules\Homework\HomeworkList.aspx.designer.cs">
       <DependentUpon>HomeworkList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Homework\StudentRange.aspx.cs">
+      <DependentUpon>StudentRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Homework\StudentRange.aspx.designer.cs">
+      <DependentUpon>StudentRange.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\Homework\WeeklyHomework.aspx.cs">
       <DependentUpon>WeeklyHomework.aspx</DependentUpon>
@@ -805,6 +810,13 @@
     <Compile Include="Modules\ReadHandler.ashx.cs">
       <DependentUpon>ReadHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Semester\SemesterList.aspx.cs">
+      <DependentUpon>SemesterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Semester\SemesterList.aspx.designer.cs">
+      <DependentUpon>SemesterList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Student\MyClassmate.aspx.cs">
       <DependentUpon>MyClassmate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -832,6 +844,13 @@
     </Compile>
     <Compile Include="Modules\Student\MyCoursemate.aspx.designer.cs">
       <DependentUpon>MyCoursemate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Student\CooperatorStudentList.aspx.cs">
+      <DependentUpon>CooperatorStudentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Student\CooperatorStudentList.aspx.designer.cs">
+      <DependentUpon>CooperatorStudentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Layout\Site.Master.cs">

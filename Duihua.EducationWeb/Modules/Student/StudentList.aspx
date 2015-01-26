@@ -410,20 +410,26 @@ UpdateCommand="UPDATE [dbo].[Student]
       </div>
       <div class="modal-body">
          <div class="form-group">
-        <label for="ePicUrl">学生数据表格（只支持excel 97~2003）：</label>
-           <div class="input-group">
-                
+            <label for="SemesterID">学年：</label>
+              <asp:DropDownList CssClass="form-control" ID="SemesterID" runat="server" ClientIDMode="Static" DataSourceID="SqlDataSource3" DataTextField="SemesterName" DataValueField="SemesterID">
+                </asp:DropDownList>
+              <asp:SqlDataSource ID="SqlDataSource3" runat="server"   ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
+                 SelectCommand="SELECT s.SemesterID, s.SemesterName FROM Semester s" ></asp:SqlDataSource>
+         </div>
+         <div class="form-group">
+             <label for="ePicUrl">学生数据表格（只支持excel 97~2003）：</label>
+             <div class="input-group">
                 <asp:FileUpload ID="fuExcelFile" runat="server" ClientIDMode="Static" CssClass="form-control" placeholder="学生数据表格"/>
                 <span class="input-group-btn">
                     <asp:Button ID="btnImportExcel" runat="server" Text="上传"  
                     CssClass="btn btn-success" OnClick="btnImportExcel_Click"/>
                     <button type="button" class="btn btn-success" id="templateDownload">模板下载</button>
                 </span>
-          </div>
+             </div>
 
-          <asp:TextBox ID="TextBox1" runat="server"  name="PicUrl" style="display:none" ></asp:TextBox>
-          <asp:Image ID="Image1" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
-      </div>
+            <asp:TextBox ID="TextBox1" runat="server"  name="PicUrl" style="display:none" ></asp:TextBox>
+            <asp:Image ID="Image1" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
+         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

@@ -100,7 +100,7 @@ box-shadow: none;
                     <li  class="active"> 
                         <a href="/Modules/Default.aspx">管理面板</a>
                     </li>
-                    <%if (HttpContext.Current.User.IsInRole("学生") || HttpContext.Current.User.IsInRole("教师"))
+                    <%if (HttpContext.Current.User.IsInRole("学生") || HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务"))
                       { %>
                      <li> 
                         <a href="/Modules/Course/CourseDashBoard.aspx">我的课程</a>
