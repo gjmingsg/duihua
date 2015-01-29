@@ -34,6 +34,8 @@ namespace Duihua.EducationWeb.Modules.KPI
         private void BindData() {
             StringBuilder hs = new StringBuilder();
             StringBuilder sb = new StringBuilder();
+            if (string.IsNullOrEmpty(SemesterID.SelectedValue))
+                return;
             var kl = kpi.GetKPIReleaseIdList(SemesterID.SelectedValue);
             int i = 0;
             foreach (var id in kl)

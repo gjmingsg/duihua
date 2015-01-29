@@ -20,21 +20,21 @@ namespace Duihua.Lib.Common
             var Request = u;
             return Request.Url.Scheme + "://" + Request.Url.Host + ":" + Request.Url.Port + ("/".Equals(Request.ApplicationPath) ? "" : Request.ApplicationPath);
         }
-        public static Control FindControl(Control container,string ID)
+        public static Control FindControl(Control container, string ID)
         {
             if (ID.Equals(container.ID))
                 return container;
-         
+
             foreach (Control item in container.Controls)
             {
-                 if (ID.Equals(item.ID))
-                     return item;
-                 if (item.Controls.Count > 0)
-                 {
-                     var c = FindControl(item, ID);
-                     if (c != null)
-                         return c;
-                 }
+                if (ID.Equals(item.ID))
+                    return item;
+                if (item.Controls.Count > 0)
+                {
+                    var c = FindControl(item, ID);
+                    if (c != null)
+                        return c;
+                }
             }
             return null;
         }
@@ -44,37 +44,40 @@ namespace Duihua.Lib.Common
                 return;
             foreach (var key in dic.Keys)
             {
-                foreach (Control item in container.Controls){
-                    if(item.Controls.Count==0)
-                        SetControlValue(item, dic,key);
+                foreach (Control item in container.Controls)
+                {
+                    if (item.Controls.Count == 0)
+                        SetControlValue(item, dic, key);
                     else
                         Fill(item, dic);
                 }
-            }  
+            }
         }
 
-        private static void SetControlValue(Control item, Dictionary<String, Object> dic,string key)
+        private static void SetControlValue(Control item, Dictionary<String, Object> dic, string key)
         {
             if (item is Label)
             {
                 var t = item as Label;
-                if (key.Equals(t.Attributes["name"]))
+                if (key.Equals(t.Attributes["name"]) || key.Equals(t.ID))
                     t.Text = dic[key].ToString();
             }
-            else if (item is TextBox) {
+            else if (item is TextBox)
+            {
                 var t = item as TextBox;
-                if (key.Equals(t.Attributes["name"]))
+                if (key.Equals(t.Attributes["name"]) || key.Equals(t.ID))
                     t.Text = dic[key].ToString();
             }
             else if (item is ListControl)
             {
                 var t = item as ListControl;
-                if (key.Equals(t.Attributes["name"]))
+                if (key.Equals(t.Attributes["name"]) || key.Equals(t.ID))
                     t.SelectedValue = dic[key].ToString();
             }
-            else if (item is HtmlTextArea) {
+            else if (item is HtmlTextArea)
+            {
                 var t = item as HtmlTextArea;
-                if (key.Equals(t.Attributes["name"]))
+                if (key.Equals(t.Attributes["name"]) || key.Equals(t.ID))
                     t.InnerText = dic[key].ToString();
             }
         }
@@ -101,9 +104,11 @@ namespace Duihua.Lib.Common
                     dic.Add(t.Attributes["name"], t.InnerText);
             }
         }
-        public static Dictionary<String, Object> GetForm(HttpRequest request) {
-            var item = new Dictionary<String, Object> ();
-            foreach (var key in request.Form.AllKeys) {
+        public static Dictionary<String, Object> GetForm(HttpRequest request)
+        {
+            var item = new Dictionary<String, Object>();
+            foreach (var key in request.Form.AllKeys)
+            {
                 if (string.IsNullOrEmpty(request.Form[key]) == false)
                     item[key] = request.Form[key];
             }
@@ -119,7 +124,8 @@ namespace Duihua.Lib.Common
                 {
                     GetControlValue(key, item);
                 }
-                else {
+                else
+                {
                     item = GetForm(key);
                 }
             }

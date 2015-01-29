@@ -138,6 +138,7 @@
     <Content Include="Modules\Homework\StudentRange.aspx" />
     <Content Include="Modules\Homework\WeeklyHomework.aspx" />
     <Content Include="Modules\Homework\WorkResultDetail.aspx" />
+    <Content Include="Modules\Homework\WorkResultView.aspx" />
     <Content Include="Modules\KPI\FillKPI.aspx" />
     <Content Include="Modules\KPI\FillKPITaskList.aspx" />
     <Content Include="Modules\KPI\KPIItemDetail.aspx" />
@@ -708,6 +709,13 @@
     </Compile>
     <Compile Include="Modules\Homework\WorkResultDetail.aspx.designer.cs">
       <DependentUpon>WorkResultDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Homework\WorkResultView.aspx.cs">
+      <DependentUpon>WorkResultView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Homework\WorkResultView.aspx.designer.cs">
+      <DependentUpon>WorkResultView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\KPI\FillKPI.aspx.cs">
       <DependentUpon>FillKPI.aspx</DependentUpon>

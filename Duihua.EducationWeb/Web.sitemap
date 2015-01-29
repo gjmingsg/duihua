@@ -16,12 +16,12 @@
         <siteMapNode url="~/Modules/Forum/TopicTypeSub.aspx?TypeId=0bfd8578-696e-4f7c-bbee-690ac92210ad" title="咨询留言"  description="咨询留言" />
       </siteMapNode>
 
-      <siteMapNode url="" title="教工之家"  description="教工之家" roles="教务,教师">
+      <siteMapNode url="" title="教工之家"  description="教工之家" roles="教务,教师,管理员">
         
         <siteMapNode url="~/Modules/Semester/SemesterList.aspx" title="学年管理"  description="学年管理"  roles="教务,管理员"/>
         <siteMapNode url="~/Modules/Class/ClassList.aspx" title="班级管理"  description="班级管理" roles="教务,管理员"/>
         <siteMapNode url="~/Modules/Course/CourseList.aspx" title="课程管理"  description="课程管理" roles="教务,管理员"/>
-        <siteMapNode url="~/Modules/Homework/HomeworkList.aspx" title="作业管理"  description="作业管理" roles="教务,教师"/>
+        <siteMapNode url="~/Modules/Homework/HomeworkList.aspx" title="作业管理"  description="作业管理" roles="教务,管理员"/>
         <siteMapNode url="~/Modules/KPI/KPIRange.aspx" title="课程排行"  description="课程排行" roles="教务,学生,教师"/>
         <siteMapNode url="~/Modules/KPI/KPIResultList.aspx" title="考核分数"  description="考核分数"  roles="教务,教师"/>
         

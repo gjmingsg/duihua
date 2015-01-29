@@ -27,7 +27,7 @@ namespace Duihua.EducationWeb
         {
             // 在出现未处理的错误时运行的代码
             log.Error(Server.GetLastError());
-            Response.Redirect("~/Default.aspx");
+            //Response.Redirect("~/Default.aspx");
         }
 
         void Session_Start(object sender, EventArgs e)

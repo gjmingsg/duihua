@@ -170,7 +170,9 @@ h6, .h6 {
             <p><%=CourseInfo["TeachName"].ToString()%>：<%=CourseInfo["Intro"].ToString()%></p>
           </div>
           <div class="sidebar-module">
-            <h4>作业</h4>
+            <h4>
+            <a href='/Modules/Homework/HomeworkList.aspx?CourseID=<%=CourseID %>'>作业</a>
+            </h4>
             <ol class="list-unstyled">
               <%foreach (var item in HomeWork)
                 { %>  

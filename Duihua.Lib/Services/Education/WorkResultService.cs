@@ -65,5 +65,24 @@ GROUP BY x.CourseID,x.CourseName");
                         GROUP BY jc.UserId");
             return l;
         }
+
+        public Dictionary<string, object> GetWorkResult(string WorkResultID)
+        {
+            var l = _dao.QueryListData(new Dictionary<string, object>() { { "WorkResultID", WorkResultID } },
+                @"SELECT 
+                    hw.Title
+                    ,hw.Score
+                    ,hw.BeginTime
+                    ,hw.DeadLine
+                    ,hw.[Content]
+                    ,wr.Score getScore
+                    ,wr.GradeTime
+                    ,wr.Evaluate
+                     FROM HomeWork hw INNER JOIN WorkResult wr ON wr.WorkID = hw.WorkID
+                    WHERE wr.WorkResultID = @WorkResultID");
+            if (l.Count == 0)
+                return null;
+            return l[0];
+        }
     }
 }
