@@ -13,19 +13,23 @@
 </div>
 
     <div class="row">
+    <div  class="col-xs-12 col-sm-12">
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
         <ItemTemplate>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href='TopicTypeSub.aspx?TypeId=<%#Eval("TypeId") %>' style=" float:left">
-                    <img src="../../Images/topicicon.png" alt='<%#Eval("TypeName")%>'  class="thumbnail"/>
-                </a>
-                <div  style=" float:left; margin:-10px 5px 0px 5px; padding:5px;">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div  class="col-xs-6 col-sm-6">
+                    <a href='TopicTypeSub.aspx?TypeId=<%#Eval("TypeId") %>' style=" float:left">
+                        <img src="../../Images/topicicon.png" alt='<%#Eval("TypeName")%>'  class="thumbnail"/>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-6" style=" margin-top:-20px;">
                     <h3><a href='TopicTypeSub.aspx?TypeId=<%#Eval("TypeId") %>'><%#Eval("TypeName")%></a></h3>
                     <div>
                         发帖数：
                         <span class="label label-success">
                             <%#Eval("topicCount")%>
                         </span>
+                        <br />
                         回复数：
                         <span class="label label-success">
                             <%#Eval("replyCount")%>
@@ -36,6 +40,7 @@
         </ItemTemplate>
         
     </asp:Repeater>
+    </div>
     </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DuihuaDB %>" 
             SelectCommand="SELECT [TypeId],

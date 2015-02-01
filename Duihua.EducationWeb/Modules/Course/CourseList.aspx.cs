@@ -43,14 +43,13 @@ namespace Duihua.EducationWeb.Modules.Course
 
         private void BindSemester(string SemesterID)
         {
-            if (string.IsNullOrEmpty(SemesterID))
-                return;
             eSemesterID.DataSource = SqlDataSource2;
             eSemesterID.DataBind();
-            eSemesterID.Items.FindByValue(SemesterID).Selected = true;
-
             eClassID.DataSource = SqlDataSource4;
             eClassID.DataBind();
+            if (string.IsNullOrEmpty(SemesterID))
+                return;
+            eSemesterID.Items.FindByValue(SemesterID).Selected = true;
         }
 
         private void BindImage() {
@@ -112,9 +111,10 @@ namespace Duihua.EducationWeb.Modules.Course
                 list.Visible = false;
                 detail.Visible = true;
                 var c = cg.GetCourse(id);
-                
-                BindSemester((c["SemesterID"] + "").ToString());
-
+                if (c.Keys.Contains("SemesterID"))
+                    BindSemester((c["SemesterID"] + "").ToString());
+                else
+                    BindSemester("");
                 WebHelper.Fill(detail, c);
                
                 BindImage();

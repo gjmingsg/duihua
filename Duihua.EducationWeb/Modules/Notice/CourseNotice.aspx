@@ -36,7 +36,8 @@
         FROM [dbo].[Notice] n
         INNER JOIN aspnet_Users au ON au.UserId = n.Creator 
     WHERE ModuleName = 'Course'
-    AND ModuleId = @CourseID">
+    AND ModuleId = @CourseID
+    order by CreateTime desc">
         <SelectParameters>
             <asp:QueryStringParameter QueryStringField="CourseID" Name="CourseID" DefaultValue="00000000-0000-0000-0000-000000000000" />
         </SelectParameters>

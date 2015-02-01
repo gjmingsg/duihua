@@ -74,6 +74,7 @@ border-radius: 4px 4px 0 0;
 -webkit-box-shadow: none;
 box-shadow: none;
     }
+    .error-info{ color:Red;}
     </style>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -91,7 +92,10 @@ box-shadow: none;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">对画学生档案系统</a>
+              <a class="navbar-brand" href="#" style="padding:0px; height:50px;">
+                <img src="/Images/logo2.png" alt="对画艺术教育" style=" margin:0px; padding:0px; display:inline;" height="50px;" />
+              对画学生管理系统
+              </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" id='head-menu'>
@@ -125,7 +129,7 @@ box-shadow: none;
         </div>
          
         <div class="container">
-            <form id="Form1" runat="server" role="form">
+            <form id="mainForm" runat="server" role="form">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
            </form>
         </div>
@@ -141,6 +145,7 @@ box-shadow: none;
    
     <script type="text/javascript">
         $(function () {
+           
             $('#head-menu>li').each(function () {
                 var url = $(this).find('a').attr('href');
                 if (document.URL.indexOf(url) >= 0)

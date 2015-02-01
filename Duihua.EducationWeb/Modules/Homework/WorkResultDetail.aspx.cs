@@ -108,7 +108,7 @@ namespace Duihua.EducationWeb.Modules.Homework
         }
         
         private void SecurityBind() {
-            btnEvaluate.Visible = HttpContext.Current.User.IsInRole("教师");
+            btnEvaluate.Visible = HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务");
             btnSubmitWork.Visible = HttpContext.Current.User.IsInRole("学生");
         }
 

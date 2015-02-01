@@ -3,6 +3,7 @@
 <%@ Register Src="~/Modules/Common/UCAttachment.ascx" TagName="Attachment" TagPrefix="UC" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
  <script type="text/javascript" src="../../Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../Scripts/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
     <link href="../../Styles/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -253,33 +254,33 @@ WHERE WorkID  = @WrokID">
       <div class="form-group">
           <label for="eTitle">作业名称：</label>
           <asp:TextBox ID="eTitle" ClientIDMode="Static" runat="server" name="Title"  CssClass="form-control"  placeholder="作业名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ControlToValidate="eTitle" ValidationGroup="vs"  runat="server" ErrorMessage="“作业名称”必填"   CssClass="help-block"  Display="Dynamic"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ControlToValidate="eTitle" ValidationGroup="vs"  runat="server" ErrorMessage="“作业名称”必填"   CssClass="error-info"  Display="Dynamic"></asp:RequiredFieldValidator>
       </div>
     
       <div class="form-group">
         <label for="eBeginTime">提交时间：</label>
-        <div class="input-group date form_eBeginTime">
+        <div class="input-group date form_eBeginTime" data-date='' data-link-field='eBeginTime' data-date-format='yyyy-mm-dd' data-link-format="yyyy-mm-dd">
             <asp:TextBox ID="eBeginTime" ClientIDMode="Static" runat="server" name="BeginTime"   CssClass="form-control"></asp:TextBox>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vs"  ControlToValidate="eBeginTime" runat="server"    ErrorMessage="“提交时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vs"  ControlToValidate="eBeginTime" runat="server"    ErrorMessage="“提交时间”必填"  CssClass="error-info" Display="Dynamic"></asp:RequiredFieldValidator>
         </div>
        </div>
        <div class="form-group">
         <label for="eDeadLine">截止时间：</label>
-         <div class="input-group date form_eDeadLine">
+         <div class="input-group date form_eDeadLine" data-date='' data-link-field='eDeadLine' data-date-format='yyyy-mm-dd' data-link-format="yyyy-mm-dd">
             <asp:TextBox ID="eDeadLine" ClientIDMode="Static" runat="server" name="DeadLine"  CssClass="form-control"></asp:TextBox>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ValidationGroup="vs" ControlToValidate="eDeadLine" runat="server"  ErrorMessage="“截止时间”必填"  CssClass="help-block" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ValidationGroup="vs" ControlToValidate="eDeadLine" runat="server"  ErrorMessage="“截止时间”必填"  CssClass="error-info" Display="Dynamic"></asp:RequiredFieldValidator>
          </div>
        </div>
       
        <div class="form-group">
         <label for="eScore">分值：</label>
         <asp:TextBox ID="eScore" ClientIDMode="Static" Text="100" runat="server" name="Score"  CssClass="form-control"></asp:TextBox>
-           <asp:RequiredFieldValidator  runat="server"  ValidationGroup="vs"  ErrorMessage="“分值”必填"  ControlToValidate="eScore"      CssClass="help-block"></asp:RequiredFieldValidator>
-           <asp:RegularExpressionValidator runat="server"  ValidationGroup="vs" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]+(.[0-9]{0,1})$" CssClass="help-block"  Display="Dynamic"></asp:RegularExpressionValidator>
+           <asp:RequiredFieldValidator  runat="server"  ValidationGroup="vs"  ErrorMessage="“分值”必填"  ControlToValidate="eScore"      CssClass="error-info"></asp:RequiredFieldValidator>
+           <asp:RegularExpressionValidator runat="server"  ValidationGroup="vs" ErrorMessage="“分值”必为数字" ControlToValidate="eScore"    ValidationExpression="^[1-9][0-9]+(.[0-9]{0,1})$" CssClass="error-info"  Display="Dynamic"></asp:RegularExpressionValidator>
       </div>
       <div class="form-group">
         <label for="eContent">作业详细说明：</label>
@@ -292,7 +293,7 @@ WHERE WorkID  = @WrokID">
    <div class="panel-footer">
       <div class="form-group col-sm-offset-10 col-sm-2">
          <asp:Button ID="btnSave" runat="server" Text="保存" ValidationGroup="vs"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
-         <asp:Button ID="btnBack" runat="server" Text="返回"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
+         <asp:Button ID="btnBack" runat="server" Text="返回" CausesValidation="false"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
           
       </div>
       <br />
@@ -308,17 +309,19 @@ WHERE WorkID  = @WrokID">
         todayBtn: 1,
         autoclose: 1,
         todayHighlight: 1,
-        startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh:ii:ss"
+        startView: 2,
+        minView: 2,
+        forceParse: 0
     });
     $(".form_eDeadLine").datetimepicker({
-        language: 'zh-CN',
+       language: 'zh-CN',
         weekStart: 1,
         todayBtn: 1,
         autoclose: 1,
         todayHighlight: 1,
-        startDate:'<%=DateTime.Now %>',
-        format: "yyyy-mm-dd hh:ii:ss"
+        startView: 2,
+        minView: 2,
+        forceParse: 0
     });
     
 </script> 

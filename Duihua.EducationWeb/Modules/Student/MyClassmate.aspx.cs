@@ -14,8 +14,10 @@ namespace Duihua.EducationWeb.Modules.Student
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
-                ImgTeacher.ImageUrl = TeacherInfo["PicUrl"].ToString();
-                ImgTeacher.AlternateText = TeacherInfo["TeachName"].ToString();
+                if (TeacherInfo.Keys.Contains("PicUrl"))
+                    ImgTeacher.ImageUrl = TeacherInfo["PicUrl"].ToString().Replace("_small", "");
+                if (TeacherInfo.Keys.Contains("TeachName"))
+                    ImgTeacher.AlternateText = TeacherInfo["TeachName"].ToString();
             }
         }
         /// <summary>

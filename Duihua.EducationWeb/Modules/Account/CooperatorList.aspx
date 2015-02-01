@@ -184,12 +184,12 @@ ORDER BY pageIndex asc
       <div class="form-group">
          <label for="eCooperatorName">单位名称：</label>
          <asp:TextBox ID="eCooperatorName" ClientIDMode="Static" runat="server" name="CooperatorName" CssClass="form-control" placeholder="单位名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eCooperatorName" runat="server" ErrorMessage="“单位名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eCooperatorName" runat="server" ErrorMessage="“单位名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
       <div class="form-group">
           <label for="eAddress">所在地址：</label>
            <asp:TextBox ID="eAddress" ClientIDMode="Static" runat="server" name="Address" CssClass="form-control" placeholder="单位名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="vd" ControlToValidate="eAddress" runat="server" ErrorMessage="“所在地址”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="vd" ControlToValidate="eAddress" runat="server" ErrorMessage="“所在地址”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
        
      

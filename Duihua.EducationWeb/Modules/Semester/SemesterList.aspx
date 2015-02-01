@@ -2,6 +2,7 @@
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript" src="../../Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../Scripts/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
     <link href="../../Styles/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -163,26 +164,26 @@
       <div class="form-group">
          <label for="eSemesterName">学年名称：</label>
          <asp:TextBox ID="eSemesterName" ClientIDMode="Static" runat="server" name="SemesterName" CssClass="form-control" placeholder="学年名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eSemesterName" runat="server" ErrorMessage="“学年名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eSemesterName" runat="server" ErrorMessage="“学年名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
       <div class="form-group">
           <label for="eStartTime">学年时间：</label>
          <div>
             <div class="col-md-6  col-xs-6">
-                <div class="input-group input-append date form_StartTime" data-date='<%=DateTime.Now %>'>
+                <div class="input-group input-append date form_StartTime" data-date='' data-link-field='eStartTime' data-date-format='yyyy-MM-dd' data-link-format="yyyy-MM-dd">
                      <asp:TextBox ID="eStartTime" ValidationGroup="vs" ClientIDMode="Static" name="StartTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="eStartTime" runat="server" ErrorMessage="“学年开始时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="vd" ControlToValidate="eStartTime" runat="server" ErrorMessage="“学年开始时间”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
             <div class="col-md-6  col-xs-6">
-                <div class="input-group input-append date form_EndTime" data-date='<%=DateTime.Now %>' >
+                <div class="input-group input-append date form_EndTime"  data-date=''data-link-field='eEndTime'  data-date-format='yyyy-MM-dd' data-link-format="yyyy-MM-dd">
                      <asp:TextBox ID="eEndTime" ClientIDMode="Static" ValidationGroup="vs" name="EndTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="eEndTime" runat="server" ErrorMessage="“学年结束时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="vd" ControlToValidate="eEndTime" runat="server" ErrorMessage="“学年结束时间”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
                 </div>
             </div>
         </div>
@@ -198,7 +199,7 @@
    <div class="panel-footer">
       <div class="form-group col-sm-offset-10 col-sm-2">
          <asp:Button ID="btnSave" runat="server" Text="保存" ValidationGroup="vd"  OnClick="btnSave_Click" CssClass="btn btn-primary"/>
-         <asp:Button ID="btnBack" runat="server" Text="返回"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
+         <asp:Button ID="btnBack" runat="server" Text="返回"  CausesValidation="false"  OnClick="btnBackList_Click" CssClass="btn btn-default"/>
       </div>
       <br />
        <br />
@@ -212,8 +213,9 @@
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startDate: '<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd'
+            startView: 2,
+            minView: 2,
+            forceParse: 0
         });
         $('.form_EndTime').datetimepicker({
             language: 'zh-CN',
@@ -221,8 +223,9 @@
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startDate: '<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd'
+            startView: 2,
+            minView: 2,
+            forceParse: 0
         });
     });
    

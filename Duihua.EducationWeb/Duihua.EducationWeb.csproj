@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Attachment\img\logopic.jpg" />
     <Content Include="Images\admin.png" />
     <Content Include="Images\boy.png" />
     <Content Include="Images\build.png" />
@@ -75,6 +76,7 @@
     <Content Include="Images\cup_2.png" />
     <Content Include="Images\forum.png" />
     <Content Include="Images\girl.png" />
+    <Content Include="Images\logo2.png" />
     <Content Include="Images\noimage.jpg" />
     <Content Include="Images\noimage_small.jpg" />
     <Content Include="Images\Teacher.png" />
@@ -871,7 +873,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Attachment\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modules\Web.config" />

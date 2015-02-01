@@ -130,6 +130,15 @@ namespace Duihua.EducationWeb.Modules.Account {
         protected global::System.Web.UI.WebControls.Image ImgShowImg;
         
         /// <summary>
+        /// ImgShowImgSmall 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgShowImgSmall;
+        
+        /// <summary>
         /// Label4 控件。
         /// </summary>
         /// <remarks>
@@ -227,6 +236,15 @@ namespace Duihua.EducationWeb.Modules.Account {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImgPicUrl;
+        
+        /// <summary>
+        /// ImgPicUrlSmall 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgPicUrlSmall;
         
         /// <summary>
         /// eIntro 控件。

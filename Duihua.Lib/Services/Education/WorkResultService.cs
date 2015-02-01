@@ -62,7 +62,8 @@ GROUP BY x.CourseID,x.CourseName");
 	                        SELECT jc.ClassID
                           FROM JoinClass jc 
 	                        WHERE jc.UserId =@UserId)
-                        GROUP BY jc.UserId");
+                        GROUP BY jc.UserId
+                        ORDER BY Score ASC");
             return l;
         }
 

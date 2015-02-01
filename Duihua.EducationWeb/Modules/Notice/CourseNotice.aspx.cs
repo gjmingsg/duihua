@@ -25,8 +25,8 @@ namespace Duihua.EducationWeb.Modules.Notice
         void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem) {
-                e.Item.FindControl("btnModifyNotice").Visible = HttpContext.Current.User.IsInRole("教师");
-                e.Item.FindControl("btnDeleteNotice").Visible = HttpContext.Current.User.IsInRole("教师");
+                e.Item.FindControl("btnModifyNotice").Visible = HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务");
+                e.Item.FindControl("btnDeleteNotice").Visible = HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务");
             }
             
         }
@@ -44,7 +44,7 @@ namespace Duihua.EducationWeb.Modules.Notice
 
         private void SecurityBind()
         {
-            btnSubmitNotice.Visible = HttpContext.Current.User.IsInRole("教师");
+            btnSubmitNotice.Visible = HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务");
             
         }
         protected void btnDeleteNotice_Click(object sender, EventArgs e) {

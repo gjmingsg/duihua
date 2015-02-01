@@ -24,6 +24,7 @@ namespace Duihua.EducationWeb.Modules.KPI
         {
             if (!IsPostBack)
             {
+                
                 commentDiv.Visible = User.IsInRole("教务") || User.IsInRole("管理员");
             }
         }

@@ -2,6 +2,7 @@
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <script type="text/javascript" src="../../Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../Scripts/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
       <link href="../../Styles/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -271,7 +272,7 @@ UpdateCommand="UPDATE [dbo].[Student]
         曾就读的学校：<asp:Label   runat="server" name="CooperatorName"></asp:Label>
         <br />
         <br />
-        状态：<asp:Label   runat="server" name="Status"></asp:Label>
+        状态：<asp:Label   runat="server" name="StatusText"></asp:Label>
           <br />
         <br />
        
@@ -308,7 +309,7 @@ UpdateCommand="UPDATE [dbo].[Student]
        <div class="form-group">
            <label for="eStudentName">姓名：</label>
            <asp:TextBox ID="eStudentName" name="StudentName" runat="server" ClientIDMode="Static" CssClass="form-control"></asp:TextBox> 
-           <asp:RequiredFieldValidator   ValidationGroup="vs" ControlToValidate="eStudentName" runat="server" ErrorMessage="“姓名”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+           <asp:RequiredFieldValidator   ValidationGroup="vs" ControlToValidate="eStudentName" runat="server" ErrorMessage="“姓名”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
       <div  class="form-group">
           <label for="eSex">性别：</label>
@@ -320,7 +321,7 @@ UpdateCommand="UPDATE [dbo].[Student]
       <div class="form-group">
         <label for="eParentName">家长名称：</label>
         <asp:TextBox ID="eParentName" ClientIDMode="Static"   runat="server"  name="ParentName"  CssClass="form-control" placeholder="家长名称"></asp:TextBox>
-        <asp:RequiredFieldValidator ValidationGroup="vs" ControlToValidate="eParentName" runat="server" ErrorMessage="“家长名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ValidationGroup="vs" ControlToValidate="eParentName" runat="server" ErrorMessage="“家长名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
        <div class="form-group">
         <label for="ePhone">联系电话：</label>
@@ -357,7 +358,7 @@ UpdateCommand="UPDATE [dbo].[Student]
       <div class="form-group">
         <label for="eRegisterTime">注册时间：</label>
         <div>
-            <div class="input-group input-append date form_RegisterTime" data-date='<%=DateTime.Now %>'>
+            <div class="input-group input-append date form_RegisterTime"  data-date='' data-link-field='eRegisterTime' data-date-format='yyyy-MM-dd' data-link-format="yyyy-MM-dd">
                 <asp:TextBox ID="eRegisterTime"  ClientIDMode="Static" name="RegisterTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
@@ -381,7 +382,7 @@ UpdateCommand="UPDATE [dbo].[Student]
        <div class="form-group">
         <label for="eAddress">地址：</label>
         <asp:TextBox ID="eAddress" ClientIDMode="Static"   runat="server" name="Address"  CssClass="form-control" placeholder="地址"></asp:TextBox>
-        <asp:RequiredFieldValidator   ValidationGroup="vs" ControlToValidate="eAddress" runat="server" ErrorMessage="“地址”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator   ValidationGroup="vs" ControlToValidate="eAddress" runat="server" ErrorMessage="“地址”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
   
       <div class="form-group">
@@ -446,8 +447,9 @@ UpdateCommand="UPDATE [dbo].[Student]
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startDate: '<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd'
+            startView: 2,
+            minView: 2,
+            forceParse: 0
         });
 
         $('#templateDownload').click(function () {

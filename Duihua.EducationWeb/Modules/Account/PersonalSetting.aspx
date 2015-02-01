@@ -64,7 +64,7 @@
           </div>
        
           <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4" style=" padding:0px 60px;">
+            <div class="col-12 col-sm-12 col-lg-12" style=" padding:0px 60px;">
               <h3>个人简介</h3>
             
               <blockquote>
@@ -98,22 +98,22 @@
       <div class="form-group">
            <label for="eUserName">姓名：</label>
            <asp:TextBox ID="eUserName" name="UserName" runat="server" ClientIDMode="Static" CssClass="form-control"></asp:TextBox> 
-           <asp:RequiredFieldValidator ID="RequiredFieldValidator1"   ValidationGroup="vs" ControlToValidate="eUserName" runat="server" ErrorMessage="“姓名”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator1"   ValidationGroup="vs" ControlToValidate="eUserName" runat="server" ErrorMessage="“姓名”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
        <div class="form-group">
         <label for="ePhone">联系电话：</label>
         <asp:TextBox ID="ePhone" ClientIDMode="Static"  runat="server" name="Phone"  CssClass="form-control" placeholder="联系电话"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3"  ValidationGroup="vs" ControlToValidate="ePhone" runat="server" ErrorMessage="“联系电话”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3"  ValidationGroup="vs" ControlToValidate="ePhone" runat="server" ErrorMessage="“联系电话”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
        <div class="form-group">
         <label for="eEmail">邮箱：</label>
         <asp:TextBox ID="eEmail" ClientIDMode="Static"   runat="server" name="Email"  CssClass="form-control" placeholder="邮箱"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="vs" ControlToValidate="eEmail" runat="server" ErrorMessage="“邮箱”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="vs" ControlToValidate="eEmail" runat="server" ErrorMessage="“邮箱”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
         <div class="form-group">
         <label for="eAddress">地址：</label>
         <asp:TextBox ID="eAddress" ClientIDMode="Static"   runat="server" name="Address"  CssClass="form-control" placeholder="地址"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="vs" ControlToValidate="eEmail" runat="server" ErrorMessage="“地址”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="vs" ControlToValidate="eEmail" runat="server" ErrorMessage="“地址”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
 
       <% if (HttpContext.Current.User.IsInRole("学生"))
@@ -128,12 +128,12 @@
       <div class="form-group">
         <label for="eParentName">家长名称：</label>
         <asp:TextBox ID="eParentName" ClientIDMode="Static"   runat="server"  name="ParentName"  CssClass="form-control" placeholder="家长名称"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="vs" ControlToValidate="eParentName" runat="server" ErrorMessage="“家长名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="vs" ControlToValidate="eParentName" runat="server" ErrorMessage="“家长名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
          <div class="form-group">
         <label for="eIDCard">身份证：</label>
         <asp:TextBox ID="eIDCard" ClientIDMode="Static"  runat="server"  name="IDCard"  CssClass="form-control" placeholder="身份证"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  ControlToValidate="eIDCard" ValidationGroup="vs" runat="server" ErrorMessage="“身份证”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  ControlToValidate="eIDCard" ValidationGroup="vs" runat="server" ErrorMessage="“身份证”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
           <div class="form-group">
                 <label for="eCooperatorId">曾就读的学校：</label>
@@ -188,7 +188,7 @@
                 <asp:TextBox ID="ejoinTime"  ClientIDMode="Static" name="joinTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator7"  ValidationGroup="vs" ControlToValidate="ejoinTime" runat="server" ErrorMessage="“入职时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7"  ValidationGroup="vs" ControlToValidate="ejoinTime" runat="server" ErrorMessage="“入职时间”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
             </div>
         </div>
       </div>

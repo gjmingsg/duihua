@@ -12,11 +12,14 @@
                 <p class="lead">所修课程：<asp:Literal runat="server" ID="loverallCourse"></asp:Literal></p>
                 <h3 class="overview-doctype">各课程作业情况</h3>
                 <p>
-                     <canvas id='overall_canvas' width="600" height="400"></canvas>
+                     <canvas id='overall_canvas'width="600" height="300"></canvas>
                      <script type="text/javascript">
-                         var overall_data = <% =GetOverallScore()%>;
-                         var ctx_overall = document.getElementById('overall_canvas').getContext("2d");
-                         new Chart(ctx_overall).Radar(overall_data);
+                         var overall_data =[ <% =GetOverallScore()%>];
+                         window.onload = function(){
+				            var ctx =  document.getElementById('overall_canvas').getContext("2d");
+				            window.myDoughnut = new Chart(ctx).Doughnut(overall_data, {responsive : true});
+			             };
+
                      </script>
                 </p>
                 <h3 class="overview-doctype">总体班级排名(从左到右，成绩由低到高)</h3>

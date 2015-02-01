@@ -85,6 +85,13 @@ namespace Duihua.EducationWeb.Modules.Account
                 detail.Visible = true;
                 var c = cg.GetTeacher(id);
                 WebHelper.Fill(detail, c);
+                if (string.IsNullOrEmpty(ePicUrl.Text) == false)
+                {
+                    ImgPicUrl.Visible = true;
+                    ImgPicUrl.ImageUrl = ePicUrl.Text.Replace("_small", "");
+                    ImgPicUrlSmall.Visible = true;
+                    ImgPicUrlSmall.ImageUrl = ePicUrl.Text;
+                }
             }
             else if ("View".Equals(b.CommandName))
             {
@@ -93,6 +100,13 @@ namespace Duihua.EducationWeb.Modules.Account
                 var c = cg.GetTeacher(id);
 
                 WebHelper.Fill(view, c);
+                if (string.IsNullOrEmpty(tbShowImg.Text) == false)
+                {
+                    ImgShowImg.Visible = true;
+                    ImgShowImg.ImageUrl = tbShowImg.Text.Replace("_small", "");
+                    ImgShowImgSmall.Visible = true;
+                    ImgShowImgSmall.ImageUrl = tbShowImg.Text;
+                }
             }
             else if ("Delete".Equals(b.CommandName))
             {
@@ -150,7 +164,8 @@ namespace Duihua.EducationWeb.Modules.Account
             ePicUrl.Text = path + targetFileName;
             ImgPicUrl.ImageUrl = ePicUrl.Text;
             ImgPicUrl.Visible = true;
-
+            ImgPicUrlSmall.ImageUrl = ePicUrl.Text.Replace("_small","");
+            ImgPicUrlSmall.Visible = true;
         }
 
         private bool checkType(string[] filetype)

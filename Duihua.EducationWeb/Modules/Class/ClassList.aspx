@@ -185,7 +185,7 @@ ORDER BY pageIndex asc
       <div class="form-group">
          <label for="tbGradeName">班级名称：</label>
          <asp:TextBox ID="tbGradeName" ClientIDMode="Static" runat="server" name="GradeName" CssClass="form-control" placeholder="班级名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ValidationGroup="vd" ControlToValidate="tbGradeName" runat="server" ErrorMessage="“班级名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ValidationGroup="vd" ControlToValidate="tbGradeName" runat="server" ErrorMessage="“班级名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
       <div class="form-group">
           <label for="ddSemesterID">学年：</label>

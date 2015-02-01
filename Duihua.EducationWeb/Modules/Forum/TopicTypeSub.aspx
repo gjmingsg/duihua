@@ -16,6 +16,7 @@ CodeBehind="TopicTypeSub.aspx.cs" Inherits="Duihua.EducationWeb.Modules.Forum.To
             <span class="label label-success">
                 <%=TopicType["topicCount"]%>
             </span>
+            <br />
             回复数：
             <span class="label label-success">
                 <%=TopicType["replyCount"]%>

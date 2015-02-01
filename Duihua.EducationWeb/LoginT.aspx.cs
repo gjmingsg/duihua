@@ -28,6 +28,13 @@ namespace Duihua.EducationWeb
             var student = s.GetStudent(o.ProviderUserKey.ToString()) ;
             if (student != null)
             {
+                if ("2".Equals(student["Status"].ToString()))
+                {
+                    FormsAuthentication.SignOut();
+                    Session.Abandon();
+                    Request.Cookies.Remove(FormsAuthentication.FormsCookieName);
+                    Response.Redirect("~/Default.aspx");
+                }
                 FormsAuthentication.SetAuthCookie(student["StudentName"].ToString(), false);
                 Session.Add("Student", student);
             }

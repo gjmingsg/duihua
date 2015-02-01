@@ -171,7 +171,14 @@ h6, .h6 {
           </div>
           <div class="sidebar-module">
             <h4>
+            <%if (HttpContext.Current.User.IsInRole("教师") || HttpContext.Current.User.IsInRole("教务"))
+              { %>
             <a href='/Modules/Homework/HomeworkList.aspx?CourseID=<%=CourseID %>'>作业</a>
+            <%}
+              else
+              {%>
+              作业
+            <%} %>
             </h4>
             <ol class="list-unstyled">
               <%foreach (var item in HomeWork)

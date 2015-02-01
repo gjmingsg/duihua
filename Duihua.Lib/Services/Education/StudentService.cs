@@ -45,9 +45,12 @@ s.[UserId]
       ,s.[Status]
       ,s.[Sex]
 ,jc.ClassID
-     ,CONVERT(NVARCHAR(10),s.[RegisterTime],121)[RegisterTime]
+     ,CONVERT(NVARCHAR(10),s.[RegisterTime],120)[RegisterTime]
       ,s.[PicUrl]
 ,au.MobileAlias,am.Email,c.CooperatorName
+  ,CASE s.[Status] when '0' THEN '入学未交费'
+                              WHEN '1' THEN '入学已缴费'
+							WHEN '2' THEN '毕业' end as [StatusText]
                         FROM [dbo].[Student] s
                         left JOIN JoinClass jc ON jc.UserId = s.UserId
                         INNER JOIN aspnet_Users au ON au.UserId = s.UserId

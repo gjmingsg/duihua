@@ -1,4 +1,4 @@
-﻿<%@ Page Title="主页" Language="C#" MasterPageFile="~/Layout/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="对画学生档案管理系统主页" Language="C#" MasterPageFile="~/Layout/Site.master" AutoEventWireup="true"
     CodeBehind="Default.aspx.cs" Inherits="Duihua.EducationWeb._Default" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">

@@ -2,6 +2,7 @@
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
    <script type="text/javascript" src="../../Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../Scripts/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
    <link href="../../Styles/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -152,6 +153,7 @@ ORDER BY pageIndex asc
         教师图片：
          <asp:TextBox ID="tbShowImg"  runat="server" name="PicUrl" style="display:none" ></asp:TextBox>
          <asp:Image ID="ImgShowImg" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
+         <asp:Image ID="ImgShowImgSmall" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
          <blockquote>
         教师简介：<asp:Label ID="Label4"   runat="server" name="Intro"></asp:Label>
         </blockquote>
@@ -174,16 +176,16 @@ ORDER BY pageIndex asc
       <div class="form-group">
          <label for="eTeachName">教师名称：</label>
          <asp:TextBox ID="eTeachName" ClientIDMode="Static" runat="server" name="TeachName" CssClass="form-control" placeholder="教师名称"></asp:TextBox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eTeachName" runat="server" ErrorMessage="“教师名称”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="vd" ControlToValidate="eTeachName" runat="server" ErrorMessage="“教师名称”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
       </div>
        <div class="form-group">
         <label for="ejoinTime">入职时间：</label>
         <div>
-            <div class="input-group input-append date form_ejoinTime" data-date='<%=DateTime.Now %>'>
+            <div class="input-group input-append date form_ejoinTime"  data-date='' data-link-field='ejoinTime' data-date-format='yyyy-MM-dd' data-link-format="yyyy-MM-dd">
                 <asp:TextBox ID="ejoinTime"  ClientIDMode="Static" name="joinTime" runat="server" CssClass="form-control"   size="16" ></asp:TextBox>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 		        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ValidationGroup="vs" ControlToValidate="ejoinTime" runat="server" ErrorMessage="“入职时间”必填" Display="Dynamic" CssClass="help-block"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2"  ValidationGroup="vs" ControlToValidate="ejoinTime" runat="server" ErrorMessage="“入职时间”必填" Display="Dynamic" CssClass="error-info"></asp:RequiredFieldValidator>
             </div>
         </div>
       </div>
@@ -199,6 +201,7 @@ ORDER BY pageIndex asc
 
           <asp:TextBox ID="ePicUrl" runat="server"  name="PicUrl" style="display:none" ></asp:TextBox>
           <asp:Image ID="ImgPicUrl" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/>  
+          <asp:Image ID="ImgPicUrlSmall" runat="server" Visible="false" CssClass="img-responsive img-thumbnail"/> 
       </div>
       <div class="form-group">
         <label for="eIntro">单位描述：</label>
@@ -224,8 +227,9 @@ ORDER BY pageIndex asc
             todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
-            startDate: '<%=DateTime.Now %>',
-            format: 'yyyy-mm-dd'
+            startView: 2,
+            minView: 2,
+            forceParse: 0
         });
         
     });

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Duihua.Lib.Services.Education;
+using System.Collections;
 
 namespace Duihua.EducationWeb.Modules
 {
@@ -25,7 +26,15 @@ namespace Duihua.EducationWeb.Modules
                     lmessage.Text = string.Format("有<strong><span class='label label-danger'><a href='Notice/PersonNotice.aspx'>{0}</a></span></strong>条未读通知。", ncount);
             }
         }
-
+        public bool IsInRole(IList roles) {
+           
+            foreach (var r in roles) {
+                if (User.IsInRole(r.ToString()))
+                    return true;
+            }
+            return false;
+            
+        }
       
     }
 }

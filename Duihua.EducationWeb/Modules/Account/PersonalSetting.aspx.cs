@@ -37,7 +37,10 @@ namespace Duihua.EducationWeb.Modules.Account
             if (!IsPostBack)
             {
                 if (Person != null && Person.ContainsKey("PicUrl"))
-                    imgPicUrl.ImageUrl = Person["PicUrl"].ToString();
+                {
+                    string pic = Person["PicUrl"].ToString().Replace("_small","");
+                    imgPicUrl.ImageUrl = pic;
+                }
                 WebHelper.Fill(baseInfo, Person);
 
                 ///如果是同一个人，或者是直接登录后查看个人信息的，可以进行修改

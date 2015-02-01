@@ -16,10 +16,10 @@ namespace Duihua.Lib.Services.Education
                                      ,hw.CourseID
                                      ,hw.Title
                                      ,hw.[Content]
-                                     , CONVERT(NVARCHAR(19),hw.DeadLine,121)DeadLine
+                                     , CONVERT(NVARCHAR(19),hw.DeadLine,120)DeadLine
                                      ,hw.Score
                                      ,hw.CreateTime
-                                     , CONVERT(NVARCHAR(19),hw.BeginTime,121)BeginTime
+                                     , CONVERT(NVARCHAR(19),hw.BeginTime,120)BeginTime
                                      ,c.CourseName
                                     ,(SELECT COUNT(1) FROM WorkResult wr WHERE hw.WorkID= wr.WorkID) hasSubmit
                                   FROM HomeWork hw INNER JOIN Course c ON c.CourseID = hw.CourseID
