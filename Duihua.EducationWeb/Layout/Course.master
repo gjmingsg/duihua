@@ -167,7 +167,7 @@ h6, .h6 {
           </div>
           <div class="sidebar-module sidebar-module-inset">
             <h4>关于任课老师</h4>
-            <p><%=CourseInfo["TeachName"].ToString()%>：<%=CourseInfo["Intro"].ToString()%></p>
+            <p><%=CourseInfo["TeachName"].ToString()%><%--：<%=CourseInfo["Intro"].ToString()%>--%></p>
           </div>
           <div class="sidebar-module">
             <h4>

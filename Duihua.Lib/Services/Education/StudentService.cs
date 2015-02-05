@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Duihua.Lib.Common;
+using log4net;
 
 namespace Duihua.Lib.Services.Education
 {
     public class StudentService
     {
+        private readonly ILog log = LogManager.GetLogger(typeof(StudentService));
         private readonly DBHelper _dao = new DBHelper();
         
         /// <summary>
@@ -21,6 +23,18 @@ namespace Duihua.Lib.Services.Education
             var s = _dao.QueryListData(new Dictionary<String, Object>() { { "StuNumber", StuNumber }, { "IDCard", IDCard } },
                             @"SELECT top 1 s.*,jc.ClassID FROM Student s
 INNER JOIN JoinClass jc ON jc.UserId = s.UserId WHERE s.StuNumber = @StuNumber AND s.IDCard = @IDCard");
+            if (s.Count == 0)
+                return null;
+            else
+                return s[0];
+        }
+        public Dictionary<String, Object> GetStudentByName(string IDCard, string StudentName)
+        {
+
+            var s = _dao.QueryListData(new Dictionary<String, Object>() { { "StudentName", StudentName }, { "IDCard", IDCard } },
+                            @"SELECT top 1 s.* FROM Student s
+  WHERE s.StudentName = @StudentName AND s.IDCard = @IDCard");
+            log.Debug(string.Format("查询获得学生数{0}",s.Count));
             if (s.Count == 0)
                 return null;
             else

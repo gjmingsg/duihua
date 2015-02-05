@@ -110,9 +110,7 @@ box-shadow: none;
                         <a href="/Modules/Course/CourseDashBoard.aspx">我的课程</a>
                     </li>
                     <%} %>
-                      <li> 
-                        <a href="/Modules/Forum/Forum.aspx">论坛</a>
-                    </li>
+                      
                     <li> 
                         <a href="/modules/Account/PersonalSetting.aspx">个人设置</a>
                     </li>

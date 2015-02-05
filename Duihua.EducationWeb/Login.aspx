@@ -65,10 +65,10 @@
                     <legend>请输入登录凭证</legend>
                     
                          <p>
-                        <label for="tbStudentID" class="sr-only">学号</label>
-                        <asp:TextBox ClientIDMode="Static" ID="tbStudentID" runat="server" CssClass="form-control" placeholder="学号"></asp:TextBox>
+                        <label for="tbStudentID" class="sr-only">用户名</label>
+                        <asp:TextBox ClientIDMode="Static" ID="tbStudentID" runat="server" CssClass="form-control" placeholder="用户名"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbStudentID" 
-                             CssClass="failureNotification" ErrorMessage="必须填写“学号”。" ToolTip="必须填写“学号”。" 
+                             CssClass="failureNotification" ErrorMessage="必须填写“用户名”。" ToolTip="必须填写“用户名”。" 
                              ValidationGroup="LoginStudentValidationGroup">*</asp:RequiredFieldValidator>
                     </p>
                     <p>

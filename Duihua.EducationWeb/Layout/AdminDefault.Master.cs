@@ -21,12 +21,14 @@ namespace Duihua.WebApp.Admin
         private readonly ILog log = LogManager.GetLogger(typeof(AdminDefault));
         protected void Page_Load(object sender, EventArgs e)
         {
-            log.Info("通过PC访问，来自IP:" + Request.UserHostAddress + "的访问【" + Request.RawUrl + "】");
+            
             if (string.IsNullOrEmpty(Page.User.Identity.Name))
             {
+                log.Info("通过PC访问，来自IP:" + Request.UserHostAddress + "的访问【" + Request.RawUrl + "】");
                 Response.Redirect("~/Logout.aspx");
                 return;
             }
+            log.Info(Page.User.Identity.Name+"通过PC访问，来自IP:" + Request.UserHostAddress + "的访问【" + Request.RawUrl + "】");
             if (!Page.IsPostBack)
             {
                 //ltuserName.Text = Page.User.Identity.Name;

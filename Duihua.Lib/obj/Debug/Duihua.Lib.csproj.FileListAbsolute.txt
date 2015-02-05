@@ -5,3 +5,10 @@ E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\bin\Debug\l
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\ResolveAssemblyReference.cache
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.dll
 E:\workspace\其他\web\对话艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.pdb
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\bin\Debug\Duihua.Lib.dll
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\bin\Debug\Duihua.Lib.pdb
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\bin\Debug\log4net.dll
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\bin\Debug\log4net.xml
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\obj\Debug\ResolveAssemblyReference.cache
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.dll
+E:\workspace\其他\web\对画艺术培训\project\Duihua\Duihua.Lib\obj\Debug\Duihua.Lib.pdb

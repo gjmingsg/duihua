@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 using Duihua.Lib.Common;
 using Duihua.Lib.Services.Education;
 using System.Web.Security;
+using log4net;
 
 namespace Duihua.EducationWeb
 {
     public partial class Login : System.Web.UI.Page
     {
+        private readonly ILog log = LogManager.GetLogger(typeof(Login));
         private readonly StudentService s = new StudentService();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,10 +40,11 @@ namespace Duihua.EducationWeb
         {
             if (string.IsNullOrEmpty(tbStudentID.Text) || string.IsNullOrEmpty(tbPersonalID.Text))
             {
-                FailureText.Text = "登录失败，学号或者身份证号不能为空。";
+                FailureText.Text = "登录失败，用户名或者身份证号不能为空。";
             }
             else {
-                var student = s.GetStudent(tbPersonalID.Text, tbStudentID.Text);
+                var student = s.GetStudentByName(tbPersonalID.Text, tbStudentID.Text);
+                log.Debug(string.Format("身份证{0}，用户姓名{1}",tbPersonalID.Text,tbStudentID.Text));
                 if (student!=null)
                 {
                     FormsAuthentication.SetAuthCookie(student["StudentName"].ToString(), false);
@@ -51,7 +54,7 @@ namespace Duihua.EducationWeb
                     Response.Redirect("~/Modules/Default.aspx");
                 }
                 else {
-                    FailureText.Text = "登录失败，学号或者身份证号错误。";
+                    FailureText.Text = "登录失败，用户名或者身份证号错误。";
                 }
             }
         }
